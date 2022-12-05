@@ -10,13 +10,9 @@ export default function CarouselComp() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios(
-        "https://api.nasa.gov/planetary/apod?start_date=2022-11-05&end_date=2022-11-10&api_key="
-      );
-      const data = response.data.filter((image) => {
-        return image.media_type === "image";
-      });
-      setImages(data);
+      const response = await axios("http://localhost:8000/images/");
+      setImages(response.data);
+      console.log(response.data);
     };
     fetchData();
   }, []);
@@ -34,9 +30,7 @@ export default function CarouselComp() {
                 alt={image.explanation}
               />
               <Carousel.Caption>
-                <h3>
-                  <a href="">Click Here for More Information</a>
-                </h3>
+                <h3>{image.title}</h3>
               </Carousel.Caption>
             </Carousel.Item>
           );

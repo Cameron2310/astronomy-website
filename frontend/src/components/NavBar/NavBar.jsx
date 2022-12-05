@@ -6,6 +6,11 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "./NavBar.css";
 
 export default function NavBar() {
+  const navBarCategories = [
+    "Our Solar System",
+    "The Universe",
+    "Cosmic Wonders",
+  ];
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -14,15 +19,13 @@ export default function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <NavDropdown title="Our Solar System" id="basic-nav-dropdown">
-              <NavDropdown.Item href=""></NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="The Universe" id="basic-nav-dropdown">
-              <NavDropdown.Item href=""></NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown title="Cosmic Wonders" id="basic-nav-dropdown">
-              <NavDropdown.Item href=""></NavDropdown.Item>
-            </NavDropdown>
+            {navBarCategories.map((category, i) => {
+              return (
+                <Nav.Link href={`/${category}/`} key={i}>
+                  {category}
+                </Nav.Link>
+              );
+            })}
             <Nav.Link href="">Login</Nav.Link>
 
             <div
