@@ -1,0 +1,53 @@
+[
+  {
+    "model": "website.images",
+    "pk": 1,
+    "fields": {
+      "title": "Blood Moon, Ice Giant",
+      "date": "2022-11-11",
+      "explanation": "On November 8 the Full Moon turned blood red as it slid through Earth's shadow in a beautiful total lunar eclipse. During totality it also passed in front of, or occulted, outer planet Uranus for eclipse viewers located in parts of northern America and Asia. For a close-up and wider view these two images were taken just before the occultation began, captured with different telescopes and cameras from the same roof top in Shanghai, China. Normally very faint compared to a Full Moon, the tiny, pale, greenish disk of the distant ice giant is just to the left of the Moon's edge and about to disappear behind the darkened, red lunar limb. Though only visible from certain locations across planet Earth, lunar occultations of planets are fairly common. But for this rare 'lunar eclipse occultation' to take place, at the time of the total eclipse the outer planet had to be both at opposition and very near the ecliptic plane to fall in line with Sun, Earth, and Moon.",
+      "url": "https://apod.nasa.gov/apod/image/2211/LunarEclipseRyanHan1024.jpg"
+    }
+  },
+  {
+    "model": "website.images",
+    "pk": 2,
+    "fields": {
+      "title": "Halley Dust and Milky Way",
+      "date": "2019-05-10",
+      "explanation": "Grains of cosmic dust streaked through the mostly moonless night skies of May 7. Swept up as planet Earth plowed through the debris streams left behind by periodic Comet Halley, the annual meteor shower is known as the Eta Aquarids. Though it was made about a day after the shower's predicted maximum, this composite image still captures 20 meteors in exposures taken over a 2 hour period, registered on a background exposure of the sky. The meteor trails point back to the shower radiant near eponymous faint star Eta Aquarii close to the horizon, seen from 100 kilometers south of Sydney Australia. Known for speed, Eta Aquarid meteors move fast, entering the atmosphere at about 66 kilometers per second. Brilliant Jupiter shines near the central bulge of the Milky Way high above the horizon. The Southern Cross is just tucked in to the upper right corner of the frame.",
+      "url": "https://apod.nasa.gov/apod/image/1905/eta_aquarids_Gang_1200.jpg"
+    }
+  },
+
+  {
+    "model": "website.images",
+    "pk": 3,
+    "fields": {
+      "title": "Tianwen-1 Mission to Mars",
+      "date": "2020-07-25",
+      "explanation": "n July 23, this Long March 5 heavy-lift rocket rose into a blue morning sky from China's Hainan Island Wenchang Satellite Launch Center. The rocket carried an orbiter, lander, and rover to ask Heavenly Questions on the ambitious Tianwen-1 mission to Mars. In fact Tianwen-1 was the second of three missions scheduled for a July departure to the Red Planet. The United Arab Emirates launched its Amal (Hope) Mars probe on July 19.  NASA's launch of its Mars Perseverance Rover from Cape Canaveral Air Force Station, USA is scheduled for July 30. That is the last planned Mars launch for 2020 though. The minimum-energy launch window for an expedition to Mars is coming to a close in 2020 and will reopen in 2022.  Comet NEOWISE images from planet Earth",
+      "url": "https://apod.nasa.gov/apod/image/2007/169A2911Dai1024.jpg"
+    }
+  },
+  {
+    "model": "website.images",
+    "pk": 4,
+    "fields": {
+      "title": "IC 342: The Hidden Galaxy in Camelopardalis",
+      "date": "2022-02-11",
+      "explanation": "Similar in size to large, bright spiral galaxies in our neighborhood, IC 342 is a mere 10 million light-years distant in the long-necked, northern constellation Camelopardalis. A sprawling island universe, IC 342 would otherwise be a prominent galaxy in our night sky, but it is hidden from clear view and only glimpsed through the veil of stars, gas and dust clouds along the plane of our own Milky Way galaxy. Even though IC 342's light is dimmed and reddened by intervening cosmic clouds, this sharp telescopic image traces the galaxy's own obscuring dust, young star clusters, and glowing pink star forming regions along spiral arms that wind far from the galaxy's core. IC 342 may have undergone a recent burst of star formation activity and is close enough to have gravitationally influenced the evolution of the local group of galaxies and the Milky Way.",
+      "url": "https://apod.nasa.gov/apod/image/2202/IC342Feller1024.jpg"
+    }
+  },
+  {
+    "model": "website.images",
+    "pk": 5,
+    "fields": {
+      "title": "Dark Ball in Inverted Starfield",
+      "date": "2022-11-06",
+      "explanation": "Does this strange dark ball look somehow familiar? If so, that might be because it is our Sun. In the featured image from 2012, a detailed solar view was captured originally in a very specific color of red light, then rendered in black and white, and then color inverted. Once complete, the resulting image was added to a starfield, then also color inverted. Visible in the image of the Sun are long light filaments, dark active regions, prominences peeking around the edge, and a moving carpet of hot gas. The surface of our Sun can be a busy place, in particular during Solar Maximum, the time when its surface magnetic field is wound up the most. Besides an active Sun being so picturesque, the plasma expelled can also become picturesque when it impacts the Earth's magnetosphere and creates auroras. Compute it Yourself: Browse 2,900+ codes in the Astrophysics Source Code Library",
+      "url": "https://apod.nasa.gov/apod/image/2211/darksun_lafferty_960.jpg"
+    }
+  }
+]
