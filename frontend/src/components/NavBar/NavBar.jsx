@@ -26,7 +26,7 @@ export default function NavBar() {
                 </Nav.Link>
               );
             })}
-            <Nav.Link href="">Login</Nav.Link>
+            <Nav.Link href="/login/">Login</Nav.Link>
 
             <div
               style={{

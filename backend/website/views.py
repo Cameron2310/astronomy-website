@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from website.apis.daily_photo_API import *
 from .serializers import *
 
 
@@ -16,5 +17,38 @@ class ImagesAPIView(APIView):
     def get(self, request):
         images = Images.objects.all()
         serializer = ImagesSerializer(images, many=True)
+
+        return Response(serializer.data)
+
+
+class UserAPIView(APIView):
+    serializer_class = UserSerializer
+
+    def get(self, request):
+        email = request.query_params["email"]
+        password = request.query_params["password"]
+
+        if email != None:
+            user = User.objects.get(email=email).__dict__
+
+            if password != user['password']:
+                response = 'Wrong Password'
+
+                return Response(response)
+
+        serializer = UserSerializer(user)
+        return Response(serializer.data)
+
+    def post(self, request):
+        data = request.data
+
+        user_email = data['params']['email']
+        user_password = data['params']['password']
+
+        new_user = User.objects.create(
+            email=user_email, password=user_password)
+
+        new_user.save()
+        serializer = UserSerializer(new_user)
 
         return Response(serializer.data)
