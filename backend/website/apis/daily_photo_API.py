@@ -4,7 +4,7 @@ from website.models import *
 
 
 def get_daily_image():
-    API_KEY = '2laWFLmHXofGV1jmdccXiltU6Tn6C7UQWGRLI9aX'
+    API_KEY = ''
 
     def get_random_date():
         day = randrange(1, 28)
