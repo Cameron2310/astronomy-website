@@ -3,14 +3,16 @@
     "model": "website.subtopics",
     "pk": 1,
     "fields": {
-      "name": "Planets"
+      "name": "Planets",
+      "article": "There are more planets than stars in our galaxy. Our solar system has 8 planets. The first 4 are the small rock planets: Mercury, Venus, Earth, & Mars. After that, we have the 4 gas giants: Jupiter, Saturn, Uranus, & Neptune."
     }
   },
   {
     "model": "website.subtopics",
     "pk": 2,
     "fields": {
-      "name": "Sun"
+      "name": "Sun",
+      "article": ""
     }
   },
 
@@ -18,42 +20,48 @@
     "model": "website.subtopics",
     "pk": 3,
     "fields": {
-      "name": "Current Planetary Missions"
+      "name": "Current Planetary Missions",
+      "article": ""
     }
   },
   {
     "model": "website.subtopics",
     "pk": 4,
     "fields": {
-      "name": "Big Bang"
+      "name": "Big Bang",
+      "article": ""
     }
   },
   {
     "model": "website.subtopics",
     "pk": 5,
     "fields": {
-      "name": "Geometry of the Universe"
+      "name": "Geometry of the Universe",
+      "article": ""
     }
   },
   {
     "model": "website.subtopics",
     "pk": 6,
     "fields": {
-      "name": "Black Holes"
+      "name": "Black Holes",
+      "article": ""
     }
   },
   {
     "model": "website.subtopics",
     "pk": 7,
     "fields": {
-      "name": "Supernovas"
+      "name": "Supernovas",
+      "article": ""
     }
   },
   {
     "model": "website.subtopics",
     "pk": 8,
     "fields": {
-      "name": "Nebulas"
+      "name": "Nebulas",
+      "article": ""
     }
   }
 ]

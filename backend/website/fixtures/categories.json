@@ -5,7 +5,7 @@
     "fields": {
       "name": "Our Solar System",
       "photo": "2022-11-11",
-      "opening_article": "Our solar system is home to many wonders. From Enceladus, an ice-covered world like Hoth from Star Wars, to Olympus Mons, the largest volcano in the solar system. We have explored so much of it, yet still know so little. Our backyard neighborhood consists of a medium-sized star, eight planets, dozens of moons, & millions of asteroids. Located in an outer spiral arm of the Milky Way galaxy, it is just one of the millions of solar systems quite like it; so what makes it special? Find out . . .",
+      "article": "Our solar system is home to many wonders. From Enceladus, an ice-covered world like Hoth from Star Wars, to Olympus Mons, the largest volcano in the solar system. We have explored so much of it, yet still know so little. Our backyard neighborhood consists of a medium-sized star, eight planets, dozens of moons, & millions of asteroids. Located in an outer spiral arm of the Milky Way galaxy, it is just one of the millions of solar systems quite like it; so what makes it special? Find out . . .",
       "subtopics": [1, 2, 3]
     }
   },
@@ -15,7 +15,7 @@
     "fields": {
       "name": "The Universe",
       "photo": "2022-11-11",
-      "opening_article": "From its time of conception about 13.8 billion years ago, the Universe has created everything that we can and can't see. Within its most likely flat shape, there are stars, galaxies, black holes, nebulas, and many other wonders.",
+      "article": "From its time of conception about 13.8 billion years ago, the Universe has created everything that we can and can't see. Within its most likely flat shape, there are stars, galaxies, black holes, nebulas, and many other wonders.",
       "subtopics": [4, 5]
     }
   },
@@ -26,7 +26,7 @@
     "fields": {
       "name": "Cosmic Wonders",
       "photo": "2022-11-11",
-      "opening_article": "Massive explosions, beautiful star nurseries, and super black holes that can swallow our own Sun are just a few of the cosmic wonders living in our Universe. ",
+      "article": "Massive explosions, beautiful star nurseries, and super black holes that can swallow our own Sun are just a few of the cosmic wonders living in our Universe. ",
       "subtopics": [6, 7, 8]
     }
   }

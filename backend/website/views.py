@@ -30,6 +30,17 @@ class ImagesAPIView(APIView):
         return Response(serializer.data)
 
 
+class SubTopicAPIView(APIView):
+    serializer_class = SubtopicsSerializer
+
+    def get(self, request):
+        name = request.query_params["name"]
+        subtopic = SubTopics.objects.get(name=name)
+        serializer = SubtopicsSerializer(subtopic)
+
+        return Response(serializer.data)
+
+
 class CategoriesAPIView(APIView):
     serializer_class = CategoriesSerializer
 
@@ -56,10 +67,8 @@ class UserAPIView(APIView):
 
         if email != None:
             user = User.objects.get(email=email).__dict__
-
             if password != user['password']:
                 response = 'Wrong Password'
-
                 return Response(response)
 
         serializer = UserSerializer(user)
@@ -77,4 +86,33 @@ class UserAPIView(APIView):
         new_user.save()
         serializer = UserSerializer(new_user)
 
+        return Response(serializer.data)
+
+
+class UserInfoAPIView(APIView):
+    serializer_class = UserSerializer
+
+    def get(self, request):
+        user_id = request.query_params["user_id"]
+
+        if user_id != None:
+            user = User.objects.get(id=user_id)
+
+        serializer = UserSerializer(user)
+        return Response(serializer.data)
+
+    def put(self, request):
+        data = request.data
+
+        user_id = data['params']['user_id']
+        email = data['params']['email']
+        first_name = data['params']['first_name']
+        last_name = data['params']['last_name']
+        favorite_planet = data['params']['favorite_planet']
+
+        user = User.objects.filter(id=user_id)
+        user.update(email=email, first_name=first_name, last_name=last_name,
+                    favorite_planet=favorite_planet)
+
+        serializer = UserSerializer(user, many=True)
         return Response(serializer.data)

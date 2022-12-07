@@ -11,7 +11,7 @@ class ImagesSerializer(serializers.ModelSerializer):
 class SubtopicsSerializer(serializers.ModelSerializer):
     class Meta:
         model = SubTopics
-        fields = ['id', 'name']
+        fields = ['id', 'name', 'article']
 
 
 class CategoriesSerializer(serializers.ModelSerializer):
@@ -19,10 +19,11 @@ class CategoriesSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Categories
-        fields = ['id', 'name', 'photo', 'opening_article', 'subtopics']
+        fields = ['id', 'name', 'photo', 'article', 'subtopics']
 
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['email', 'password']
+        fields = ['id', 'email', 'password', 'first_name',
+                  'last_name', 'favorite_planet']

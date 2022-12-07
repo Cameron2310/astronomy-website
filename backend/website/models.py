@@ -20,7 +20,7 @@ class SubTopics(models.Model):
 class Categories(models.Model):
     name = models.CharField(max_length=50)
     photo = models.URLField(max_length=200)
-    opening_article = models.TextField()
+    article = models.TextField()
     subtopics = models.ManyToManyField(SubTopics)
 
 
@@ -30,8 +30,13 @@ class User(AbstractBaseUser):
         max_length=200,
         unique=True
     )
-    username = None
+    first_name = models.CharField(
+        default='First Name', blank=True, max_length=50)
+    last_name = models.CharField(
+        default='Last Name', blank=True, max_length=50)
+    favorite_planet = models.CharField(null=True, blank=True, max_length=100)
 
+    username = None
     password = models.CharField(max_length=200)
 
     USERNAME_FIELD = "email"
