@@ -11,6 +11,15 @@ def index(request, **kwargs):
     return resp
 
 
+class DataAPIView(APIView):
+    serializer_class = CategoriesSerializer
+
+    def get(self, request):
+        categories = Categories.objects.all()
+        serializer = CategoriesSerializer(categories, many=True)
+        return Response(serializer.data)
+
+
 class ImagesAPIView(APIView):
     serializer_class = ImagesSerializer
 
@@ -19,6 +28,23 @@ class ImagesAPIView(APIView):
         serializer = ImagesSerializer(images, many=True)
 
         return Response(serializer.data)
+
+
+class CategoriesAPIView(APIView):
+    serializer_class = CategoriesSerializer
+
+    def get(self, request):
+        category_name = request.query_params["categoryName"]
+
+        if category_name != None:
+            category = Categories.objects.get(name=category_name)
+            serializer = CategoriesSerializer(category)
+            return Response(serializer.data)
+
+        else:
+            categories = Categories.objects.all()
+            serializer = CategoriesSerializer(categories, many=True)
+            return Response(serializer.data)
 
 
 class UserAPIView(APIView):

@@ -1,0 +1,59 @@
+[
+  {
+    "model": "website.subtopics",
+    "pk": 1,
+    "fields": {
+      "name": "Planets"
+    }
+  },
+  {
+    "model": "website.subtopics",
+    "pk": 2,
+    "fields": {
+      "name": "Sun"
+    }
+  },
+
+  {
+    "model": "website.subtopics",
+    "pk": 3,
+    "fields": {
+      "name": "Current Planetary Missions"
+    }
+  },
+  {
+    "model": "website.subtopics",
+    "pk": 4,
+    "fields": {
+      "name": "Big Bang"
+    }
+  },
+  {
+    "model": "website.subtopics",
+    "pk": 5,
+    "fields": {
+      "name": "Geometry of the Universe"
+    }
+  },
+  {
+    "model": "website.subtopics",
+    "pk": 6,
+    "fields": {
+      "name": "Black Holes"
+    }
+  },
+  {
+    "model": "website.subtopics",
+    "pk": 7,
+    "fields": {
+      "name": "Supernovas"
+    }
+  },
+  {
+    "model": "website.subtopics",
+    "pk": 8,
+    "fields": {
+      "name": "Nebulas"
+    }
+  }
+]

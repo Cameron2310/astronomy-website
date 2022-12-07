@@ -21,7 +21,7 @@ class Categories(models.Model):
     name = models.CharField(max_length=50)
     photo = models.URLField(max_length=200)
     opening_article = models.TextField()
-    subtopics = models.ForeignKey(SubTopics, on_delete=models.CASCADE)
+    subtopics = models.ManyToManyField(SubTopics)
 
 
 class User(AbstractBaseUser):
