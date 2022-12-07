@@ -1,5 +1,7 @@
 import SubjectCard from "../SubjectCard/SubjectCard";
 
+// Component for Topics & Subtopics which shows images & correlating articles
+
 export default function TopicInfo({ props }) {
   console.log(props);
 
@@ -7,11 +9,11 @@ export default function TopicInfo({ props }) {
     return (
       <div>
         <h2>{props.data.name}</h2>
-        <p>{props.data.opening_article}</p>
+        <p>{props.data.article}</p>
         {props.data.subtopics.map((subtopic, i) => {
           return (
             <div key={i}>
-              <SubjectCard props={subtopic} />
+              <SubjectCard props={subtopic} categoryName={null} />
             </div>
           );
         })}

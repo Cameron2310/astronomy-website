@@ -1,17 +1,23 @@
 import Card from "react-bootstrap/Card";
+import CardImg from "react-bootstrap/esm/CardImg";
 
-export default function SubjectCard({ props }) {
+// Component for bootstrap cards
+
+export default function SubjectCard({ props, categoryName }) {
+  console.log(props, categoryName);
   return (
     <Card
       onClick={() => {
-        window.location = `/${props.name}/`;
+        if (categoryName === null) window.location = `/${props.name}/`;
+        window.location = `/${props.categoryName}/${props.name}/`;
       }}
       style={{ width: "18rem", cursor: "pointer" }}
     >
-      <Card.Img variant="top" src="" />
       <Card.Body>
         <Card.Title>{props.name}</Card.Title>
-        <Card.Text></Card.Text>
+        <Card.Text>
+          <CardImg className="card-img" src={props.image} />
+        </Card.Text>
       </Card.Body>
     </Card>
   );

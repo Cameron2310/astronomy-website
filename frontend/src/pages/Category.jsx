@@ -20,5 +20,5 @@ export default function Category() {
   }, [categoryName]);
 
   if (!data) return null;
-  return <TopicInfo props={data} />;
+  return <TopicInfo props={{ data: data, isSubTopic: false }} />;
 }

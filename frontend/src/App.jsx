@@ -7,9 +7,11 @@ import HomePage from "./pages/HomePage";
 import Category from "./pages/Category";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
-// import Footer from "./components/Footer/Footer";
-import PlanetsPage from "./pages/Solar-System/PlanetsPage";
+import PlanetsPage from "./pages/Solar-System/Planets-page/PlanetsPage";
+import IndividualPlanetPage from "./pages/Solar-System/Planets-page/Individual-planet/IndividualPlanetPage";
 import SunPage from "./pages/Solar-System/SunPage";
+import Dashboard from "./pages/Dashboard";
+// import Footer from "./components/Footer/Footer";
 
 function App() {
   const [data, setData] = useState();
@@ -31,7 +33,12 @@ function App() {
         <Route path="/:categoryName/" element={<Category />} />
         <Route path="/login/" element={<LoginPage />} />
         <Route path="/signup/" element={<SignUpPage />} />
+        <Route path="/dashboard/:userId/" element={<Dashboard />} />
         <Route path="/Planets/" element={<PlanetsPage />} />
+        <Route
+          path="/Planets/:planetName/"
+          element={<IndividualPlanetPage />}
+        />
         <Route path="/Sun/" element={<SunPage props={data} />} />
         <Route path="/Black Holes/" element={<SunPage />} />
         <Route path="/Supernovas/" element={<SunPage />} />

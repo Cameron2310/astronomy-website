@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
@@ -11,14 +11,14 @@ export default function Login() {
   const [password, setPassword] = useState();
 
   const getUser = async () => {
-    const response = await axios("http://localhost:8000/userlogin/", {
+    const response = await axios.get("http://localhost:8000/userlogin/", {
       params: {
         email: email,
         password: password,
       },
     });
     if (response.status == 200) {
-      window.location = "/";
+      window.location = `/dashboard/${response.data.id}/`;
     } else {
       window.location = "login/";
     }

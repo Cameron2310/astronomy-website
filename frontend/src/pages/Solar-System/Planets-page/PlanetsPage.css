@@ -1,0 +1,15 @@
+.card {
+  background-color: #3ea6d2;
+  color: white;
+  height: 5rem;
+  margin: 1rem 1rem;
+}
+.card-text {
+  position: relative;
+  bottom: 30px;
+}
+.card-img {
+  display: block;
+  margin-left: auto;
+  width: 50px;
+}

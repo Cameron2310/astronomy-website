@@ -6,24 +6,19 @@ export default function SignUp() {
   const [password, setPassword] = useState();
 
   const postUser = async () => {
-    const post = await axios
-      .post("http://localhost:8000/userlogin/", {
-        params: {
-          email: email,
-          password: password,
-        },
-      })
-      .then(function (post) {
-        if (post.status == 200) {
-          window.location = "/";
-        } else {
-          window.location = "login/";
-        }
-      })
-      .catch(function () {
-        window.location = "/login/";
-      });
+    const response = await axios.post("http://localhost:8000/userlogin/", {
+      params: {
+        email: email,
+        password: password,
+      },
+    });
+    if (response.status == 200) {
+      window.location = `/dashboard/${response.data.id}/`;
+    } else {
+      window.location = "login/";
+    }
   };
+
   return (
     <div>
       <div>
