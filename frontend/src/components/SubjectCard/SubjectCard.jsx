@@ -9,7 +9,9 @@ export default function SubjectCard({ props, categoryName }) {
     <Card
       onClick={() => {
         if (categoryName === null) window.location = `/${props.name}/`;
-        window.location = `/${props.categoryName}/${props.name}/`;
+        else {
+          window.location = `/${props.categoryName}/${props.name}/`;
+        }
       }}
       style={{ width: "18rem", cursor: "pointer" }}
     >
