@@ -1,0 +1,84 @@
+[
+  {
+    "model": "website.individual_items",
+    "pk": 1,
+    "fields": {
+      "name": "Mercury",
+      "article": "",
+      "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2369&#39"
+    }
+  },
+  {
+    "model": "website.individual_items",
+    "pk": 2,
+    "fields": {
+      "name": "Venus",
+      "article": "",
+      "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2343&#39"
+    }
+  },
+
+  {
+    "model": "website.individual_items",
+    "pk": 3,
+    "fields": {
+      "name": "Earth",
+      "article": "",
+      "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2393&#39"
+    }
+  },
+  {
+    "model": "website.individual_items",
+    "pk": 4,
+    "fields": {
+      "name": "Mars",
+      "article": "",
+      "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2372&#39"
+    }
+  },
+  {
+    "model": "website.individual_items",
+    "pk": 5,
+    "fields": {
+      "name": "Jupiter",
+      "article": "",
+      "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2375&#39"
+    }
+  },
+  {
+    "model": "website.individual_items",
+    "pk": 6,
+    "fields": {
+      "name": "Saturn",
+      "article": "",
+      "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2355&#39"
+    }
+  },
+  {
+    "model": "website.individual_items",
+    "pk": 7,
+    "fields": {
+      "name": "Uranus",
+      "article": "",
+      "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2344&#39"
+    }
+  },
+  {
+    "model": "website.individual_items",
+    "pk": 8,
+    "fields": {
+      "name": "Neptune",
+      "article": "",
+      "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2364&#39"
+    }
+  },
+  {
+    "model": "website.individual_items",
+    "pk": 9,
+    "fields": {
+      "name": "Sun",
+      "article": "",
+      "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2352&#39"
+    }
+  }
+]

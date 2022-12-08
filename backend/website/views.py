@@ -20,6 +20,16 @@ class DataAPIView(APIView):
         return Response(serializer.data)
 
 
+class IndividualItemAPIView(APIView):
+    serializer_class = IndividualItemsSerializer
+
+    def get(self, request):
+        name = request.query_params["item_name"]
+        item = Individual_items.objects.get(name=name)
+        serializer = IndividualItemsSerializer(item)
+        return Response(serializer.data)
+
+
 class ImagesAPIView(APIView):
     serializer_class = ImagesSerializer
 

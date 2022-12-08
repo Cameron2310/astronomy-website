@@ -12,6 +12,12 @@ class Images(models.Model):
     likes = models.IntegerField(default=0)
 
 
+class Individual_items(models.Model):
+    name = models.CharField(max_length=50)
+    article = models.TextField()
+    three_d_model = models.URLField(max_length=100, default=None)
+
+
 class SubTopics(models.Model):
     name = models.CharField(max_length=50)
     article = models.TextField()

@@ -8,6 +8,12 @@ class ImagesSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'date', 'explanation', 'url', 'likes']
 
 
+class IndividualItemsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Individual_items
+        fields = ['id', 'name', 'article', 'three_d_model']
+
+
 class SubtopicsSerializer(serializers.ModelSerializer):
     class Meta:
         model = SubTopics
