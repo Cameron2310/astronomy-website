@@ -35,7 +35,7 @@ class ImagesAPIView(APIView):
     serializer_class = ImagesSerializer
 
     def get(self, request):
-        images = Images.objects.all()
+        images = Images.objects.all().order_by('-id')[:5][::-1]
         serializer = ImagesSerializer(images, many=True)
 
         return Response(serializer.data)

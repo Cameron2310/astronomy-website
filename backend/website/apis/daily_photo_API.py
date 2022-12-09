@@ -4,7 +4,7 @@ from website.models import *
 
 
 def get_daily_image():
-    API_KEY = ''
+    API_KEY = '2laWFLmHXofGV1jmdccXiltU6Tn6C7UQWGRLI9aX'
 
     def get_random_date():
         day = randrange(1, 28)
@@ -15,11 +15,9 @@ def get_daily_image():
         return random_date
 
     random_date = get_random_date()
-    url = f"https://api.nasa.gov/planetary/apod?date={random_date}&api_key={API_KEY}"
+    url = f"https://api.nasa.gov/planetary/apod?&api_key={API_KEY}"
     request = requests.get(url)
     response = request.json()
-
-    print(response)
 
     while response['media_type'] != 'image':
         url = f"https://api.nasa.gov/planetary/apod?date={random_date}&api_key={API_KEY}"
@@ -29,9 +27,11 @@ def get_daily_image():
     return response
 
 
-# def update_images():
-#     images = get_daily_images()
+def save_image():
+    image = get_daily_image()
 
-#     new_image = Images.objects.create(
-#         title=images[i]['title'], date=images[i]['date'], explanation=images[i]['explanation'], url=images[i]['url'])
-#     new_image.save()
+    new_image = Images.objects.create(
+        title=image['title'], date=image['date'], explanation=image['explanation'], url=image['url'])
+    new_image.save()
+
+    return new_image
