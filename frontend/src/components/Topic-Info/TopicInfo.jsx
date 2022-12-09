@@ -13,7 +13,7 @@ export default function TopicInfo({ props }) {
         {props.data.subtopics.map((subtopic, i) => {
           return (
             <div key={i}>
-              <SubjectCard props={subtopic} categoryName={null} />
+              <SubjectCard props={subtopic} categoryName={{ name: null }} />
             </div>
           );
         })}

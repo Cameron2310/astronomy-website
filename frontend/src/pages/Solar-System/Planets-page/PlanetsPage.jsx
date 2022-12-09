@@ -1,9 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { CardGroup, Col, Row } from "reactstrap";
-import IFrame from "../../../components/IFrame";
+import Subcategory from "../../../components/Subcategory";
 import SubjectCard from "../../../components/SubjectCard/SubjectCard";
-import TopicInfo from "../../../components/Topic-Info/TopicInfo";
 import "./PlanetsPage.css";
 
 export default function PlanetPage() {
@@ -44,14 +43,13 @@ export default function PlanetPage() {
   if (!data || !subTopic) return null;
   return (
     <div>
-      <IFrame
+      <Subcategory
         props={{
           url: "https://sketchfab.com/models/fd0cb20fd0794d3886cbbc8cc86ff6c9/embed",
+          data: subTopic,
         }}
-      ></IFrame>
-      <div>
-        <TopicInfo props={{ data: subTopic }} />
-      </div>
+      />
+
       <CardGroup>
         <Row xs={1} md={3}>
           {data.bodies.map((planet, i) => {

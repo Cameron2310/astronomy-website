@@ -7,12 +7,12 @@ import FactsCard from "../../../../components/Facts-card/FactsCard";
 export default function IndividualPlanetsPage() {
   const [planetData, setPlanetData] = useState();
   const [data, setData] = useState();
-  const { planetName } = useParams();
+  const { topicName } = useParams();
 
   useEffect(() => {
     const getPlanetData = async () => {
       const response = await axios(
-        `https://api.le-systeme-solaire.net/rest/bodies?filter[]=englishName,eq,${planetName}`
+        `https://api.le-systeme-solaire.net/rest/bodies?filter[]=englishName,eq,${topicName}`
       );
       setPlanetData(response.data.bodies[0]);
     };
@@ -23,7 +23,7 @@ export default function IndividualPlanetsPage() {
     const getData = async () => {
       const response = await axios("/finditem/", {
         params: {
-          item_name: planetName,
+          item_name: topicName,
         },
       });
       console.log(response.data);
@@ -39,6 +39,7 @@ export default function IndividualPlanetsPage() {
       <div>
         <h2>{data.name}</h2>
         <FactsCard props={planetData} />
+        <p>{data.article}</p>
       </div>
     </div>
   );

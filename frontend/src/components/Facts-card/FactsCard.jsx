@@ -10,7 +10,7 @@ export default function FactsCard({ props }) {
 
   return (
     <div>
-      <p>Gravity: {props.gravity}</p>
+      <p>Gravity: {props.gravity} m/s^2</p>
       <p>Average temperature: {convertKelvinToFahrenheit()}°F</p>
       <p>
         Closest {props.englishName} is to the Sun:{" "}

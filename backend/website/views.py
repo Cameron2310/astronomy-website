@@ -24,6 +24,7 @@ class IndividualItemAPIView(APIView):
     serializer_class = IndividualItemsSerializer
 
     def get(self, request):
+        print(request.data)
         name = request.query_params["item_name"]
         item = Individual_items.objects.get(name=name)
         serializer = IndividualItemsSerializer(item)

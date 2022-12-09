@@ -4,14 +4,11 @@ import CardImg from "react-bootstrap/esm/CardImg";
 // Component for bootstrap cards
 
 export default function SubjectCard({ props, categoryName }) {
-  console.log(props, categoryName);
+  // console.log(props, categoryName);
   return (
     <Card
       onClick={() => {
-        if (categoryName === null) window.location = `/${props.name}/`;
-        else {
-          window.location = `/${props.categoryName}/${props.name}/`;
-        }
+        window.location = `${props.name}/`;
       }}
       style={{ width: "18rem", cursor: "pointer" }}
     >

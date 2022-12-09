@@ -13,10 +13,7 @@ urlpatterns = [
     path('', views.index),
     path('dashboard/<int:user_id>/', views.index),
     path('<str:categoryName>/', views.index),
-    path('Sun/', views.index),
-    path('Planets/', views.index),
-    path('Planets/<str:planet_name>/', views.index),
-    path('Black Holes/', views.index),
-    path('Supernovas/', views.index),
-    path('Nebulas/', views.index),
+    path('<str:categoryName>/<str:subCategory>/', views.index),
+    path('<str:categoryName>/<str:subCategory>/<str:topicName>/', views.index),
+
 ]

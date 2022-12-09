@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
       "name": "Mercury",
-      "article": "",
+      "article": "Mercury, the closest planet to the Sun, is a bipolar planet with temperatures ranging from -300°F to 800°F. This is due to Mercury not having an atmosphere. Mercury is also the smallest planet in the Solar System. With a circumference of only 9,525 miles, 18 Mercurys could fit inside Earth. However, Mercury is the fastest planet. Traveling at 29 miles per second, Mercury orbits around the Sun every 88 Earth days. It also had a recent visitor. NASA's Messenger spacecraft conducted a mission, where it mapped the surface of Mercury. Messenger is the second of 2 NASA spacecraft to ever go to Mercury.\nEven on the smallest planet, crazy events can take place. Scientists have been perplexed by Mercury's magnetic field; the planet is supposed to be too small to have a global magnetic field, yet it has a magnetic field that is only 1% the strength of the Earth's. However, according to NASA, when Mercury's magnetic field interacts with the solar wind, it sometimes generates magnetic tornadoes that channel fast, hot solar wind plasma to the surface of the itty-bitty planet. When solar wind plasma hits the surface, it displaces neutrally charged atoms on the surface, sending the loops high into Mercury's atmosphere. Want to learn more about Mercury? Check out some of the available resources!",
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2369&#39"
     }
   },
@@ -13,7 +13,7 @@
     "pk": 2,
     "fields": {
       "name": "Venus",
-      "article": "",
+      "article": "100°F seems pretty hot until you realize that temperatures on Venus can reach 900°F - hot enough to melt lead. It's not only hot though; the pressure there is immense. With air pressure, 90 times what we have here on Earth, standing on Venus can feel like being a mile below the ocean on Earth. As if that wasn't crazy enough, Venus also rotates on its axis backwards. This means that, on Venus, the Sun rises in the west and sets in the east, opposite to what we experience on Earth. (It’s not the only planet in our solar system with such an oddball rotation – Uranus spins on its side.)\nMost recently Venus has been explored by NASA's Parker Solar Probe which did a flyby in February 2021. Also last year, three new missions to Venus were announced. VERITAS, DAVINCI, & EnVision will all take place in the next 10 years. We will hopefully learn a lot more about the hottest planet in our solar system! Check out our resources too!",
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2343&#39"
     }
   },
@@ -23,7 +23,7 @@
     "pk": 3,
     "fields": {
       "name": "Earth",
-      "article": "",
+      "article": "Earth, our home, is the only planet we know of with life on it. It is also the only planet with liquid water on its surface. Our atmosphere is mostly nitrogen with a combination of 78% nitrogen, 21% oxygen, and 1% other stuff.\nSince the Earth was formed 4.6 billion years ago, it has been through some major changes. Originally, days were only 6 hours long; however, due to the Moon slowing the Earth's rotation, days are getting longer by 1.7 milliseconds every century. Another major change is the Earth's continents have come together and broken off multiple times including when they formed the supercontinents Rodinia & Pangea. These changes make Earth pretty special. Our home is the only planet in the solar system with tectonic plates. If you would like to learn more about our home, please check out the resources on Earth.",
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2393&#39"
     }
   },
@@ -32,7 +32,7 @@
     "pk": 4,
     "fields": {
       "name": "Mars",
-      "article": "",
+      "article": "The red planet has been the main topic of many science fiction novels and movies from The War of the Worlds to Total Recall. Mars is one of the most explored bodies in our solar system, and it's the only planet where we've sent rovers to roam the alien landscape. Currently, there are 2 rovers on Mars - Curiosity, and Perseverance, as well as a lander (InSight) and a helicopter (Ingenuity). Temperatures can range from -148°F in the winter to 68°F in the summer. Mars has a very thin atmosphere, preventing it from being able to retain heat. The atmosphere is made up of 96% carbon dioxide and 2.7% nitrogen.\nMars looks red due to iron in the Martian soil oxidizing or turning to rust. And despite the fact that Mars is smaller than Earth, the red planet has 2 moons named Phobos and Deimos. The moons get their names from the Roman god of war's horses and the planet gets its name from the Roman god of war. Despite the public's fascination with Mars, the planet contains no life; but, scientists believe that it has the most favorable conditions to support life, and scientists believe there is potential for life under the surface of Mars because they recently found water ice just under the surface. To learn more about Mars, check out our available resources.",
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2372&#39"
     }
   },
@@ -41,7 +41,7 @@
     "pk": 5,
     "fields": {
       "name": "Jupiter",
-      "article": "",
+      "article": "The monster planet, Jupiter, is the largest planet in the solar system. Nobody knows who first laid eyes on Jupiter; however, the Babylonians first studied the massive planet over 2,400 years ago. Almost 2000 years before Galileo would be the first to look upon Jupiter through a telescope. Named after the Roman king of the gods, Jupiter, it has 80 moons and weighs nearly 318 times more than Earth. Its infamous great red spot has been brewing for centuries. The storm itself is twice the size of Earth. The giant planet is 460 million miles away from the Sun and takes 11 Earth years to complete 1 orbit around the Sun.\nJupiter has had many guests in the past. The most recent and ninth was the Juno spacecraft which arrived in 2016. Its mission is to measure Jupiter's composition, gravitational field, magnetic field, and polar magnetosphere. It will also search for clues about how the planet formed, including whether it has a rocky core, the amount of water present within the deep atmosphere, mass distribution, and its deep winds, which can reach speeds up to 390 miles per hour. To learn more about Juno and Jupiter, check out our resources!",
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2375&#39"
     }
   },
@@ -50,7 +50,7 @@
     "pk": 6,
     "fields": {
       "name": "Saturn",
-      "article": "",
+      "article": "Beyonce's favorite planet has got to be Saturn considering it's got 7 massive rings that are visible from Earth. The rings are made up of thousands of ice and rock ringlets. Just like the other gas giants, Saturn's atmosphere is composed of hydrogen and helium. Not only does Saturn have the most rings, but it also has the most moons with 82 discovered so far.\nThe Assyrians were the first to document Saturn in 700 B.C. and they called it \"Star of Ninib\". The Romans later renamed it after their god of agriculture. In 1979, Pioneer II was the first spacecraft to reach Saturn. It made many discoveries including a new ring and moon. The most recent spacecraft to go to Saturn was the Cassini craft whose mission ended in 2017.\nSaturn has short 10 hour days; however its years are long. A year on Saturn is 29 Earth years long. This is due to the fact that Saturn is over 900 million miles away from Earth. If you would like to learn more about the 2nd biggest planet in the solar system, check out our resources!",
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2355&#39"
     }
   },
@@ -59,7 +59,7 @@
     "pk": 7,
     "fields": {
       "name": "Uranus",
-      "article": "",
+      "article": "Uranus is probably the wackiest planet in the solar system with its sideways rotation. The planet, like Venus, rotates backwards from East to West. Its axial tilt is a staggering 99 degrees, which makes it spin like a rolling ball. For comparison, Earth tilts on its axis at 23 degrees. Uranus has 27 known moons and does a complete orbit around the Sun every 84 years. The planet has only ever been visited by a spacecraft once, which was the Voyager 2 craft back in 1986. Uranus is a unique planet because it is mostly made up of water, methane, and ammonia above a small rocky core.\nThe planet gets its name from the Greek primordial god of the sky. And despite being closer to the Sun than Neptune, Uranus is the coldest planet in the solar system. Uranus has an average temperature of -353°F and its winds can reach speeds of 90 to 360 mph at times. Check out our resources too!",
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2344&#39"
     }
   },
@@ -68,7 +68,7 @@
     "pk": 8,
     "fields": {
       "name": "Neptune",
-      "article": "",
+      "article": "Neptune is the farthest planet from the Sun, at a distance of 2.8 billion miles away. The planet is so far away that it takes 165 years to orbit around the Sun. Since its discovery in 1846, Neptune has only completed 1 orbit. The planet received its name from the Roman god of the sea and was discovered in 1846. Even though the planet is almost 4 times larger than Earth, Neptune and Earth have almost identical gravity; however, the necessary escape velocity to leave the planet (52,702 mph) is more than double Earth's escape velocity of 25,031 mph.\nMuch like Uranus, Voyager II is the only spacecraft to visit Neptune. Also, like Uranus, Neptune is composed of water, methane, and ammonia. Despite not being the coldest planet, Neptune is the planet with the strongest winds in the solar system with speeds reaching up to 1300 mph. Learn more by reading our resources!",
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2364&#39"
     }
   },

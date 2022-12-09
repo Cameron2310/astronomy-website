@@ -1,14 +1,29 @@
-import IFrame from "../../components/IFrame";
-import TopicInfo from "../../components/Topic-Info/TopicInfo";
+import Subcategory from "../../components/Subcategory";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
-export default function SunPage({ props }) {
-  console.log(props);
+export default function SunPage() {
+  const [subTopic, setSubTopic] = useState();
+
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios("/finditem/", {
+        params: { item_name: "Sun" },
+      });
+      setSubTopic(response.data);
+    };
+    getData();
+  }, []);
+
+  if (!subTopic) return null;
   return (
     <div>
-      <IFrame
-        props={{ url: "https://solarsystem.nasa.gov/gltf_embed/2352&#39" }}
+      <Subcategory
+        props={{
+          url: subTopic.three_d_model,
+          data: subTopic,
+        }}
       />
-      <TopicInfo props={{ data: props[0], isSubTopic: true }} />;
     </div>
   );
 }
