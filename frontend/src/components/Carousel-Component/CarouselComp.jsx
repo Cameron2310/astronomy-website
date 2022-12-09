@@ -30,9 +30,11 @@ export default function CarouselComp() {
                 src={image.url}
                 alt={image.explanation}
               />
-              <Carousel.Caption>
-                <h3>{image.title}</h3>
-              </Carousel.Caption>
+              <a href={`Photos/${image.title}/`}>
+                <Carousel.Caption>
+                  <h3>{image.title}</h3>
+                </Carousel.Caption>
+              </a>
             </Carousel.Item>
           );
         })}

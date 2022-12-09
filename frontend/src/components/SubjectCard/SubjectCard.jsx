@@ -3,8 +3,8 @@ import CardImg from "react-bootstrap/esm/CardImg";
 
 // Component for bootstrap cards
 
-export default function SubjectCard({ props, categoryName }) {
-  // console.log(props, categoryName);
+export default function SubjectCard({ props }) {
+  console.log(props);
   return (
     <Card
       onClick={() => {

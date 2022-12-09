@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import IFrame from "../../../../components/IFrame";
 import FactsCard from "../../../../components/Facts-card/FactsCard";
+import TopicInfo from "../../../../components/Topic-Info/TopicInfo";
 
 export default function IndividualPlanetsPage() {
   const [planetData, setPlanetData] = useState();
@@ -21,9 +22,9 @@ export default function IndividualPlanetsPage() {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios("/finditem/", {
+      const response = await axios("/subtopic/", {
         params: {
-          item_name: topicName,
+          name: topicName,
         },
       });
       console.log(response.data);
@@ -37,9 +38,8 @@ export default function IndividualPlanetsPage() {
     <div>
       <IFrame props={{ url: data.three_d_model }} />
       <div>
-        <h2>{data.name}</h2>
         <FactsCard props={planetData} />
-        <p>{data.article}</p>
+        <TopicInfo props={{ data: data }} />
       </div>
     </div>
   );

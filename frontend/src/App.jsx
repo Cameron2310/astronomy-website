@@ -2,15 +2,17 @@ import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./App.css";
 
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/HomePages/HomePage";
+import PhotoPage from "./pages/HomePages/PhotoPage";
 import Category from "./pages/Category";
 import LoginPage from "./pages/User-Pages/LoginPage";
 import SignUpPage from "./pages/User-Pages/SignupPage";
 import PlanetsPage from "./pages/Solar-System/Planets-page/PlanetsPage";
 import IndividualPlanetPage from "./pages/Solar-System/Planets-page/Individual-planet/IndividualPlanetPage";
-import SunPage from "./pages/Solar-System/SunPage";
 import Dashboard from "./pages/User-Pages/Dashboard";
+import ArticlePage from "./pages/ArticlePage/";
 // import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -30,8 +32,9 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="Photos/:photoName/" element={<PhotoPage />} />
         <Route path=":categoryName/" element={<Category />} />
-        <Route path=":categoryName/:subCategory/" element={<SunPage />} />
+        <Route path=":categoryName/:subCategory/" element={<ArticlePage />} />
         <Route path=":categoryName/Planets/" element={<PlanetsPage />} />
         <Route
           path=":categoryName/:subCategory/:topicName/"

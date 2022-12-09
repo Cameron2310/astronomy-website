@@ -45,8 +45,9 @@ export default function PlanetPage() {
     <div>
       <Subcategory
         props={{
-          url: "https://sketchfab.com/models/fd0cb20fd0794d3886cbbc8cc86ff6c9/embed",
+          url: "https://sketchfab.com/models/b6b69a95a6f0426bb8bbc2e8cb7ff46a/embed",
           data: subTopic,
+          isSubtopic: true,
         }}
       />
 
