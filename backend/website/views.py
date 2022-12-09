@@ -20,23 +20,23 @@ class DataAPIView(APIView):
         return Response(serializer.data)
 
 
-class IndividualItemAPIView(APIView):
-    serializer_class = IndividualItemsSerializer
-
-    def get(self, request):
-        print(request.data)
-        name = request.query_params["item_name"]
-        item = Individual_items.objects.get(name=name)
-        serializer = IndividualItemsSerializer(item)
-        return Response(serializer.data)
-
-
 class ImagesAPIView(APIView):
     serializer_class = ImagesSerializer
 
     def get(self, request):
         images = Images.objects.all().order_by('-id')[:5][::-1]
         serializer = ImagesSerializer(images, many=True)
+
+        return Response(serializer.data)
+
+
+class FilterImagesAPIView(APIView):
+    serializer_class = ImagesSerializer
+
+    def get(self, request):
+        name = request.query_params["photo_name"]
+        image = Images.objects.get(title=name)
+        serializer = ImagesSerializer(image)
 
         return Response(serializer.data)
 

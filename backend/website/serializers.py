@@ -8,16 +8,10 @@ class ImagesSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'date', 'explanation', 'url', 'likes']
 
 
-class IndividualItemsSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Individual_items
-        fields = ['id', 'name', 'article', 'three_d_model']
-
-
 class SubtopicsSerializer(serializers.ModelSerializer):
     class Meta:
         model = SubTopics
-        fields = ['id', 'name', 'article']
+        fields = ['id', 'name', 'article', 'three_d_model']
 
 
 class CategoriesSerializer(serializers.ModelSerializer):
@@ -25,7 +19,8 @@ class CategoriesSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Categories
-        fields = ['id', 'name', 'photo', 'article', 'subtopics']
+        fields = ['id', 'name', 'article',
+                  'subtopics', 'three_d_model']
 
 
 class UserSerializer(serializers.ModelSerializer):

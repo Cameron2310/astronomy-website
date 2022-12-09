@@ -12,20 +12,15 @@ class Images(models.Model):
     likes = models.IntegerField(default=0)
 
 
-class Individual_items(models.Model):
+class SubTopics(models.Model):
     name = models.CharField(max_length=50)
     article = models.TextField()
     three_d_model = models.URLField(max_length=100, default=None)
 
 
-class SubTopics(models.Model):
-    name = models.CharField(max_length=50)
-    article = models.TextField()
-
-
 class Categories(models.Model):
     name = models.CharField(max_length=50)
-    photo = models.URLField(max_length=200)
+    three_d_model = models.URLField(max_length=200)
     article = models.TextField()
     subtopics = models.ManyToManyField(SubTopics)
 
