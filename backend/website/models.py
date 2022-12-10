@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+
 
 # Create your models here.
 
@@ -25,11 +26,27 @@ class Categories(models.Model):
     subtopics = models.ManyToManyField(SubTopics)
 
 
+class UserManager(BaseUserManager):
+
+    def create_user(self, email, password, **kwargs):
+        """Create and return a `User` with an email, phone number, username and password."""
+        if email is None:
+            raise TypeError('Users must have a email.')
+        if password is None:
+            raise TypeError('Users must have an password.')
+
+        user = self.model(email=self.normalize_email(email))
+        user.set_password(password)
+        user.save(using=self._db)
+
+        return user
+
+
 class User(AbstractBaseUser):
     email = models.EmailField(
         verbose_name='email address',
         max_length=200,
-        unique=True
+        unique=True,
     )
     first_name = models.CharField(
         default='First Name', blank=True, max_length=50)
@@ -42,3 +59,5 @@ class User(AbstractBaseUser):
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
+
+    objects = UserManager()

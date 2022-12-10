@@ -1,7 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import Cookies from "js-cookie";
 
 import "./NavBar.css";
 
@@ -11,6 +11,12 @@ export default function NavBar() {
     "The Universe",
     "Cosmic Wonders",
   ];
+
+  function logout() {
+    Cookies.remove("isLoggedIn");
+    window.location = "/";
+  }
+
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -26,23 +32,27 @@ export default function NavBar() {
                 </Nav.Link>
               );
             })}
-            <Nav.Link href="/login/">Login</Nav.Link>
+            {Cookies.get("isLoggedIn") ? (
+              <Nav.Link href="/login/">Dashboard</Nav.Link>
+            ) : (
+              <Nav.Link href="/login/">Login</Nav.Link>
+            )}
 
             <div
               style={{
                 position: "absolute",
-                right: 0,
+                right: 50,
                 top: 0,
                 margin: "15px",
                 padding: 0,
               }}
             >
               <input
-                type="text"
-                name="name"
-                onChange={(e) => setName(e.target.value)}
+                type="button"
+                name="logout"
+                value="Logout"
+                onClick={logout}
               />
-              <input type="submit" name="submit" value="Search" />
             </div>
           </Nav>
         </Navbar.Collapse>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import Cookies from "js-cookie";
 import axios from "axios";
 
 import "./Login.css";
@@ -9,6 +10,7 @@ import "./Login.css";
 export default function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [error, setError] = useState();
 
   const getUser = async () => {
     const response = await axios.get("http://localhost:8000/userlogin/", {
@@ -17,10 +19,11 @@ export default function Login() {
         password: password,
       },
     });
-    if (response.status == 200) {
-      window.location = `/dashboard/${response.data.id}/`;
+    if (!response.data.id) {
+      setError(response.data);
     } else {
-      window.location = "login/";
+      Cookies.set("isLoggedIn", true, { expires: 30 });
+      window.location = `/dashboard/${response.data.id}/`;
     }
   };
 
@@ -37,12 +40,13 @@ export default function Login() {
             }}
           />
           <input
-            type="text"
+            type="password"
             placeholder="Password"
             onChange={(e) => {
               setPassword(e.target.value);
             }}
           />
+          <p style={{ color: "red" }}>{error}</p>
         </Card.Text>
         <Button variant="primary" type="submit" onClick={getUser}>
           Login

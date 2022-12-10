@@ -4,6 +4,7 @@ import axios from "axios";
 export default function SignUp() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [error, setError] = useState();
 
   const postUser = async () => {
     const response = await axios.post("http://localhost:8000/userlogin/", {
@@ -12,10 +13,10 @@ export default function SignUp() {
         password: password,
       },
     });
-    if (response.status == 200) {
-      window.location = `/dashboard/${response.data.id}/`;
+    if (!response.data.id) {
+      setError(response.data);
     } else {
-      window.location = "login/";
+      window.location = `/dashboard/${response.data.id}/`;
     }
   };
 
@@ -30,7 +31,7 @@ export default function SignUp() {
           }}
         />
         <input
-          type="text"
+          type="password"
           placeholder="Password"
           onChange={(e) => {
             setPassword(e.target.value);
@@ -40,6 +41,7 @@ export default function SignUp() {
       <div>
         <button onClick={postUser}>Sign Up</button>
       </div>
+      <p style={{ color: "red" }}>{error}</p>
     </div>
   );
 }

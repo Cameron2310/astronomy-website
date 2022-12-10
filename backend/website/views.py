@@ -1,4 +1,10 @@
 from django.http import HttpResponse
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
+from django.db import IntegrityError
+from django.core.validators import validate_email
+from django.contrib.auth.password_validation import validate_password
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from website.apis.daily_photo_API import *
@@ -75,15 +81,14 @@ class UserAPIView(APIView):
     def get(self, request):
         email = request.query_params["email"]
         password = request.query_params["password"]
+        user = authenticate(request, email=email, password=password)
 
-        if email != None:
-            user = User.objects.get(email=email).__dict__
-            if password != user['password']:
-                response = 'Wrong Password'
-                return Response(response)
-
-        serializer = UserSerializer(user)
-        return Response(serializer.data)
+        if user is not None:
+            login(request, user)
+            serializer = UserSerializer(user)
+            return Response(serializer.data)
+        else:
+            return HttpResponse("Email/password is invalid.")
 
     def post(self, request):
         data = request.data
@@ -91,13 +96,25 @@ class UserAPIView(APIView):
         user_email = data['params']['email']
         user_password = data['params']['password']
 
-        new_user = User.objects.create(
-            email=user_email, password=user_password)
+        try:
+            validate_email(user_email)
+            validate_password(user_password)
+        except ValidationError as e:
+            print(e)
+            return HttpResponse(e)
+        else:
+            print("good email")
+            try:
+                new_user = User.objects.create_user(
+                    email=user_email, password=user_password)
+            except IntegrityError as e:
+                print(e)
+                return HttpResponse("Email already exists.")
+            else:
+                new_user.save()
+                serializer = UserSerializer(new_user)
 
-        new_user.save()
-        serializer = UserSerializer(new_user)
-
-        return Response(serializer.data)
+                return Response(serializer.data)
 
 
 class UserInfoAPIView(APIView):
