@@ -1,6 +1,6 @@
 [
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 1,
     "fields": {
       "name": "Planets",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 2,
     "fields": {
       "name": "Sun",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 3,
     "fields": {
       "name": "Current Planetary Missions",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 4,
     "fields": {
       "name": "The Big Bang",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 5,
     "fields": {
       "name": "Geometry of the Universe",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 6,
     "fields": {
       "name": "Black Holes",
@@ -54,7 +54,7 @@
     }
   },
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 7,
     "fields": {
       "name": "Nebulas",
@@ -63,7 +63,7 @@
     }
   },
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 8,
     "fields": {
       "name": "Supernovas",
@@ -72,7 +72,7 @@
     }
   },
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 9,
     "fields": {
       "name": "Mercury",
@@ -81,7 +81,7 @@
     }
   },
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 10,
     "fields": {
       "name": "Venus",
@@ -91,7 +91,7 @@
   },
 
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 11,
     "fields": {
       "name": "Earth",
@@ -100,7 +100,7 @@
     }
   },
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 12,
     "fields": {
       "name": "Mars",
@@ -109,7 +109,7 @@
     }
   },
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 13,
     "fields": {
       "name": "Jupiter",
@@ -118,7 +118,7 @@
     }
   },
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 14,
     "fields": {
       "name": "Saturn",
@@ -127,7 +127,7 @@
     }
   },
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 15,
     "fields": {
       "name": "Uranus",
@@ -136,7 +136,7 @@
     }
   },
   {
-    "model": "website.subtopics",
+    "model": "website.subtopic",
     "pk": 16,
     "fields": {
       "name": "Neptune",

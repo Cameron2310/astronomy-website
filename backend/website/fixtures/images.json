@@ -1,16 +1,16 @@
 [
   {
-    "model": "website.images",
+    "model": "website.image",
     "pk": 1,
     "fields": {
       "title": "Blood Moon, Ice Giant",
       "date": "2022-11-11",
-      "explanation": "On November 8 the Full Moon turned blood red as it slid through Earth's shadow in a beautiful total lunar eclipse. During totality it also passed in front of, or occulted, outer planet Uranus for eclipse viewers located in parts of northern America and Asia. For a close-up and wider view these two images were taken just before the occultation began, captured with different telescopes and cameras from the same roof top in Shanghai, China. Normally very faint compared to a Full Moon, the tiny, pale, greenish disk of the distant ice giant is just to the left of the Moon's edge and about to disappear behind the darkened, red lunar limb. Though only visible from certain locations across planet Earth, lunar occultations of planets are fairly common. But for this rare 'lunar eclipse occultation' to take place, at the time of the total eclipse the outer planet had to be both at opposition and very near the ecliptic plane to fall in line with Sun, Earth, and Moon.",
+      "explanation": "On November 8 the Full Moon turned blood red as it slid through Earth's shadow in a beautiful total lunar eclipse. During totality it also passed in front of, or occulted, outer planet Uranus for eclipse viewers located in parts of northern America and Asia. For a close-up and wider view these two image were taken just before the occultation began, captured with different telescopes and cameras from the same roof top in Shanghai, China. Normally very faint compared to a Full Moon, the tiny, pale, greenish disk of the distant ice giant is just to the left of the Moon's edge and about to disappear behind the darkened, red lunar limb. Though only visible from certain locations across planet Earth, lunar occultations of planets are fairly common. But for this rare 'lunar eclipse occultation' to take place, at the time of the total eclipse the outer planet had to be both at opposition and very near the ecliptic plane to fall in line with Sun, Earth, and Moon.",
       "url": "https://apod.nasa.gov/apod/image/2211/LunarEclipseRyanHan1024.jpg"
     }
   },
   {
-    "model": "website.images",
+    "model": "website.image",
     "pk": 2,
     "fields": {
       "title": "Halley Dust and Milky Way",
@@ -21,17 +21,17 @@
   },
 
   {
-    "model": "website.images",
+    "model": "website.image",
     "pk": 3,
     "fields": {
       "title": "Tianwen-1 Mission to Mars",
       "date": "2020-07-25",
-      "explanation": "n July 23, this Long March 5 heavy-lift rocket rose into a blue morning sky from China's Hainan Island Wenchang Satellite Launch Center. The rocket carried an orbiter, lander, and rover to ask Heavenly Questions on the ambitious Tianwen-1 mission to Mars. In fact Tianwen-1 was the second of three missions scheduled for a July departure to the Red Planet. The United Arab Emirates launched its Amal (Hope) Mars probe on July 19.  NASA's launch of its Mars Perseverance Rover from Cape Canaveral Air Force Station, USA is scheduled for July 30. That is the last planned Mars launch for 2020 though. The minimum-energy launch window for an expedition to Mars is coming to a close in 2020 and will reopen in 2022.  Comet NEOWISE images from planet Earth",
+      "explanation": "n July 23, this Long March 5 heavy-lift rocket rose into a blue morning sky from China's Hainan Island Wenchang Satellite Launch Center. The rocket carried an orbiter, lander, and rover to ask Heavenly Questions on the ambitious Tianwen-1 mission to Mars. In fact Tianwen-1 was the second of three missions scheduled for a July departure to the Red Planet. The United Arab Emirates launched its Amal (Hope) Mars probe on July 19.  NASA's launch of its Mars Perseverance Rover from Cape Canaveral Air Force Station, USA is scheduled for July 30. That is the last planned Mars launch for 2020 though. The minimum-energy launch window for an expedition to Mars is coming to a close in 2020 and will reopen in 2022.  Comet NEOWISE image from planet Earth",
       "url": "https://apod.nasa.gov/apod/image/2007/169A2911Dai1024.jpg"
     }
   },
   {
-    "model": "website.images",
+    "model": "website.image",
     "pk": 4,
     "fields": {
       "title": "IC 342: The Hidden Galaxy in Camelopardalis",
@@ -41,7 +41,7 @@
     }
   },
   {
-    "model": "website.images",
+    "model": "website.image",
     "pk": 5,
     "fields": {
       "title": "Dark Ball in Inverted Starfield",

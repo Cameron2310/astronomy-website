@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import Cookies from "js-cookie";
 
 export default function SignUp() {
   const [email, setEmail] = useState();
@@ -16,6 +17,7 @@ export default function SignUp() {
     if (!response.data.id) {
       setError(response.data);
     } else {
+      Cookies.set("UID", response.data.id, { expires: 30, sameSite: "Lax" });
       window.location = `/dashboard/${response.data.id}/`;
     }
   };

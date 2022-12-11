@@ -12,6 +12,7 @@ import SignUpPage from "./pages/User-Pages/SignupPage";
 import PlanetsPage from "./pages/Solar-System/Planets-page/PlanetsPage";
 import IndividualPlanetPage from "./pages/Solar-System/Planets-page/Individual-planet/IndividualPlanetPage";
 import Dashboard from "./pages/User-Pages/Dashboard";
+import Community from "./pages/Community";
 import ArticlePage from "./pages/ArticlePage/";
 // import Footer from "./components/Footer/Footer";
 
@@ -32,6 +33,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/Community/" element={<Community />} />
         <Route path="Photos/:photoName/" element={<PhotoPage />} />
         <Route path=":categoryName/" element={<Category />} />
         <Route path=":categoryName/:subCategory/" element={<ArticlePage />} />

@@ -4,26 +4,24 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 # Create your models here.
 
-
-class Images(models.Model):
+class Image(models.Model):
     title = models.CharField(max_length=200)
     date = models.DateField()
     explanation = models.TextField()
     url = models.URLField(max_length=200)
-    likes = models.IntegerField(default=0)
 
 
-class SubTopics(models.Model):
+class SubTopic(models.Model):
     name = models.CharField(max_length=50)
     article = models.TextField()
     three_d_model = models.URLField(max_length=100, default=None)
 
 
-class Categories(models.Model):
+class Category(models.Model):
     name = models.CharField(max_length=50)
     three_d_model = models.URLField(max_length=200)
     article = models.TextField()
-    subtopics = models.ManyToManyField(SubTopics)
+    subtopics = models.ManyToManyField(SubTopic)
 
 
 class UserManager(BaseUserManager):
@@ -55,9 +53,28 @@ class User(AbstractBaseUser):
     favorite_planet = models.CharField(null=True, blank=True, max_length=100)
 
     username = None
-    password = models.CharField(max_length=200)
+    password = models.CharField(max_length=150)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 
     objects = UserManager()
+
+
+class Post(models.Model):
+    image = models.URLField(blank=True, max_length=300)
+    date = models.DateField(auto_now_add=True)
+    likes = models.IntegerField(default=0)
+    caption = models.TextField()
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="posts")
+    users_who_liked_post = models.ManyToManyField(User)
+
+
+class Comment(models.Model):
+    text = models.TextField()
+    likes = models.IntegerField(default=0)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="comments")
+    post = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name="comments")

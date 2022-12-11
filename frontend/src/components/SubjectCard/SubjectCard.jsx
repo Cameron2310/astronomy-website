@@ -14,7 +14,7 @@ export default function SubjectCard({ props }) {
     >
       <Card.Body>
         <Card.Title>{props.name}</Card.Title>
-        <Card.Text>
+        <Card.Text className="text">
           <CardImg className="card-img" src={props.image} />
         </Card.Text>
       </Card.Body>

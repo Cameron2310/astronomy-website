@@ -1,6 +1,6 @@
 [
   {
-    "model": "website.categories",
+    "model": "website.category",
     "pk": 1,
     "fields": {
       "name": "Our Solar System",
@@ -10,7 +10,7 @@
     }
   },
   {
-    "model": "website.categories",
+    "model": "website.category",
     "pk": 2,
     "fields": {
       "name": "The Universe",
@@ -21,7 +21,7 @@
   },
 
   {
-    "model": "website.categories",
+    "model": "website.category",
     "pk": 3,
     "fields": {
       "name": "Cosmic Wonders",

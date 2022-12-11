@@ -13,7 +13,7 @@ export default function NavBar() {
   ];
 
   function logout() {
-    Cookies.remove("isLoggedIn");
+    Cookies.remove("UID");
     window.location = "/";
   }
 
@@ -32,28 +32,30 @@ export default function NavBar() {
                 </Nav.Link>
               );
             })}
-            {Cookies.get("isLoggedIn") ? (
-              <Nav.Link href="/login/">Dashboard</Nav.Link>
+            <Nav.Link href="/Community/">Community</Nav.Link>
+            {Cookies.get("UID") ? (
+              <div>
+                <Nav.Link href="/Login/">Dashboard</Nav.Link>
+                <div
+                  style={{
+                    position: "absolute",
+                    right: 50,
+                    top: 0,
+                    margin: "15px",
+                    padding: 0,
+                  }}
+                >
+                  <input
+                    type="button"
+                    name="logout"
+                    value="Logout"
+                    onClick={logout}
+                  />
+                </div>
+              </div>
             ) : (
               <Nav.Link href="/login/">Login</Nav.Link>
             )}
-
-            <div
-              style={{
-                position: "absolute",
-                right: 50,
-                top: 0,
-                margin: "15px",
-                padding: 0,
-              }}
-            >
-              <input
-                type="button"
-                name="logout"
-                value="Logout"
-                onClick={logout}
-              />
-            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -21,7 +21,7 @@ class DataAPIView(APIView):
     serializer_class = CategoriesSerializer
 
     def get(self, request):
-        categories = Categories.objects.all()
+        categories = Category.objects.all()
         serializer = CategoriesSerializer(categories, many=True)
         return Response(serializer.data)
 
@@ -30,7 +30,7 @@ class ImagesAPIView(APIView):
     serializer_class = ImagesSerializer
 
     def get(self, request):
-        images = Images.objects.all().order_by('-id')[:5][::-1]
+        images = Image.objects.all().order_by('-id')[:5][::-1]
         serializer = ImagesSerializer(images, many=True)
 
         return Response(serializer.data)
@@ -41,7 +41,7 @@ class FilterImagesAPIView(APIView):
 
     def get(self, request):
         name = request.query_params["photo_name"]
-        image = Images.objects.get(title=name)
+        image = Image.objects.get(title=name)
         serializer = ImagesSerializer(image)
 
         return Response(serializer.data)
@@ -52,9 +52,32 @@ class SubTopicAPIView(APIView):
 
     def get(self, request):
         name = request.query_params["name"]
-        subtopic = SubTopics.objects.get(name=name)
+        subtopic = SubTopic.objects.get(name=name)
         serializer = SubtopicsSerializer(subtopic)
 
+        return Response(serializer.data)
+
+
+class PostsAPIView(APIView):
+    serializer_class = PostSerializer
+
+    def get(self, request):
+        posts = Post.objects.all()
+        serializer = PostSerializer(posts, many=True)
+
+        return Response(serializer.data)
+
+    def put(self, request):
+        data = request.data
+        post_id = data["params"]["id"]
+        likes = data["params"]["likes"]
+        user_id = data["params"]["userId"]
+
+        post = Post.objects.filter(id=post_id).update(likes=likes)
+        post = Post.objects.get(id=post_id)
+        post.users_who_liked_post.add(user_id)
+
+        serializer = PostSerializer(post)
         return Response(serializer.data)
 
 
@@ -65,12 +88,12 @@ class CategoriesAPIView(APIView):
         category_name = request.query_params["categoryName"]
 
         if category_name != None:
-            category = Categories.objects.get(name=category_name)
+            category = Category.objects.get(name=category_name)
             serializer = CategoriesSerializer(category)
             return Response(serializer.data)
 
         else:
-            categories = Categories.objects.all()
+            categories = Category.objects.all()
             serializer = CategoriesSerializer(categories, many=True)
             return Response(serializer.data)
 

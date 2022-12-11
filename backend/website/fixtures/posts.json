@@ -1,0 +1,23 @@
+[
+  {
+    "model": "website.post",
+    "pk": 1,
+    "fields": {
+      "image": "https://astronomy.com/-/media/Images/Community/Astronomy%20Day/milkywayatmospheregalaxyouterspaceastronomyastronomicalobject141112pxhere.com.jpg?mw=600",
+      "date": "2022-12-05",
+      "caption": "I love this picture!",
+      "author": 1,
+      "users_who_liked_post": []
+    }
+  },
+  {
+    "model": "website.post",
+    "pk": 2,
+    "fields": {
+      "date": "2022-12-09",
+      "caption": "Just learned that a new moon has been discovered near Jupiter!",
+      "author": 1,
+      "users_who_liked_post": []
+    }
+  }
+]

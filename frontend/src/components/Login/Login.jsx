@@ -22,7 +22,7 @@ export default function Login() {
     if (!response.data.id) {
       setError(response.data);
     } else {
-      Cookies.set("isLoggedIn", true, { expires: 30 });
+      Cookies.set("UID", response.data.id, { expires: 30, sameSite: "Lax" });
       window.location = `/dashboard/${response.data.id}/`;
     }
   };
