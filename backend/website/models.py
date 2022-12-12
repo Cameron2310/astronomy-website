@@ -60,6 +60,9 @@ class User(AbstractBaseUser):
 
     objects = UserManager()
 
+    def __str__(self):
+        return f"{self.id}"
+
 
 class Post(models.Model):
     image = models.URLField(blank=True, max_length=300)

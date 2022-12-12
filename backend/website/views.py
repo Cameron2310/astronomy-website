@@ -72,12 +72,30 @@ class PostsAPIView(APIView):
         post_id = data["params"]["id"]
         likes = data["params"]["likes"]
         user_id = data["params"]["userId"]
-
-        post = Post.objects.filter(id=post_id).update(likes=likes)
         post = Post.objects.get(id=post_id)
-        post.users_who_liked_post.add(user_id)
+        user = post.users_who_liked_post.filter(id=user_id)
+
+        if len(user) == 0:
+            likes = str(int(likes) + 1)
+            post.users_who_liked_post.add(user_id)
+        else:
+            likes = str(int(likes) - 1)
+            post.users_who_liked_post.remove(user_id)
+
+        Post.objects.filter(id=post_id).update(likes=likes)
 
         serializer = PostSerializer(post)
+        return Response(serializer.data)
+
+
+class FilterPostsAPIView(APIView):
+    serializer_class = PostSerializer
+
+    def get(self, request):
+        post_id = request.query_params['id']
+        post = Post.objects.get(id=post_id)
+        serializer = PostSerializer(post)
+
         return Response(serializer.data)
 
 

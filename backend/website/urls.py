@@ -11,6 +11,7 @@ urlpatterns = [
     path('userdata/', views.UserInfoAPIView.as_view()),
     path('subtopic/', views.SubTopicAPIView.as_view()),
     path('get_posts/', views.PostsAPIView.as_view()),
+    path('filter_post/', views.FilterPostsAPIView.as_view()),
     path('', views.index),
     path('Photos/<str:photo_name>/', views.index),
     path('dashboard/<int:user_id>/', views.index),

@@ -7,7 +7,9 @@ export default function Community() {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get("http://localhost:8000/get_posts/");
+      const response = await axios.get("http://localhost:8000/get_posts/", {
+        params: { id: "None" },
+      });
       setData(response.data);
     };
     getData();
