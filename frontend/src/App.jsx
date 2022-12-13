@@ -1,7 +1,5 @@
 import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import "./App.css";
 
 import HomePage from "./pages/HomePages/HomePage";
@@ -17,17 +15,6 @@ import ArticlePage from "./pages/ArticlePage/";
 // import Footer from "./components/Footer/Footer";
 
 function App() {
-  const [data, setData] = useState();
-
-  useEffect(() => {
-    const getData = async () => {
-      const response = await axios("http://localhost:8000/data/");
-      setData(response.data);
-    };
-    getData();
-  }, []);
-
-  if (!data) return null;
   return (
     <Router className="App">
       <NavBar />

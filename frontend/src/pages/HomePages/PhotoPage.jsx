@@ -4,25 +4,25 @@ import axios from "axios";
 
 export default function PhotoPage() {
   const { photoName } = useParams();
-  const [data, setData] = useState();
+  const [photoData, setPhotoData] = useState();
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchPhoto = async () => {
       const response = await axios("http://localhost:8000/filter_images/", {
         params: { photo_name: photoName },
       });
-      setData(response.data);
+      setPhotoData(response.data);
       console.log(response.data);
     };
-    fetchData();
+    fetchPhoto();
   }, []);
 
-  if (!data) return null;
+  if (!photoData) return null;
   return (
     <div>
-      <img src={data.url} alt={data.title} />
-      <h2>{data.title}</h2>
-      <p className="articles">{data.explanation}</p>
+      <img src={photoData.url} alt={photoData.title} />
+      <h2>{photoData.title}</h2>
+      <p className="articles">{photoData.explanation}</p>
     </div>
   );
 }

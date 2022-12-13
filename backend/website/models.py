@@ -81,3 +81,4 @@ class Comment(models.Model):
         User, on_delete=models.CASCADE, related_name="comments")
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name="comments")
+    user_who_liked_comment = models.ManyToManyField(User)

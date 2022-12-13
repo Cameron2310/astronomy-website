@@ -1,32 +1,28 @@
-import Subcategory from "../components/Subcategory/";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import TopicInfo from "../components/Topic-Info/TopicInfo";
+import IFrame from "../components/IFrame";
 
 export default function ArticlePage() {
-  const [data, setData] = useState();
+  const [topicInformation, setTopicInformation] = useState();
   const { subCategory } = useParams();
 
   useEffect(() => {
-    const getData = async () => {
+    const getSubtopicData = async () => {
       const response = await axios("/subtopic/", {
         params: { name: subCategory },
       });
-      setData(response.data);
-      console.log(response.data);
+      setTopicInformation(response.data);
     };
-    getData();
+    getSubtopicData();
   }, []);
 
-  if (!data) return null;
+  if (!topicInformation) return null;
   return (
     <div>
-      <Subcategory
-        props={{
-          url: data.three_d_model,
-          data: data,
-        }}
-      />
+      <IFrame url={topicInformation.three_d_model} />
+      <TopicInfo topicInformation={topicInformation} />
     </div>
   );
 }

@@ -3,21 +3,20 @@ import SubjectCard from "../SubjectCard/SubjectCard";
 
 // Component for Topics & Subtopics which shows images & correlating articles
 
-export default function TopicInfo({ props }) {
+export default function TopicInfo({ topicInformation, isSubtopic }) {
   const [article, setArticle] = useState(() => {
-    return props.data.article.split("\n");
+    return topicInformation.article.split("\n");
   });
-  console.log(article);
 
-  if (props.isSubtopic === false) {
+  if (isSubtopic === false) {
     return (
       <div>
-        <h2>{props.data.name}</h2>
-        <p>{props.data.article}</p>
-        {props.data.subtopics.map((subtopic, i) => {
+        <h2>{topicInformation.name}</h2>
+        <p>{topicInformation.article}</p>
+        {topicInformation.subtopics.map((subtopic, i) => {
           return (
             <div key={i}>
-              <SubjectCard props={subtopic} categoryName={{ name: null }} />
+              <SubjectCard topicInformation={subtopic} />
             </div>
           );
         })}
@@ -26,7 +25,7 @@ export default function TopicInfo({ props }) {
   } else {
     return (
       <div>
-        <h2>{props.data.name}</h2>
+        <h2>{topicInformation.name}</h2>
         <p className="articles">
           {article.map((paragraph, i) => {
             return (

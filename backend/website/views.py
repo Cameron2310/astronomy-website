@@ -7,23 +7,13 @@ from django.core.validators import validate_email
 from django.contrib.auth.password_validation import validate_password
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from website.apis.daily_photo_API import *
 from .serializers import *
 
 
 def index(request, **kwargs):
     file = open('static/index.html').read()
-    resp = HttpResponse(file)
-    return resp
-
-
-class DataAPIView(APIView):
-    serializer_class = CategoriesSerializer
-
-    def get(self, request):
-        categories = Category.objects.all()
-        serializer = CategoriesSerializer(categories, many=True)
-        return Response(serializer.data)
+    response = HttpResponse(file)
+    return response
 
 
 class ImagesAPIView(APIView):
@@ -40,8 +30,8 @@ class FilterImagesAPIView(APIView):
     serializer_class = ImagesSerializer
 
     def get(self, request):
-        name = request.query_params["photo_name"]
-        image = Image.objects.get(title=name)
+        photo_name = request.query_params["photo_name"]
+        image = Image.objects.get(title=photo_name)
         serializer = ImagesSerializer(image)
 
         return Response(serializer.data)
@@ -51,8 +41,8 @@ class SubTopicAPIView(APIView):
     serializer_class = SubtopicsSerializer
 
     def get(self, request):
-        name = request.query_params["name"]
-        subtopic = SubTopic.objects.get(name=name)
+        subtopic_name = request.query_params["name"]
+        subtopic = SubTopic.objects.get(name=subtopic_name)
         serializer = SubtopicsSerializer(subtopic)
 
         return Response(serializer.data)
@@ -72,29 +62,94 @@ class PostsAPIView(APIView):
         post_id = data["params"]["id"]
         likes = data["params"]["likes"]
         user_id = data["params"]["userId"]
-        post = Post.objects.get(id=post_id)
-        user = post.users_who_liked_post.filter(id=user_id)
+        original_post = Post.objects.get(id=post_id)
+        user = original_post.users_who_liked_post.filter(id=user_id)
 
         if len(user) == 0:
             likes = str(int(likes) + 1)
-            post.users_who_liked_post.add(user_id)
+            original_post.users_who_liked_post.add(user_id)
         else:
             likes = str(int(likes) - 1)
-            post.users_who_liked_post.remove(user_id)
+            original_post.users_who_liked_post.remove(user_id)
 
         Post.objects.filter(id=post_id).update(likes=likes)
+        updated_post = Post.objects.get(id=post_id)
 
-        serializer = PostSerializer(post)
+        serializer = PostSerializer(updated_post)
+        return Response(serializer.data)
+
+    def post(self, request):
+        data = request.data
+        user_id = data['params']['user_id']
+        caption = data['params']['caption']
+
+        user = User.objects.get(id=user_id)
+
+        new_post = Post.objects.create(
+            author=user, caption=caption)
+
+        new_post.save()
+        serializer = PostSerializer(new_post)
+
         return Response(serializer.data)
 
 
-class FilterPostsAPIView(APIView):
-    serializer_class = PostSerializer
+class CommentsAPIView(APIView):
+    serializer_class = CommentSerializer
 
     def get(self, request):
         post_id = request.query_params['id']
-        post = Post.objects.get(id=post_id)
-        serializer = PostSerializer(post)
+        comments = Comment.objects.filter(post=post_id)
+        serializer = CommentSerializer(comments, many=True)
+
+        return Response(serializer.data)
+
+    def post(self, request):
+        data = request.data
+        user_id = data['params']['user_id']
+        comment_text = data['params']['comment_text']
+        post_id = data['params']['post_id']
+
+        user = User.objects.get(id=user_id)
+        current_post = Post.objects.get(id=post_id)
+
+        new_comment = Comment.objects.create(
+            author=user, text=comment_text, post=current_post)
+
+        new_comment.save()
+        serializer = CommentSerializer(new_comment)
+
+        return Response(serializer.data)
+
+    def put(self, request):
+        data = request.data
+        comment_id = data["params"]["comment_id"]
+        comment_likes = data["params"]["comment_likes"]
+        user_id = data["params"]["user_id"]
+        original_comment = Comment.objects.get(id=comment_id)
+        user = original_comment.user_who_liked_comment.filter(id=user_id)
+
+        if len(user) == 0:
+            comment_likes = str(int(comment_likes) + 1)
+            original_comment.user_who_liked_comment.add(user_id)
+        else:
+            comment_likes = str(int(comment_likes) - 1)
+            original_comment.user_who_liked_comment.remove(user_id)
+
+        Comment.objects.filter(id=comment_id).update(likes=comment_likes)
+        updated_comment = Comment.objects.get(id=comment_id)
+
+        serializer = CommentSerializer(updated_comment)
+        return Response(serializer.data)
+
+    def delete(self, request):
+        comment_id = request.query_params["comment_id"]
+        post_id = request.query_params["post_id"]
+        print("comment id >>> ", comment_id)
+
+        current_comment = Comment.objects.filter(id=comment_id).delete()
+        updated_comments = Comment.objects.filter(post=post_id)
+        serializer = CommentSerializer(updated_comments, many=True)
 
         return Response(serializer.data)
 

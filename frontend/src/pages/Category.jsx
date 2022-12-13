@@ -5,27 +5,26 @@ import IFrame from "../components/IFrame";
 import TopicInfo from "../components/Topic-Info/TopicInfo";
 
 export default function Category() {
-  const [data, setData] = useState();
+  const [categoryData, setCategoryData] = useState();
   const { categoryName } = useParams();
-  console.log(categoryName, data);
 
   useEffect(() => {
-    const getData = async () => {
+    const getCategoryData = async () => {
       const response = await axios("http://localhost:8000/categories/", {
         params: {
           categoryName: categoryName,
         },
       });
-      setData(response.data);
+      setCategoryData(response.data);
     };
-    getData();
+    getCategoryData();
   }, [categoryName]);
 
-  if (!data) return null;
+  if (!categoryData) return null;
   return (
     <div>
-      <IFrame props={{ url: data.three_d_model }} />
-      <TopicInfo props={{ data: data, isSubtopic: false }} />
+      <IFrame url={categoryData.three_d_model} />
+      <TopicInfo topicInformation={categoryData} isSubtopic={false} />
     </div>
   );
 }

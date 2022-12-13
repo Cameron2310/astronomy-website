@@ -27,7 +27,6 @@ export default function IndividualPlanetsPage() {
           name: topicName,
         },
       });
-      console.log(response.data);
       setData(response.data);
     };
     getData();
@@ -36,10 +35,10 @@ export default function IndividualPlanetsPage() {
   if (!data || !planetData) return null;
   return (
     <div>
-      <IFrame props={{ url: data.three_d_model }} />
+      <IFrame url={data.three_d_model} />
       <div>
-        <FactsCard props={planetData} />
-        <TopicInfo props={{ data: data }} />
+        <FactsCard planetData={planetData} />
+        <TopicInfo topicInformation={data} />
       </div>
     </div>
   );

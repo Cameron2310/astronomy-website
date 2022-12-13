@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { CardGroup, Col, Row } from "reactstrap";
-import Subcategory from "../../../components/Subcategory";
 import SubjectCard from "../../../components/SubjectCard/SubjectCard";
+import IFrame from "../../../components/IFrame";
+import TopicInfo from "../../../components/Topic-Info/TopicInfo";
 import "./PlanetsPage.css";
 
 export default function PlanetPage() {
@@ -34,7 +35,6 @@ export default function PlanetPage() {
       const response = await axios("/subtopic/", {
         params: { name: "Planets" },
       });
-      console.log(response.data);
       setSubTopic(response.data);
     };
     getData();
@@ -43,13 +43,12 @@ export default function PlanetPage() {
   if (!data || !subTopic) return null;
   return (
     <div>
-      <Subcategory
-        props={{
-          url: "https://sketchfab.com/models/b6b69a95a6f0426bb8bbc2e8cb7ff46a/embed",
-          data: subTopic,
-          isSubtopic: true,
-        }}
+      <IFrame
+        url={
+          "https://sketchfab.com/models/b6b69a95a6f0426bb8bbc2e8cb7ff46a/embed"
+        }
       />
+      <TopicInfo topicInformation={subTopic} isSubtopic={true} />
 
       <CardGroup>
         <Row xs={1} md={3}>
@@ -57,7 +56,7 @@ export default function PlanetPage() {
             return (
               <Col md={3}>
                 <SubjectCard
-                  props={{
+                  topicInformation={{
                     data: planet,
                     name: planet.englishName,
                     image: images[i],
