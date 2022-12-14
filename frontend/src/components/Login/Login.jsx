@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Cookies from "js-cookie";
 import axios from "axios";
-
+import CryptoJS from "crypto-js";
 import "./Login.css";
 
 export default function Login() {
@@ -22,8 +22,15 @@ export default function Login() {
     if (!response.data.id) {
       setError(response.data);
     } else {
-      Cookies.set("UID", response.data.id, { expires: 30, sameSite: "Lax" });
-      window.location = `/dashboard/${response.data.id}/`;
+      Cookies.set(
+        "UID",
+        CryptoJS.AES.encrypt(
+          JSON.stringify(response.data.id),
+          "secret key 123"
+        ).toString(),
+        { expires: 30, sameSite: "Lax" }
+      );
+      window.location = "/dashboard/";
     }
   };
 
@@ -48,7 +55,7 @@ export default function Login() {
           />
           <p style={{ color: "red" }}>{error}</p>
         </Card.Text>
-        <Button variant="primary" type="submit" onClick={getUser}>
+        <Button variant="primary" type="submit" onClick={() => getUser()}>
           Login
         </Button>
         <br />

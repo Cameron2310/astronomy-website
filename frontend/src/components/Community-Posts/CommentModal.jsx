@@ -19,7 +19,7 @@ export default function CommentModal({ post, show, setShow, verification }) {
         },
       });
       setComments([...comments, response.data]);
-    }
+    } else window.location = "/login/";
   }
   async function updateCommentLikes(comment) {
     if (verification) {
@@ -37,7 +37,7 @@ export default function CommentModal({ post, show, setShow, verification }) {
           else return comment;
         })
       );
-    }
+    } else window.location = "/login/";
   }
   async function deleteComment(comment) {
     if (verification) {
@@ -48,7 +48,7 @@ export default function CommentModal({ post, show, setShow, verification }) {
         },
       });
       setComments(response.data);
-    }
+    } else window.location = "/login/";
   }
 
   useEffect(() => {

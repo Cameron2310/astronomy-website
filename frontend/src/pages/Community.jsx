@@ -3,16 +3,21 @@ import { useEffect, useState } from "react";
 import PostCard from "../components/Community-Posts/PostCard";
 import NewPost from "../components/Community-Posts/NewPost";
 import Cookies from "js-cookie";
+import CryptoJS from "crypto-js";
 
 export default function Community() {
   const [posts, setPosts] = useState();
-  const verification = Cookies.get("UID");
+
+  if (Cookies.get("UID")) {
+    const userId = CryptoJS.AES.decrypt(Cookies.get("UID"), "secret key 123");
+    var verification = JSON.parse(userId.toString(CryptoJS.enc.Utf8));
+  }
 
   async function updateLikes(post) {
     if (verification) {
       const response = await axios.put("http://localhost:8000/get_posts/", {
         params: {
-          id: post.id,
+          post_id: post.id,
           likes: post.likes,
           userId: verification,
         },
@@ -24,8 +29,19 @@ export default function Community() {
           else return post;
         })
       );
-    }
+    } else window.location = "/login/";
   }
+  async function deletePost(post) {
+    if (verification) {
+      const response = await axios.delete("http://localhost:8000/get_posts/", {
+        params: {
+          post_id: post.id,
+        },
+      });
+      setPosts(response.data);
+    } else window.location = "/login/";
+  }
+
   useEffect(() => {
     const getPosts = async () => {
       const response = await axios.get("http://localhost:8000/get_posts/");
@@ -43,6 +59,7 @@ export default function Community() {
           <PostCard
             post={post}
             updateLikes={updateLikes}
+            deletePost={deletePost}
             verification={verification}
           />
         );

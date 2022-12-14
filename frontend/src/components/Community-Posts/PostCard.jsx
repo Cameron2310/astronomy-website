@@ -1,13 +1,16 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import { PersonHeart } from "react-bootstrap-icons";
-import { ChatLeftTextFill } from "react-bootstrap-icons";
 import CommentModal from "./CommentModal";
 
 import { useState } from "react";
 import "./PostCard.css";
 
-export default function PostCard({ post, updateLikes, verification }) {
+export default function PostCard({
+  post,
+  updateLikes,
+  verification,
+  deletePost,
+}) {
   const [show, setShow] = useState(false);
 
   return (
@@ -21,14 +24,33 @@ export default function PostCard({ post, updateLikes, verification }) {
         <Card.Header>
           <span className="icon-span">
             <Button className="post-button" onClick={() => updateLikes(post)}>
-              <PersonHeart />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-person-heart"
+                viewBox="0 0 16 16"
+              >
+                <path d="M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4Zm13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276Z" />
+              </svg>
               &nbsp;Like
             </Button>
-          </span>
-          <span className="icon-span">
             <Button className="post-button" onClick={() => setShow(true)}>
-              <ChatLeftTextFill />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chat-left-text-fill"
+                viewBox="0 0 16 16"
+              >
+                <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+              </svg>
               &nbsp;Comments
+            </Button>
+            <Button className="post-button" onClick={() => deletePost(post)}>
+              &nbsp;Delete
             </Button>
           </span>
         </Card.Header>

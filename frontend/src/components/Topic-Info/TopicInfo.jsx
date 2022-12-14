@@ -12,6 +12,7 @@ export default function TopicInfo({ topicInformation, isSubtopic }) {
     return (
       <div>
         <h2>{topicInformation.name}</h2>
+        <br />
         <p>{topicInformation.article}</p>
         {topicInformation.subtopics.map((subtopic, i) => {
           return (
@@ -26,12 +27,12 @@ export default function TopicInfo({ topicInformation, isSubtopic }) {
     return (
       <div>
         <h2>{topicInformation.name}</h2>
+        <br />
         <p className="articles">
           {article.map((paragraph, i) => {
             return (
               <div>
                 <p>{paragraph}</p>
-                <br />
               </div>
             );
           })}

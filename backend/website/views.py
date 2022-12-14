@@ -59,7 +59,7 @@ class PostsAPIView(APIView):
 
     def put(self, request):
         data = request.data
-        post_id = data["params"]["id"]
+        post_id = data["params"]["post_id"]
         likes = data["params"]["likes"]
         user_id = data["params"]["userId"]
         original_post = Post.objects.get(id=post_id)
@@ -80,16 +80,31 @@ class PostsAPIView(APIView):
 
     def post(self, request):
         data = request.data
+        print(data)
         user_id = data['params']['user_id']
         caption = data['params']['caption']
+
+        try:
+            image_url = data['params']['imageUrl']
+        except:
+            image_url = ''
 
         user = User.objects.get(id=user_id)
 
         new_post = Post.objects.create(
-            author=user, caption=caption)
+            author=user, caption=caption, image=image_url)
 
         new_post.save()
         serializer = PostSerializer(new_post)
+
+        return Response(serializer.data)
+
+    def delete(self, request):
+        post_id = request.query_params["post_id"]
+
+        current_post = Post.objects.filter(id=post_id).delete()
+        updated_posts_list = Post.objects.all()
+        serializer = PostSerializer(updated_posts_list, many=True)
 
         return Response(serializer.data)
 
@@ -145,7 +160,6 @@ class CommentsAPIView(APIView):
     def delete(self, request):
         comment_id = request.query_params["comment_id"]
         post_id = request.query_params["post_id"]
-        print("comment id >>> ", comment_id)
 
         current_comment = Comment.objects.filter(id=comment_id).delete()
         updated_comments = Comment.objects.filter(post=post_id)

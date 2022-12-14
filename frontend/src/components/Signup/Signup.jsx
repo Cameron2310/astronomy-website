@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
+import CryptoJS from "crypto-js";
 
 export default function SignUp() {
   const [email, setEmail] = useState();
@@ -17,8 +18,15 @@ export default function SignUp() {
     if (!response.data.id) {
       setError(response.data);
     } else {
-      Cookies.set("UID", response.data.id, { expires: 30, sameSite: "Lax" });
-      window.location = `/dashboard/${response.data.id}/`;
+      Cookies.set(
+        "UID",
+        CryptoJS.AES.encrypt(
+          JSON.stringify(response.data.id),
+          "secret key 123"
+        ).toString(),
+        { expires: 30, sameSite: "Lax" }
+      );
+      window.location = "/dashboard/";
     }
   };
 

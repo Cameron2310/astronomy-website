@@ -1,30 +1,34 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import Button from "react-bootstrap/esm/Button";
 import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
 import axios from "axios";
+import Cookies from "js-cookie";
+import CryptoJS from "crypto-js";
 
 export default function Dashboard() {
-  const getUserData = async () => {
-    const response = await axios("http://localhost:8000/userdata/", {
-      params: {
-        user_id: userId,
-      },
-    });
-    setData(response.data);
-    console.log(response.data);
-  };
-
-  const { userId } = useParams();
-
-  const [count, setCount] = useState();
-  const [data, setData] = useState(() => getUserData());
+  const userId = CryptoJS.AES.decrypt(Cookies.get("UID"), "secret key 123");
+  const decryptedUserId = JSON.parse(userId.toString(CryptoJS.enc.Utf8));
+  const [userInformation, setUserInformation] = useState();
   const [planets, setPlanets] = useState();
   const [favoritePlanet, setFavoritePlanet] = useState();
   const [email, setEmail] = useState();
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
+
+  const saveData = async () => {
+    const response = await axios.put("http://localhost:8000/userdata/", {
+      params: {
+        user_id: decryptedUserId,
+        email: email,
+        first_name: firstName,
+        last_name: lastName,
+        favorite_planet: favoritePlanet,
+      },
+    });
+    console.log(response.data[0]);
+    setUserInformation(response.data);
+  };
 
   useEffect(() => {
     const getPlanets = async () => {
@@ -32,30 +36,24 @@ export default function Dashboard() {
         "https://api.le-systeme-solaire.net/rest/bodies?filter[]=isPlanet,eq,true"
       );
       setPlanets(response.data);
-      console.log(response.data);
     };
     getPlanets();
   }, []);
 
   useEffect(() => {
-    getUserData();
-  }, [count]);
+    const getUserInformation = async () => {
+      const response = await axios("http://localhost:8000/userdata/", {
+        params: {
+          user_id: decryptedUserId,
+        },
+      });
+      console.log(response.data);
+      setUserInformation(response.data);
+    };
+    getUserInformation();
+  }, []);
 
-  const saveData = async () => {
-    const response = await axios.put("http://localhost:8000/userdata/", {
-      params: {
-        user_id: userId,
-        email: email,
-        first_name: firstName,
-        last_name: lastName,
-        favorite_planet: favoritePlanet,
-      },
-    });
-    console.log(response.data);
-    setCount((count) => count + 1);
-  };
-
-  if (!data || !planets) return null;
+  if (!userInformation || !planets) return null;
   return (
     <Card className="login-card">
       <Card.Body>
@@ -63,21 +61,21 @@ export default function Dashboard() {
           <h2>Dashboard</h2>
           <input
             type="text"
-            placeholder={data.email}
+            placeholder={"Email: " + userInformation.email}
             onChange={(e) => {
               setEmail(e.target.value);
             }}
           />
           <input
             type="text"
-            placeholder={data.first_name}
+            placeholder={"First Name: " + userInformation.first_name}
             onChange={(e) => {
               setFirstName(e.target.value);
             }}
           />
           <input
             type="text"
-            placeholder={data.last_name}
+            placeholder={"Last Name: " + userInformation.last_name}
             onChange={(e) => {
               setLastName(e.target.value);
             }}
@@ -96,7 +94,7 @@ export default function Dashboard() {
             })}
           </Form.Select>
         </Card.Text>
-        <Button variant="primary" type="submit" onClick={saveData}>
+        <Button variant="primary" type="submit" onClick={() => saveData()}>
           Save
         </Button>
       </Card.Body>
