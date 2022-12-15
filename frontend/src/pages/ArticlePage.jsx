@@ -23,6 +23,7 @@ export default function ArticlePage() {
     <div>
       <IFrame url={topicInformation.three_d_model} />
       <TopicInfo topicInformation={topicInformation} />
+      <h4>Additional Resources</h4>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Button from "react-bootstrap/esm/Button";
 import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
@@ -11,23 +11,22 @@ export default function Dashboard() {
   const decryptedUserId = JSON.parse(userId.toString(CryptoJS.enc.Utf8));
   const [userInformation, setUserInformation] = useState();
   const [planets, setPlanets] = useState();
-  const [favoritePlanet, setFavoritePlanet] = useState();
-  const [email, setEmail] = useState();
-  const [firstName, setFirstName] = useState();
-  const [lastName, setLastName] = useState();
+  const favoritePlanet = useRef("");
+  const email = useRef("");
+  const firstName = useRef("");
+  const lastName = useRef("");
 
   const saveData = async () => {
     const response = await axios.put("http://localhost:8000/userdata/", {
       params: {
         user_id: decryptedUserId,
-        email: email,
-        first_name: firstName,
-        last_name: lastName,
-        favorite_planet: favoritePlanet,
+        email: email.current.value,
+        first_name: firstName.current.value,
+        last_name: lastName.current.value,
+        favorite_planet: favoritePlanet.current.value,
       },
     });
-    console.log(response.data[0]);
-    setUserInformation(response.data);
+    setUserInformation(response.data[0]);
   };
 
   useEffect(() => {
@@ -57,35 +56,24 @@ export default function Dashboard() {
   return (
     <Card className="login-card">
       <Card.Body>
-        <Card.Text>
+        <Card.Text className="input-fields">
           <h2>Dashboard</h2>
           <input
             type="text"
             placeholder={"Email: " + userInformation.email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
+            ref={email}
           />
           <input
             type="text"
             placeholder={"First Name: " + userInformation.first_name}
-            onChange={(e) => {
-              setFirstName(e.target.value);
-            }}
+            ref={firstName}
           />
           <input
             type="text"
             placeholder={"Last Name: " + userInformation.last_name}
-            onChange={(e) => {
-              setLastName(e.target.value);
-            }}
+            ref={lastName}
           />
-          <Form.Select
-            size="sm"
-            onChange={(e) => {
-              setFavoritePlanet(e.target.value);
-            }}
-          >
+          <Form.Select size="sm" ref={favoritePlanet}>
             <option>What's your favorite planet?</option>
             {planets.bodies.map((planet, i) => {
               return (

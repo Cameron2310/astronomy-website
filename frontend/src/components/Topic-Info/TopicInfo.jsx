@@ -1,12 +1,9 @@
-import { useState } from "react";
 import SubjectCard from "../SubjectCard/SubjectCard";
 
 // Component for Topics & Subtopics which shows images & correlating articles
 
 export default function TopicInfo({ topicInformation, isSubtopic }) {
-  const [article, setArticle] = useState(() => {
-    return topicInformation.article.split("\n");
-  });
+  const article = topicInformation.article.split("\n");
 
   if (isSubtopic === false) {
     return (
@@ -33,6 +30,11 @@ export default function TopicInfo({ topicInformation, isSubtopic }) {
             return (
               <div>
                 <p>{paragraph}</p>
+                <img
+                  src={topicInformation.article_images[i].url}
+                  style={{ width: 600, border: "none" }}
+                />
+                <p>{topicInformation.article_images[i].source}</p>
               </div>
             );
           })}
