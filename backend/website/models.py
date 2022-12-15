@@ -1,19 +1,28 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.contrib.postgres.fields import ArrayField
 
 
 # Create your models here.
 
-class Image(models.Model):
+class HomePageImage(models.Model):
     title = models.CharField(max_length=200)
     date = models.DateField()
     explanation = models.TextField()
     url = models.URLField(max_length=200)
 
 
+class ArticleImage(models.Model):
+    category_name = models.CharField(max_length=50)
+    source = models.CharField(max_length=100)
+    url = models.URLField(max_length=300)
+
+
 class SubTopic(models.Model):
     name = models.CharField(max_length=50)
     article = models.TextField()
+    article_images = models.ManyToManyField(
+        ArticleImage, default=None, blank=True)
     three_d_model = models.URLField(max_length=100, default=None)
 
 

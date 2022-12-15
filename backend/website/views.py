@@ -20,7 +20,7 @@ class ImagesAPIView(APIView):
     serializer_class = ImagesSerializer
 
     def get(self, request):
-        images = Image.objects.all().order_by('-id')[:5][::-1]
+        images = HomePageImage.objects.all().order_by('-id')[:5][::-1]
         serializer = ImagesSerializer(images, many=True)
 
         return Response(serializer.data)
@@ -31,7 +31,7 @@ class FilterImagesAPIView(APIView):
 
     def get(self, request):
         photo_name = request.query_params["photo_name"]
-        image = Image.objects.get(title=photo_name)
+        image = HomePageImage.objects.get(title=photo_name)
         serializer = ImagesSerializer(image)
 
         return Response(serializer.data)
@@ -243,14 +243,17 @@ class UserInfoAPIView(APIView):
         data = request.data
 
         user_id = data['params']['user_id']
-        email = data['params']['email']
-        first_name = data['params']['first_name']
-        last_name = data['params']['last_name']
-        favorite_planet = data['params']['favorite_planet']
-
+        user_info = data['params']
         user = User.objects.filter(id=user_id)
-        user.update(email=email, first_name=first_name, last_name=last_name,
-                    favorite_planet=favorite_planet)
+
+        for i in user_info:
+            if user_info[i] == '' or user_info[i] == "What's your favorite planet?":
+                user_info_prior_to_upload = User.objects.get(
+                    id=user_id).__dict__
+                user_info.update({i: user_info_prior_to_upload[i]})
+
+        user.update(email=user_info['email'], first_name=user_info['first_name'], last_name=user_info['last_name'],
+                    favorite_planet=user_info['favorite_planet'])
 
         serializer = UserSerializer(user, many=True)
         return Response(serializer.data)

@@ -5,6 +5,7 @@
     "fields": {
       "name": "Planets",
       "article": "There are more planets than stars in our galaxy. Our solar system has 8 planets. The first 4 are the small rock planets: Mercury, Venus, Earth, & Mars. After that, we have the 4 gas giants: Jupiter, Saturn, Uranus, & Neptune.",
+      "article_images": [24],
       "three_d_model": "https://sketchfab.com/models/b6b69a95a6f0426bb8bbc2e8cb7ff46a/embed"
     }
   },
@@ -14,6 +15,7 @@
     "fields": {
       "name": "Sun",
       "article": "A hot, glowing ball of hydrogen and helium floating in space is the difference between death and the possibility of life. Our Sun is a medium-sized star located about 93 million miles away from us. It is by far the largest object in our solar system, yet it is actually rather tiny compared to other stars. The Pistol Star located 26 thousand light years away is 100 times more massive than our Sun. However, our Sun is the perfect size for us. If it was as big as the Pistol Star, then no life would be able to survive on Earth. The same thing would happen if the Sun was half the size it is now.\nEven though the Sun is only a medium-sized star, its gravitational pull is strong enough to have an effect on celestial objects 9 trillion miles away! The surface of the Sun is not solid and is made up of super-hot electrically charged gas called plasma. At the core, temperatures reach upwards of 27 million degrees Fahrenheit - hot enough to sustain nuclear fusion. If you would like to learn more, please check out the additional resources!",
+      "article_images": [1, 2],
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2352&#39"
     }
   },
@@ -23,6 +25,7 @@
     "fields": {
       "name": "Our Closest Neighbor",
       "article": "The famous Southern Star, Alpha Centauri A, is also home to our nearest neighbor star system. Crazy enough the Alpha Centauri system is actually home to three stars: Alpha Centauri A, Alpha Centauri B, and Proxima Centauri. Proxima Centauri is the closest star to us, but it is difficult to see because of how tiny it is. Proxima Centauri is about 1/10 the mass of the Sun, while the Alpha Centauri stars are around the same size as the Sun. The Alpha Centauri stars are relatively close. They are about 4 billion miles apart, which is almost equal to the distance from the Sun to Pluto. However, Proxima Centauri is about 1.2 trillion miles away from them; but, since the Alpha Centauri pair are close together their combined gravity keeps Proxima Centauri orbiting around them. The Alpha Centauri stars orbit about a common center of mass every 80 years and Proxima Centauri orbits around them every 550,000 years.\nIn the past decade, astronomers have been searching for planets around the Alpha Centauri system. Since they are the closest star system to us, the odds of finding planets are higher. Astronomers have been successful in finding 2 planets so far. The first one was discovered near Proxima Centauri in the star's habitable zone. Astronomers believe that there could be liquid water on the planet. The second planet is also new Proxima Centauri and located in the star's habitable zone. The two planets orbit rather closely to their star, but since the star is much smaller and cooler than our Sun, they are still in the habitable zone. This is very exciting news as these planets might be our new homes in the distant future! Please check out the resources below to learn more.",
+      "article_images": [3, 4],
       "three_d_model": "https://www.youtube.com/embed/8ESpLYWb9SQ"
     }
   },
@@ -32,6 +35,7 @@
     "fields": {
       "name": "The Big Bang",
       "article": "Approximately 13.7 billion years ago, our Universe burst onto the scene with a bang! Starting out as an infinitely hot and dense single point, the Universe stretched and inflated at unimaginable speeds. The early universe was also insanely hot. Scientists say that it was about 10 billion degrees Fahrenheit. Despite the insane heat, particles, atoms, and all the ingredients that would become stars and galaxies flooded the Universe.\nTime marched on and the Universe would cool. As it cooled, it would eventually reach the temperature where electrons combine with nuclei to form neutral atoms. Before this \"recombination\" occurred, the Universe would have been opaque because the free electrons would have caused light (photons) to scatter the way sunlight scatters from water droplets in clouds. But when the free electrons were absorbed to form neutral atoms, the Universe suddenly became transparent. Those same photons - the afterglow of the Big Bang known as cosmic background radiation - can be observed today.\nNASA has been focused on studying the cosmic background radiation by taking pictures of the Universe when it was only 400,000 years old. The first mission focused on the cosmic background radiation was in 1992. This was when the Cosmic Background Explorer team mapped the primordial hot and cold spots in the cosmic background radiation. 2 other missions have been launched since then to continue mapping the cosmic background radiation. If you enjoyed this article, please check out the available resources.",
+      "article_images": [5, 6, 24],
       "three_d_model": "https://www.youtube.com/embed/HdPzOWlLrbE"
     }
   },
@@ -41,6 +45,7 @@
     "fields": {
       "name": "The End of Everything",
       "article": "The universe, like all things, will eventually come to an end. It will happen long after we are gone and by then the human population will most likely have died off, along with our Sun and the rest of life on Earth. Astronomers have so far come up with 3 possibilities for how the Universe will end: the Big Freeze, the Big Rip, and the Big Crunch.\nThe Big Freeze is the first possible death we will cover. Astronomers found that after decades of research the Universe will most likely face this long, drawn-out death also known as a \"heat death\". Within a couple trillion years, the Universe will have expanded so far that no distant galaxies will be visible from our own. In 100 trillion years, all the stars in the universe will have burned out and ceased to exist. Then, last but not least, the black holes will be the last surviving relics of our Universe; but, they too will cease to exist after an enormous amount of time. This leaves us with an empty, cold, desolate universe with nothing to brighten our day. Unfortunately, this is the most likely course of action, but luckily we won't be around to have to see it.\nA far more exciting way for the universe to end would be the Big Rip! This is our second possible death and focuses on dark energy and the hypothesis that the universe will continue to accelerate its expansion soon reaching infinity which will cause cataclysmic results. This idea was first hypothesized in 2003 and has gained more support in recent years thanks to new evidence. The Big Rip centers around dark energy, which makes up 70% of all matter in the universe. Some astronomers and astrophysicists think that in the distant future dark energy will get stronger the further the universe expands and eventually tear everything apart. What a way to go! However, current estimates say this could not happen for another 22 billion years, so we are safe for now!\nThe last possible cause of death that we will cover is the Big Crunch and it is the most exciting one of all! Astronomers theorize that the Big Crunch will happen due to the universe's expansion coming to a standstill. Then, as gravity pulls on the matter, the universe will begin to contract, falling inward until it has collapsed back into a super-hot, super-dense singularity. If the theory holds true, the universe is like a giant soufflé. It starts out small, then expands as it heats up. Eventually, however, the soufflé cools and begins to collapse. The craziest part of this idea though is that astronomers think that if the universe converts back into a super-hot, super-dense singularity just like how the universe started with the Big Bang. Then, another Big Bang could happen and the universe could restart all over again! All of the above possibilities of the universe's death are quite interesting and if you would like to learn more, check out the resources below!",
+      "article_images": [7, 8, 9, 23],
       "three_d_model": "https://www.youtube.com/embed/itpLU7OzNV8"
     }
   },
@@ -50,6 +55,7 @@
     "fields": {
       "name": "Black Holes",
       "article": "One of the most popular topics in astronomy is black holes. They are places in space where gravity is so strong that not even light can escape, which is why they are invisible to us. Space telescopes can detect them thanks to special instruments. Black holes can be extremely large or very small. Scientists think that the smallest black holes are the size of a single atom, yet have the mass of a large mountain. On the other end of the scale, black holes can reach sizes more than a billion times more massive than our Sun. These black holes are called supermassive black holes and scientists think that one exists at the center of every galaxy causing the galaxy to spin.\nFirst predicted by Albert Einstein's theory of general relativity, black holes are formed when a massive star dies. After a massive star dies, it leaves behind a small, dense remnant core. If the core's mass is more than three times the mass of the Sun, the force of gravity overwhelms all other forces and produces a black hole. The nearest black hole to Earth is Gaia BH1, which is only 1,566 light-years away! If you're interested in learning more, please check out our resources.",
+      "article_images": [10, 11],
       "three_d_model": "https://sketchfab.com/models/74cbeaeae2174a218fe9455d77902b5c/embed"
     }
   },
@@ -59,6 +65,7 @@
     "fields": {
       "name": "Nebulas",
       "article": "To me, nebulas are the most beautiful objects in the night sky. Nebulas, nebula meaning cloud in Latin, are star nurseries, enormous clouds of gas and dust light-years across. They are often found in the space between stars and can take several different forms including emission nebula, reflection nebula, planetary nebula, supernova remnant, & dark nebula.\nNebulas are key to the lifecycle of stars. In these vast clouds, gas, dust, and other material become dense clumps due to gravity. These clouds are made up of mostly hydrogen, which when put under intense pressure ignites these dense clumps and turns them into stars. At the end of a star's life, it turns into a white dwarf; but during this process, they release clouds of gas which form a so-called \"planetary nebula\".\nIn order to capture these glorious creations, telescopes have to use the infrared radiation emitted by nebulas to create an image. You're probably wondering why this is necessary. Well, due to the dense amount of gas & dust, visible light from stars in a nebula cannot escape. This requires scientists to look at other light wavelengths emitted from nebulas, such as infrared light. To learn more about nebulas, check out the resources.",
+      "article_images": [12, 13, 22],
       "three_d_model": "https://www.bbc.com/news/av-embeds/52395011"
     }
   },
@@ -68,6 +75,7 @@
     "fields": {
       "name": "Supernovas",
       "article": "Imagine an explosion that gives off more energy in one moment than the Sun gives off in its entire 10 billion-year lifetime. These explosions are called supernovas and they occur every 10 seconds throughout the Universe. A supernova occurs when one of 2 things happens. First, if a star steals matter from another star until it accumulates too much matter, it will explode, resulting in a supernova. The other way a supernova can occur is at the end of a massive star's life. As the star runs out of nuclear fuel, some of its mass flows into its core. Eventually, the core is so heavy that it cannot withstand its own gravitational force. The core collapses, which results in the giant explosion of a supernova.\nScientists have determined that supernovas play a key role in distributing elements throughout the universe. When a star explodes, it shoots elements and debris into space. Many of the elements we find here on Earth are made in the core of stars. These elements travel on to form new stars, planets, and everything else in the universe. This means that the elements that make up our very own bodies came from stars that exploded hundreds of millions of years ago! Check out some of the available resources to learn more about supernovas!",
+      "article_images": [14, 15],
       "three_d_model": "https://www.youtube.com/embed/C3ue7cEocvI"
     }
   },
@@ -77,6 +85,7 @@
     "fields": {
       "name": "Mercury",
       "article": "Mercury, the closest planet to the Sun, is a bipolar planet with temperatures ranging from -300°F to 800°F. This is due to Mercury not having an atmosphere. Mercury is also the smallest planet in the Solar System. With a circumference of only 9,525 miles, 18 Mercurys could fit inside Earth. However, Mercury is the fastest planet. Traveling at 29 miles per second, Mercury orbits around the Sun every 88 Earth days. It also had a recent visitor. NASA's Messenger spacecraft conducted a mission, where it mapped the surface of Mercury. Messenger is the second of 2 NASA spacecraft to ever go to Mercury.\nEven on the smallest planet, crazy events can take place. Scientists have been perplexed by Mercury's magnetic field; the planet is supposed to be too small to have a global magnetic field, yet it has a magnetic field that is only 1% the strength of the Earth's. However, according to NASA, when Mercury's magnetic field interacts with the solar wind, it sometimes generates magnetic tornadoes that channel fast, hot solar wind plasma to the surface of the itty-bitty planet. When solar wind plasma hits the surface, it displaces neutrally charged atoms on the surface, sending the loops high into Mercury's atmosphere. Want to learn more about Mercury? Check out some of the available resources!",
+      "article_images": [16, 17],
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2369&#39"
     }
   },
@@ -86,6 +95,7 @@
     "fields": {
       "name": "Venus",
       "article": "100°F seems pretty hot until you realize that temperatures on Venus can reach 900°F - hot enough to melt lead. It's not only hot though; the pressure there is immense. With air pressure, 90 times what we have here on Earth, standing on Venus can feel like being a mile below the ocean on Earth. As if that wasn't crazy enough, Venus also rotates on its axis backwards. This means that, on Venus, the Sun rises in the west and sets in the east, opposite to what we experience on Earth. (It’s not the only planet in our solar system with such an oddball rotation – Uranus spins on its side.)\nMost recently Venus has been explored by NASA's Parker Solar Probe which did a flyby in February 2021. Also last year, three new missions to Venus were announced. VERITAS, DAVINCI, & EnVision will all take place in the next 10 years. We will hopefully learn a lot more about the hottest planet in our solar system! Check out our resources too!",
+      "article_images": [18, 19],
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2343&#39"
     }
   },
@@ -96,6 +106,7 @@
     "fields": {
       "name": "Earth",
       "article": "Earth, our home, is the only planet we know of with life on it. It is also the only planet with liquid water on its surface. Our atmosphere is mostly nitrogen with a combination of 78% nitrogen, 21% oxygen, and 1% other stuff.\nSince the Earth was formed 4.6 billion years ago, it has been through some major changes. Originally, days were only 6 hours long; however, due to the Moon slowing the Earth's rotation, days are getting longer by 1.7 milliseconds every century. Another major change is the Earth's continents have come together and broken off multiple times including when they formed the supercontinents Rodinia & Pangea. These changes make Earth pretty special. Our home is the only planet in the solar system with tectonic plates. If you would like to learn more about our home, please check out the resources on Earth.",
+      "article_images": [20, 21],
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2393&#39"
     }
   },
@@ -105,6 +116,7 @@
     "fields": {
       "name": "Mars",
       "article": "The red planet has been the main topic of many science fiction novels and movies from The War of the Worlds to Total Recall. Mars is one of the most explored bodies in our solar system, and it's the only planet where we've sent rovers to roam the alien landscape. Currently, there are 2 rovers on Mars - Curiosity, and Perseverance, as well as a lander (InSight) and a helicopter (Ingenuity). Temperatures can range from -148°F in the winter to 68°F in the summer. Mars has a very thin atmosphere, preventing it from being able to retain heat. The atmosphere is made up of 96% carbon dioxide and 2.7% nitrogen.\nMars looks red due to iron in the Martian soil oxidizing or turning to rust. And despite the fact that Mars is smaller than Earth, the red planet has 2 moons named Phobos and Deimos. The moons get their names from the Roman god of war's horses and the planet gets its name from the Roman god of war. Despite the public's fascination with Mars, the planet contains no life; but, scientists believe that it has the most favorable conditions to support life, and scientists believe there is potential for life under the surface of Mars because they recently found water ice just under the surface. To learn more about Mars, check out our available resources.",
+      "article_images": [25, 26],
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2372&#39"
     }
   },
@@ -114,6 +126,7 @@
     "fields": {
       "name": "Jupiter",
       "article": "The monster planet, Jupiter, is the largest planet in the solar system. Nobody knows who first laid eyes on Jupiter; however, the Babylonians first studied the massive planet over 2,400 years ago. Almost 2000 years before Galileo would be the first to look upon Jupiter through a telescope. Named after the Roman king of the gods, Jupiter, it has 80 moons and weighs nearly 318 times more than Earth. Its infamous great red spot has been brewing for centuries. The storm itself is twice the size of Earth. The giant planet is 460 million miles away from the Sun and takes 11 Earth years to complete 1 orbit around the Sun.\nJupiter has had many guests in the past. The most recent and ninth was the Juno spacecraft which arrived in 2016. Its mission is to measure Jupiter's composition, gravitational field, magnetic field, and polar magnetosphere. It will also search for clues about how the planet formed, including whether it has a rocky core, the amount of water present within the deep atmosphere, mass distribution, and its deep winds, which can reach speeds up to 390 miles per hour. To learn more about Juno and Jupiter, check out our resources!",
+      "article_images": [27, 28],
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2375&#39"
     }
   },
@@ -123,6 +136,7 @@
     "fields": {
       "name": "Saturn",
       "article": "Beyonce's favorite planet has got to be Saturn considering it's got 7 massive rings that are visible from Earth. The rings are made up of thousands of ice and rock ringlets. Just like the other gas giants, Saturn's atmosphere is composed of hydrogen and helium. Not only does Saturn have the most rings, but it also has the most moons with 82 discovered so far.\nThe Assyrians were the first to document Saturn in 700 B.C. and they called it \"Star of Ninib\". The Romans later renamed it after their god of agriculture. In 1979, Pioneer II was the first spacecraft to reach Saturn. It made many discoveries including a new ring and moon. The most recent spacecraft to go to Saturn was the Cassini craft whose mission ended in 2017.\nSaturn has short 10 hour days; however its years are long. A year on Saturn is 29 Earth years long. This is due to the fact that Saturn is over 900 million miles away from Earth. If you would like to learn more about the 2nd biggest planet in the solar system, check out our resources!",
+      "article_images": [29, 30],
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2355&#39"
     }
   },
@@ -132,6 +146,7 @@
     "fields": {
       "name": "Uranus",
       "article": "Uranus is probably the wackiest planet in the solar system with its sideways rotation. The planet, like Venus, rotates backwards from East to West. Its axial tilt is a staggering 99 degrees, which makes it spin like a rolling ball. For comparison, Earth tilts on its axis at 23 degrees. Uranus has 27 known moons and does a complete orbit around the Sun every 84 years. The planet has only ever been visited by a spacecraft once, which was the Voyager 2 craft back in 1986. Uranus is a unique planet because it is mostly made up of water, methane, and ammonia above a small rocky core.\nThe planet gets its name from the Greek primordial god of the sky. And despite being closer to the Sun than Neptune, Uranus is the coldest planet in the solar system. Uranus has an average temperature of -353°F and its winds can reach speeds of 90 to 360 mph at times. Check out our resources too!",
+      "article_images": [31, 32],
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2344&#39"
     }
   },
@@ -141,6 +156,7 @@
     "fields": {
       "name": "Neptune",
       "article": "Neptune is the farthest planet from the Sun, at a distance of 2.8 billion miles away. The planet is so far away that it takes 165 years to orbit around the Sun. Since its discovery in 1846, Neptune has only completed 1 orbit. The planet received its name from the Roman god of the sea and was discovered in 1846. Even though the planet is almost 4 times larger than Earth, Neptune and Earth have almost identical gravity; however, the necessary escape velocity to leave the planet (52,702 mph) is more than double Earth's escape velocity of 25,031 mph.\nMuch like Uranus, Voyager II is the only spacecraft to visit Neptune. Also, like Uranus, Neptune is composed of water, methane, and ammonia. Despite not being the coldest planet, Neptune is the planet with the strongest winds in the solar system with speeds reaching up to 1300 mph. Learn more by reading our resources!",
+      "article_images": [33, 34],
       "three_d_model": "https://solarsystem.nasa.gov/gltf_embed/2364&#39"
     }
   }

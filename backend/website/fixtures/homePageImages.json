@@ -1,6 +1,6 @@
 [
   {
-    "model": "website.image",
+    "model": "website.homepageimage",
     "pk": 1,
     "fields": {
       "title": "Blood Moon, Ice Giant",
@@ -10,7 +10,7 @@
     }
   },
   {
-    "model": "website.image",
+    "model": "website.homepageimage",
     "pk": 2,
     "fields": {
       "title": "Halley Dust and Milky Way",
@@ -21,7 +21,7 @@
   },
 
   {
-    "model": "website.image",
+    "model": "website.homepageimage",
     "pk": 3,
     "fields": {
       "title": "Tianwen-1 Mission to Mars",
@@ -31,7 +31,7 @@
     }
   },
   {
-    "model": "website.image",
+    "model": "website.homepageimage",
     "pk": 4,
     "fields": {
       "title": "IC 342: The Hidden Galaxy in Camelopardalis",
@@ -41,7 +41,7 @@
     }
   },
   {
-    "model": "website.image",
+    "model": "website.homepageimage",
     "pk": 5,
     "fields": {
       "title": "Dark Ball in Inverted Starfield",

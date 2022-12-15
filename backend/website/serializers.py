@@ -4,14 +4,22 @@ from .models import *
 
 class ImagesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Image
+        model = HomePageImage
         fields = ['id', 'title', 'date', 'explanation', 'url']
 
 
+class ArticlesImagesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ArticleImage
+        fields = ['category_name', 'source', 'url']
+
+
 class SubtopicsSerializer(serializers.ModelSerializer):
+    article_images = ArticlesImagesSerializer(many=True)
+
     class Meta:
         model = SubTopic
-        fields = ['id', 'name', 'article', 'three_d_model']
+        fields = ['id', 'name', 'article', 'article_images', 'three_d_model']
 
 
 class CategoriesSerializer(serializers.ModelSerializer):
