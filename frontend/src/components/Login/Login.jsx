@@ -11,14 +11,14 @@ export default function Login() {
   // Description:
   // Simple Login Component
 
-  const [email, setEmail] = useState();
+  const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   const [error, setError] = useState();
 
   const getUser = async () => {
     const response = await axios.get("http://localhost:8000/userlogin/", {
       params: {
-        email: email,
+        username: username,
         password: password,
       },
     });
@@ -44,9 +44,9 @@ export default function Login() {
         <Card.Text>
           <input
             type="text"
-            placeholder="Email"
+            placeholder="Username"
             onChange={(e) => {
-              setEmail(e.target.value);
+              setUsername(e.target.value);
             }}
           />
           <input

@@ -8,13 +8,14 @@ export default function NewPostModal({ setPosts, posts, verification }) {
   // Description:
   // Component on top of page that allows user to add post
 
+  // State variables
   const [showURLField, setShowURLField] = useState(false);
   const text = useRef(null);
   const imageUrl = useRef("");
 
   async function createNewPost() {
     if (verification) {
-      const response = await axios.post("http://localhost:8000/get_posts/", {
+      const response = await axios.post("http://localhost:8000/posts/", {
         params: {
           user_id: verification,
           caption: text.current.value,

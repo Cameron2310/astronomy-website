@@ -58,6 +58,8 @@ class PostsAPIView(APIView):
         return Response(serializer.data)
 
     def put(self, request):
+        # PUT function takes in post_id, likes, & user_id and updates the likes based on if the current user has liked the post or not
+
         data = request.data
         post_id = data["params"]["post_id"]
         likes = data["params"]["likes"]
@@ -65,6 +67,7 @@ class PostsAPIView(APIView):
         original_post = Post.objects.get(id=post_id)
         user = original_post.users_who_liked_post.filter(id=user_id)
 
+        # If current user has not liked the current post yet, the number of likes goes up by 1
         if len(user) == 0:
             likes = str(int(likes) + 1)
             original_post.users_who_liked_post.add(user_id)
@@ -80,7 +83,6 @@ class PostsAPIView(APIView):
 
     def post(self, request):
         data = request.data
-        print(data)
         user_id = data['params']['user_id']
         caption = data['params']['caption']
 
@@ -137,6 +139,8 @@ class CommentsAPIView(APIView):
         return Response(serializer.data)
 
     def put(self, request):
+        # PUT function takes in comment_id, likes, & user_id and updates the likes based on if the current user has liked the comment or not
+
         data = request.data
         comment_id = data["params"]["comment_id"]
         comment_likes = data["params"]["comment_likes"]
@@ -189,37 +193,35 @@ class UserAPIView(APIView):
     serializer_class = UserSerializer
 
     def get(self, request):
-        email = request.query_params["email"]
+        username = request.query_params["username"]
         password = request.query_params["password"]
-        user = authenticate(request, email=email, password=password)
+        user = authenticate(request, username=username, password=password)
 
         if user is not None:
             login(request, user)
             serializer = UserSerializer(user)
             return Response(serializer.data)
         else:
-            return HttpResponse("Email/password is invalid.")
+            return HttpResponse("Username/password is invalid.")
 
     def post(self, request):
         data = request.data
 
-        user_email = data['params']['email']
+        username = data['params']['username']
         user_password = data['params']['password']
 
         try:
-            validate_email(user_email)
             validate_password(user_password)
         except ValidationError as e:
             print(e)
             return HttpResponse(e)
         else:
-            print("good email")
             try:
                 new_user = User.objects.create_user(
-                    email=user_email, password=user_password)
+                    username=username, password=user_password)
             except IntegrityError as e:
                 print(e)
-                return HttpResponse("Email already exists.")
+                return HttpResponse("Username already exists.")
             else:
                 new_user.save()
                 serializer = UserSerializer(new_user)
@@ -240,6 +242,8 @@ class UserInfoAPIView(APIView):
         return Response(serializer.data)
 
     def put(self, request):
+        # PUT function updates the user's information
+
         data = request.data
 
         user_id = data['params']['user_id']
@@ -252,7 +256,7 @@ class UserInfoAPIView(APIView):
                     id=user_id).__dict__
                 user_info.update({i: user_info_prior_to_upload[i]})
 
-        user.update(email=user_info['email'], first_name=user_info['first_name'], last_name=user_info['last_name'],
+        user.update(username=user_info['username'], first_name=user_info['first_name'], last_name=user_info['last_name'],
                     favorite_planet=user_info['favorite_planet'])
 
         serializer = UserSerializer(user, many=True)

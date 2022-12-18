@@ -9,7 +9,7 @@ urlpatterns = [
     path('categories/', views.CategoriesAPIView.as_view()),
     path('userdata/', views.UserInfoAPIView.as_view()),
     path('subtopic/', views.SubTopicAPIView.as_view()),
-    path('get_posts/', views.PostsAPIView.as_view()),
+    path('posts/', views.PostsAPIView.as_view()),
     path('comments/', views.CommentsAPIView.as_view()),
     path('', views.index),
     path('Photos/<str:photo_name>/', views.index),

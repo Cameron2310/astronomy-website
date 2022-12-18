@@ -208,5 +208,165 @@
       "resource_summary": "An article about the elements contained in an Exploded Supernova",
       "resource_url": "https://www.sciencealert.com/element-map-supernova-remnant-cassiopeia-a-chandra-x-ray"
     }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 22,
+    "fields": {
+      "resource_name": "MESSENGER Website",
+      "category_name": "Mercury",
+      "resource_summary": "Website dedicated to the MESSENGER mission",
+      "resource_url": "https://messenger.jhuapl.edu/"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 23,
+    "fields": {
+      "resource_name": "All About Mercury",
+      "category_name": "Mercury",
+      "resource_summary": "Kids website on Mercury",
+      "resource_url": "https://spaceplace.nasa.gov/all-about-mercury/en/"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 24,
+    "fields": {
+      "resource_name": "Venus Missions",
+      "category_name": "Venus",
+      "resource_summary": "An article dedicated to past, current, & future missions to Venus ",
+      "resource_url": "https://www.planetary.org/space-missions/every-venus-mission"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 25,
+    "fields": {
+      "resource_name": "Ten Mysteries of Venus",
+      "category_name": "Venus",
+      "resource_summary": "Video about some of Venus's Mysteries",
+      "resource_url": "https://solarsystem.nasa.gov/resources/2684/ten-mysteries-of-venus/"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 26,
+    "fields": {
+      "resource_name": "How the Earth and moon formed, explained",
+      "category_name": "Earth",
+      "resource_summary": "An article about the formation of the Earth and moon",
+      "resource_url": "https://news.uchicago.edu/explainer/formation-earth-and-moon-explained"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 27,
+    "fields": {
+      "resource_name": "NASA Solar System - Earth",
+      "category_name": "Earth",
+      "resource_summary": "NASA website with in-depth knowledge on Earth",
+      "resource_url": "https://solarsystem.nasa.gov/planets/earth/overview/"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 28,
+    "fields": {
+      "resource_name": "Mars Missions",
+      "category_name": "Mars",
+      "resource_summary": "NASA website dedicated to the Mars Exploration program",
+      "resource_url": "https://mars.nasa.gov/mars-exploration/missions/?page=0&per_page=99&order=date+desc&search="
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 29,
+    "fields": {
+      "resource_name": "7 Biggest Mysteries of Mars",
+      "category_name": "Mars",
+      "resource_summary": "An article about the mysteries of Mars",
+      "resource_url": "https://www.space.com/13681-mars-biggest-mysteries-water-life.html"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 30,
+    "fields": {
+      "resource_name": "How did Jupiter form?",
+      "category_name": "Jupiter",
+      "resource_summary": "A video about how the mystery behind how Jupiter formed",
+      "resource_url": "https://www.youtube.com/watch?v=QmQq3dyBlIo&ab_channel=DiscoveryUK"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 31,
+    "fields": {
+      "resource_name": "What is Jupiter made of?",
+      "category_name": "Jupiter",
+      "resource_summary": "An article about the composition of Jupiter",
+      "resource_url": "https://www.space.com/18388-what-is-jupiter-made-of.html"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 32,
+    "fields": {
+      "resource_name": "How did Saturn get so many rings?",
+      "category_name": "Saturn",
+      "resource_summary": "A video about the formation of Saturn's rings",
+      "resource_url": "https://www.youtube.com/watch?v=6Bv8g5xBJSo&ab_channel=BBCEarthLab"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 33,
+    "fields": {
+      "resource_name": "Saturn's Moons",
+      "category_name": "Saturn",
+      "resource_summary": "A webpage dedicated to Saturn's moons",
+      "resource_url": "https://solarsystem.nasa.gov/moons/saturn-moons/overview/?page=0&per_page=40&order=name+asc&search=&placeholder=Enter+moon+name&condition_1=38%3Aparent_id&condition_2=moon%3Abody_type%3Ailike"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 34,
+    "fields": {
+      "resource_name": "Uranus's Tilt",
+      "category_name": "Uranus",
+      "resource_summary": "An article about how Uranus ended up tilted on its side",
+      "resource_url": "https://science.howstuffworks.com/46008-uranus-explained.htm"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 35,
+    "fields": {
+      "resource_name": "The Coldest Planet",
+      "category_name": "Uranus",
+      "resource_summary": "An article about why Uranus is the coldest planet in the Solar System",
+      "resource_url": "https://www.skyatnightmagazine.com/space-science/why-uranus-coldest-planet-solar-system/"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 36,
+    "fields": {
+      "resource_name": "Neptune's Mysteries",
+      "category_name": "Neptune",
+      "resource_summary": "An article about Neptune's mysteries",
+      "resource_url": "https://www.space.com/33516-biggest-mysteries-of-neptune.html"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 37,
+    "fields": {
+      "resource_name": "The 8th Planet: Neptune",
+      "category_name": "Neptune",
+      "resource_summary": "A video that will teach you more about Neptune",
+      "resource_url": "https://www.youtube.com/watch?v=faKnto4Pb6c&ab_channel=Astrum"
+    }
   }
 ]

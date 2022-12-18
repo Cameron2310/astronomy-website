@@ -8,10 +8,12 @@ export default function CommentModal({ post, show, setShow, verification }) {
   // Description:
   // Component that shows all the comments for the post
 
+  // State variables
   const [comments, setComments] = useState();
   const commentText = useRef(null);
   const handleClose = () => setShow(false);
 
+  // Functions that handle creating, deleting, & liking comments
   async function createNewComment() {
     if (verification) {
       const response = await axios.post("http://localhost:8000/comments/", {
@@ -54,6 +56,7 @@ export default function CommentModal({ post, show, setShow, verification }) {
     } else window.location = "/login/";
   }
 
+  // useEffect makes backend request to get comments for current post
   useEffect(() => {
     const getComments = async () => {
       const response = await axios.get("http://localhost:8000/comments/", {
@@ -73,17 +76,23 @@ export default function CommentModal({ post, show, setShow, verification }) {
         <Modal.Header closeButton>
           <Modal.Title>Comments</Modal.Title>
         </Modal.Header>
+
+        {/* Each comment is mapped out and given a delete & like button */}
+
         {comments.map((comment, i) => {
           return (
             <Modal.Body style={{ borderStyle: "dashed" }}>
-              {comment.text} {comment.likes}
+              <p>Comment by: {comment.author.username}</p>
+              {comment.text} {comment.likes} likes
               <div>
-                <Button
-                  variant="primary"
-                  onClick={() => deleteComment(comment)}
-                >
-                  Delete
-                </Button>
+                {comment.author.id == verification ? (
+                  <Button
+                    variant="primary"
+                    onClick={() => deleteComment(comment)}
+                  >
+                    Delete
+                  </Button>
+                ) : null}
                 <Button
                   variant="primary"
                   onClick={() => updateCommentLikes(comment)}
@@ -94,6 +103,8 @@ export default function CommentModal({ post, show, setShow, verification }) {
             </Modal.Body>
           );
         })}
+        {/* Form to create new comments */}
+
         <Form>
           <Form.Group className="mb-3" controlId="ControlTextarea1">
             <Form.Control

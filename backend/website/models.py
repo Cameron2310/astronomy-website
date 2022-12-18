@@ -42,14 +42,14 @@ class Category(models.Model):
 
 class UserManager(BaseUserManager):
 
-    def create_user(self, email, password, **kwargs):
+    def create_user(self, username, password, **kwargs):
         """Create and return a `User` with an email, username and password."""
-        if email is None:
-            raise TypeError('Users must have a email.')
+        if username is None:
+            raise TypeError('Users must have a username.')
         if password is None:
             raise TypeError('Users must have an password.')
 
-        user = self.model(email=self.normalize_email(email))
+        user = self.model(username=username)
         user.set_password(password)
         user.save(using=self._db)
 
@@ -57,21 +57,16 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser):
-    email = models.EmailField(
-        verbose_name='email address',
-        max_length=200,
-        unique=True,
-    )
+    username = models.CharField(max_length=50, unique=True)
     first_name = models.CharField(
         default='First Name', blank=True, max_length=50)
     last_name = models.CharField(
         default='Last Name', blank=True, max_length=50)
     favorite_planet = models.CharField(null=True, blank=True, max_length=100)
 
-    username = None
     password = models.CharField(max_length=150)
 
-    USERNAME_FIELD = "email"
+    USERNAME_FIELD = "username"
     REQUIRED_FIELDS = []
 
     objects = UserManager()

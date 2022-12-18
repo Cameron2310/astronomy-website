@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
       "text": "Thats a beautiful picture!",
-      "author": 1,
+      "author": 2,
       "post": 1
     }
   },
@@ -13,7 +13,7 @@
     "pk": 2,
     "fields": {
       "text": "Woah! So cool!",
-      "author": 1,
+      "author": 2,
       "post": 1
     }
   }

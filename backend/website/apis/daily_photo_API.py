@@ -8,11 +8,13 @@ load_dotenv()
 
 
 def get_daily_image():
+    # Function gets the daily photo from the NASA Astronomy Photo of the Day API
+    # If the photo of the day is a video instead, a random photo is chosen
 
     def get_random_date():
         day = randrange(1, 28)
         month = randrange(1, 13)
-        year = randrange(2010, 2023)
+        year = randrange(2005, 2023)
         random_date = f"{year}-{month}-{day}"
 
         return random_date
@@ -33,9 +35,11 @@ def get_daily_image():
 
 
 def save_image():
+    # Function saves image to the database
+
     image = get_daily_image()
 
-    new_image = Images.objects.create(
+    new_image = HomePageImage.objects.create(
         title=image['title'], date=image['date'], explanation=image['explanation'], url=image['url'])
     new_image.save()
 

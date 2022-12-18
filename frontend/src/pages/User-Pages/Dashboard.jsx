@@ -15,12 +15,12 @@ export default function Dashboard() {
   const [userInformation, setUserInformation] = useState();
   const [planets, setPlanets] = useState();
   const favoritePlanet = useRef("");
-  const email = useRef("");
+  const username = useRef("");
   const firstName = useRef("");
   const lastName = useRef("");
 
   const clearInputs = () => {
-    email.current.value = "";
+    username.current.value = "";
     firstName.current.value = "";
     lastName.current.value = "";
   };
@@ -29,7 +29,7 @@ export default function Dashboard() {
     const response = await axios.put("http://localhost:8000/userdata/", {
       params: {
         user_id: decryptedUserId,
-        email: email.current.value,
+        username: username.current.value,
         first_name: firstName.current.value,
         last_name: lastName.current.value,
         favorite_planet: favoritePlanet.current.value,
@@ -70,8 +70,8 @@ export default function Dashboard() {
           <h2>Dashboard</h2>
           <input
             type="text"
-            placeholder={"Email: " + userInformation.email}
-            ref={email}
+            placeholder={"Username: " + userInformation.username}
+            ref={username}
           />
           <input
             type="text"

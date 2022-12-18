@@ -9,6 +9,8 @@ import "./PlanetsPage.css";
 export default function PlanetPage() {
   const [data, setData] = useState();
   const [subTopic, setSubTopic] = useState();
+
+  // Icons for planet cards
   const images = [
     "https://cdn-icons-png.flaticon.com/512/2739/2739612.png",
     "https://cdn-icons-png.flaticon.com/512/3594/3594270.png",

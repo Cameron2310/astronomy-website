@@ -7,14 +7,14 @@ export default function SignUp() {
   // Description:
   // User signup component
 
-  const [email, setEmail] = useState();
+  const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   const [error, setError] = useState();
 
   const postUser = async () => {
     const response = await axios.post("http://localhost:8000/userlogin/", {
       params: {
-        email: email,
+        username: username,
         password: password,
       },
     });
@@ -38,9 +38,9 @@ export default function SignUp() {
       <div>
         <input
           type="text"
-          placeholder="Email"
+          placeholder="Username"
           onChange={(e) => {
-            setEmail(e.target.value);
+            setUsername(e.target.value);
           }}
         />
         <input

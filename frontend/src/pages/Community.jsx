@@ -6,16 +6,19 @@ import Cookies from "js-cookie";
 import CryptoJS from "crypto-js";
 
 export default function Community() {
+  // State variables
   const [posts, setPosts] = useState();
 
+  // Only logged in users can like posts & create posts
   if (Cookies.get("UID")) {
     const userId = CryptoJS.AES.decrypt(Cookies.get("UID"), "secret key 123");
     var verification = JSON.parse(userId.toString(CryptoJS.enc.Utf8));
   }
 
+  // Functions to update likes and delete posts
   async function updateLikes(post) {
     if (verification) {
-      const response = await axios.put("http://localhost:8000/get_posts/", {
+      const response = await axios.put("http://localhost:8000/posts/", {
         params: {
           post_id: post.id,
           likes: post.likes,
@@ -33,7 +36,7 @@ export default function Community() {
   }
   async function deletePost(post) {
     if (verification) {
-      const response = await axios.delete("http://localhost:8000/get_posts/", {
+      const response = await axios.delete("http://localhost:8000/posts/", {
         params: {
           post_id: post.id,
         },
@@ -44,7 +47,7 @@ export default function Community() {
 
   useEffect(() => {
     const getPosts = async () => {
-      const response = await axios.get("http://localhost:8000/get_posts/");
+      const response = await axios.get("http://localhost:8000/posts/");
       setPosts(response.data);
     };
     getPosts();

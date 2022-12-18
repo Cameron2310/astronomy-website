@@ -19,6 +19,7 @@ export default function PostCard({
   return (
     <div>
       <Card className="post-card">
+        <Card.Header>Posted by {post.author.username}</Card.Header>
         <Card.Img variant="top" src={post.image} />
         <Card.Body>
           <Card.Text className="caption">{post.caption}</Card.Text>
@@ -52,9 +53,11 @@ export default function PostCard({
               </svg>
               &nbsp;Comments
             </Button>
-            <Button className="post-button" onClick={() => deletePost(post)}>
-              &nbsp;Delete
-            </Button>
+            {post.author.id == verification ? (
+              <Button className="post-button" onClick={() => deletePost(post)}>
+                &nbsp;Delete
+              </Button>
+            ) : null}
           </span>
         </Card.Header>
 

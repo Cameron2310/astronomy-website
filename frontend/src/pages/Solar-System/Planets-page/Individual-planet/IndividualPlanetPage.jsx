@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import CardGroup from "react-bootstrap/CardGroup";
+
 import IFrame from "../../../../components/IFrame";
 import FactsCard from "../../../../components/Facts-card/FactsCard";
 import TopicInfo from "../../../../components/Topic-Info/TopicInfo";
+import ResourceCard from "../../../../components/ResourceCard";
 
 export default function IndividualPlanetsPage() {
   const [planetData, setPlanetData] = useState();
-  const [data, setData] = useState();
+  const [topicInformation, setTopicInformation] = useState();
   const { topicName } = useParams();
+  console.log(topicInformation);
 
   useEffect(() => {
     const getPlanetData = async () => {
@@ -27,19 +31,25 @@ export default function IndividualPlanetsPage() {
           name: topicName,
         },
       });
-      setData(response.data);
+      setTopicInformation(response.data);
     };
     getData();
   }, []);
 
-  if (!data || !planetData) return null;
+  if (!topicInformation || !planetData) return null;
   return (
     <div>
-      <IFrame url={data.three_d_model} />
+      <IFrame url={topicInformation.three_d_model} />
       <div>
         <FactsCard planetData={planetData} />
-        <TopicInfo topicInformation={data} />
+        <TopicInfo topicInformation={topicInformation} />
       </div>
+      <h4>Additional Resources</h4>
+      <CardGroup>
+        {topicInformation.article_resources.map((resource, i) => {
+          return <ResourceCard resourceInformation={resource} key={i} />;
+        })}
+      </CardGroup>
     </div>
   );
 }
