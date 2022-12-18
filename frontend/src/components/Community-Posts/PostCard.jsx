@@ -11,6 +11,9 @@ export default function PostCard({
   verification,
   deletePost,
 }) {
+  // Description:
+  // Component that shows individual post
+
   const [show, setShow] = useState(false);
 
   return (

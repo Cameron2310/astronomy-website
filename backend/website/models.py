@@ -18,11 +18,18 @@ class ArticleImage(models.Model):
     url = models.URLField(max_length=300)
 
 
+class Resource(models.Model):
+    resource_name = models.CharField(max_length=50)
+    category_name = models.CharField(max_length=50)
+    resource_summary = models.CharField(max_length=150)
+    resource_url = models.URLField(max_length=300)
+
+
 class SubTopic(models.Model):
     name = models.CharField(max_length=50)
     article = models.TextField()
-    article_images = models.ManyToManyField(
-        ArticleImage, default=None, blank=True)
+    article_images = models.ManyToManyField(ArticleImage)
+    article_resources = models.ManyToManyField(Resource)
     three_d_model = models.URLField(max_length=100, default=None)
 
 
@@ -36,7 +43,7 @@ class Category(models.Model):
 class UserManager(BaseUserManager):
 
     def create_user(self, email, password, **kwargs):
-        """Create and return a `User` with an email, phone number, username and password."""
+        """Create and return a `User` with an email, username and password."""
         if email is None:
             raise TypeError('Users must have a email.')
         if password is None:

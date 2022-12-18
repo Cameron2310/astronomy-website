@@ -6,6 +6,9 @@ import Cookies from "js-cookie";
 import "./NavBar.css";
 
 export default function NavBar() {
+  // Description:
+  // NavBar Component
+
   const navBarCategories = [
     "Our Solar System",
     "The Universe",

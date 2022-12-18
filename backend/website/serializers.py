@@ -14,12 +14,21 @@ class ArticlesImagesSerializer(serializers.ModelSerializer):
         fields = ['category_name', 'source', 'url']
 
 
+class ResourceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Resource
+        fields = ['resource_name', 'category_name',
+                  'resource_summary', 'resource_url']
+
+
 class SubtopicsSerializer(serializers.ModelSerializer):
     article_images = ArticlesImagesSerializer(many=True)
+    article_resources = ResourceSerializer(many=True)
 
     class Meta:
         model = SubTopic
-        fields = ['id', 'name', 'article', 'article_images', 'three_d_model']
+        fields = ['id', 'name', 'article', 'article_images',
+                  'article_resources', 'three_d_model']
 
 
 class CategoriesSerializer(serializers.ModelSerializer):

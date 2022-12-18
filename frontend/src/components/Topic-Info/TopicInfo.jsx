@@ -1,8 +1,10 @@
 import SubjectCard from "../SubjectCard/SubjectCard";
-
-// Component for Topics & Subtopics which shows images & correlating articles
+import CardGroup from "react-bootstrap/CardGroup";
 
 export default function TopicInfo({ topicInformation, isSubtopic }) {
+  // Description:
+  // Component utilizes backend API on current subtopic to display title, article, images, and 3D models or videos
+
   const article = topicInformation.article.split("\n");
 
   if (isSubtopic === false) {
@@ -11,13 +13,23 @@ export default function TopicInfo({ topicInformation, isSubtopic }) {
         <h2>{topicInformation.name}</h2>
         <br />
         <p>{topicInformation.article}</p>
-        {topicInformation.subtopics.map((subtopic, i) => {
-          return (
-            <div key={i}>
-              <SubjectCard topicInformation={subtopic} />
-            </div>
-          );
-        })}
+        <CardGroup
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          {topicInformation.subtopics.map((subtopic, i) => {
+            return (
+              <div key={i}>
+                <SubjectCard topicInformation={subtopic} />
+              </div>
+            );
+          })}
+        </CardGroup>
       </div>
     );
   } else {

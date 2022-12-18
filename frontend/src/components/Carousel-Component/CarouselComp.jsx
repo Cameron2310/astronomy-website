@@ -4,6 +4,8 @@ import axios from "axios";
 import "./CarouselComp.css";
 
 export default function CarouselComp() {
+  // Description:
+  // Carousel component that rotates through 5 photos from the backend API
   const [images, setImages] = useState();
 
   useEffect(() => {

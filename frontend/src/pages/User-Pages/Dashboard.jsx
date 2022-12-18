@@ -7,6 +7,9 @@ import Cookies from "js-cookie";
 import CryptoJS from "crypto-js";
 
 export default function Dashboard() {
+  // Description:
+  // Component that shows user information
+
   const userId = CryptoJS.AES.decrypt(Cookies.get("UID"), "secret key 123");
   const decryptedUserId = JSON.parse(userId.toString(CryptoJS.enc.Utf8));
   const [userInformation, setUserInformation] = useState();
@@ -15,6 +18,12 @@ export default function Dashboard() {
   const email = useRef("");
   const firstName = useRef("");
   const lastName = useRef("");
+
+  const clearInputs = () => {
+    email.current.value = "";
+    firstName.current.value = "";
+    lastName.current.value = "";
+  };
 
   const saveData = async () => {
     const response = await axios.put("http://localhost:8000/userdata/", {
@@ -27,6 +36,7 @@ export default function Dashboard() {
       },
     });
     setUserInformation(response.data[0]);
+    clearInputs();
   };
 
   useEffect(() => {

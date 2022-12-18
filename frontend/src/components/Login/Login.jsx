@@ -8,6 +8,9 @@ import CryptoJS from "crypto-js";
 import "./Login.css";
 
 export default function Login() {
+  // Description:
+  // Simple Login Component
+
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [error, setError] = useState();

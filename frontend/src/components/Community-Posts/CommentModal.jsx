@@ -5,6 +5,9 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
 export default function CommentModal({ post, show, setShow, verification }) {
+  // Description:
+  // Component that shows all the comments for the post
+
   const [comments, setComments] = useState();
   const commentText = useRef(null);
   const handleClose = () => setShow(false);

@@ -4,6 +4,8 @@ import CardImg from "react-bootstrap/esm/CardImg";
 // Component for bootstrap cards
 
 export default function SubjectCard({ topicInformation }) {
+  // Description:
+  // Component that utilizes bootstrap card to display subtopic names on each category page
   return (
     <Card
       onClick={() => {

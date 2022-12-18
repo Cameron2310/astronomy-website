@@ -4,6 +4,9 @@ import Cookies from "js-cookie";
 import CryptoJS from "crypto-js";
 
 export default function SignUp() {
+  // Description:
+  // User signup component
+
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [error, setError] = useState();

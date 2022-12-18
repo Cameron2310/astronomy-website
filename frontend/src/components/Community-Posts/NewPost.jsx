@@ -5,6 +5,9 @@ import { useRef, useState } from "react";
 import {} from "react";
 
 export default function NewPostModal({ setPosts, posts, verification }) {
+  // Description:
+  // Component on top of page that allows user to add post
+
   const [showURLField, setShowURLField] = useState(false);
   const text = useRef(null);
   const imageUrl = useRef("");

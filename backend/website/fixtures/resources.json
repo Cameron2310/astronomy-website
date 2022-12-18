@@ -1,0 +1,212 @@
+[
+  {
+    "model": "website.resource",
+    "pk:": 1,
+    "fields": {
+      "resource_name": "NASA Solar System - Sun",
+      "category_name": "Sun",
+      "resource_summary": "A more in-depth overview of the Sun",
+      "resource_url": "https://solarsystem.nasa.gov/solar-system/sun/overview/"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 2,
+    "fields": {
+      "resource_name": "Sun for Kids",
+      "category_name": "Sun",
+      "resource_summary": "Kids' learning resourse about the Sun",
+      "resource_url": "https://www.elephango.com/index.cfm/pg/k12learning/lcid/10346/The_Sun"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 3,
+    "fields": {
+      "resource_name": "The Sun: Basics",
+      "category_name": "Sun",
+      "resource_summary": "A 5 minute video focused on how the Sun formed, its layers, and how it impacts Earth",
+      "resource_url": "https://hawaii.pbslearningmedia.org/resource/the-sun-basics/the-sun-basics/"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 4,
+    "fields": {
+      "resource_name": "Alpha Centauri",
+      "category_name": "Our Closest Neighbor",
+      "resource_summary": "Another website with basic information about Alpha Centauri",
+      "resource_url": "https://nineplanets.org/alpha-centauri-system/#:~:text=Key%20Facts%20%26%20Summary,also%20named%20Alpha%20Centauri%20AB."
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 5,
+    "fields": {
+      "resource_name": "How Alpha Centauri could Change the World",
+      "category_name": "Our Closest Neighbor",
+      "resource_summary": "An article about how traveling to Alpha Centauri could change the world",
+      "resource_url": "https://www.forbes.com/sites/startswithabang/2017/12/29/how-shooting-for-alpha-centauri-will-change-the-world/?sh=765fa40c4a58"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 6,
+    "fields": {
+      "resource_name": "2069: Alpha Centauri trip",
+      "category_name": "Our Closest Neighbor",
+      "resource_summary": "An article about planned trip to Alpha Centauri",
+      "resource_url": "https://www.science.org/content/article/us-lawmaker-orders-nasa-plan-trip-alpha-centauri-100th-anniversary-moon-landing"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 7,
+    "fields": {
+      "resource_name": "What is the Big Bang?",
+      "category_name": "The Big Bang",
+      "resource_summary": "An article about the Big Bang",
+      "resource_url": "https://www.space.com/25126-big-bang-theory.html"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 8,
+    "fields": {
+      "resource_name": "What is the Cosmic Microwave Background",
+      "category_name": "The Big Bang",
+      "resource_summary": "An article about the Cosmic Microwave Background",
+      "resource_url": "https://www.space.com/33892-cosmic-microwave-background.html"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 9,
+    "fields": {
+      "resource_name": "The Planck era: Imagining our infant universe",
+      "category_name": "The Big Bang",
+      "resource_summary": "An article about the early universe",
+      "resource_url": "https://astronomy.com/magazine/news/2022/04/the-planck-era-imagining-our-infant-universe"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 10,
+    "fields": {
+      "resource_name": "The Big Freeze",
+      "category_name": "The End of Everything",
+      "resource_summary": "An article about the Big Freeze",
+      "resource_url": "https://astronomy.com/news/2020/09/the-big-freeze-how-the-universe-will-die"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 11,
+    "fields": {
+      "resource_name": "The Big Rip",
+      "category_name": "The End of Everything",
+      "resource_summary": "An article about the Big Rip",
+      "resource_url": "https://www.wired.co.uk/article/big-rip-end-of-the-universe"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 12,
+    "fields": {
+      "resource_name": "The Big Crunch",
+      "category_name": "The End of Everything",
+      "resource_summary": "An article about the Big Crunch",
+      "resource_url": "https://science.howstuffworks.com/dictionary/astronomy-terms/big-crunch.htm"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 13,
+    "fields": {
+      "resource_name": "What is a Black Hole?",
+      "category_name": "Black Holes",
+      "resource_summary": "Resource for Kids",
+      "resource_url": "https://www.nasa.gov/audience/forstudents/k-4/stories/nasa-knows/what-is-a-black-hole-k4.html"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 14,
+    "fields": {
+      "resource_name": "What is Hawking Radiation?",
+      "category_name": "Black Holes",
+      "resource_summary": "An article about Hawking Radiation",
+      "resource_url": "https://www.sciencealert.com/hawking-radiation"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 15,
+    "fields": {
+      "resource_name": "How do Black Holes form?",
+      "category_name": "Black Holes",
+      "resource_summary": "An article about how black holes form",
+      "resource_url": "https://astronomy.com/news/2020/02/how-do-black-holes-form"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 16,
+    "fields": {
+      "resource_name": "What is a Nebula?",
+      "category_name": "Nebulas",
+      "resource_summary": "Kids resource on Nebulas",
+      "resource_url": "https://spaceplace.nasa.gov/nebula/en/"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 17,
+    "fields": {
+      "resource_name": "Stars & Nebulas",
+      "category_name": "Nebulas",
+      "resource_summary": "An article on the lifecycle of stars",
+      "resource_url": "https://hubblesite.org/science/stars-and-nebulas"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 18,
+    "fields": {
+      "resource_name": "Types of Nebulas: Stellar Nurseries",
+      "category_name": "Nebulas",
+      "resource_summary": "A video on the types of Nebulas",
+      "resource_url": "https://www.youtube.com/watch?v=EhTbAP1Iyhk&ab_channel=ProfessorDaveExplains"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 19,
+    "fields": {
+      "resource_name": "What is a Supernova?",
+      "category_name": "Supernovas",
+      "resource_summary": "Kids resource on Supernovas",
+      "resource_url": "https://spaceplace.nasa.gov/supernova/en/"
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 20,
+    "fields": {
+      "resource_name": "The Dispertion of Elements",
+      "category_name": "Supernovas",
+      "resource_summary": "An article about the Dispertion of Elements",
+      "resource_url": "https://imagine.gsfc.nasa.gov/educators/lessons/xray_spectra/background-elements.html#:~:text=The%20Dispersion%20of%20Elements,in%20to%20the%20interstellar%20medium."
+    }
+  },
+  {
+    "model": "website.resource",
+    "pk:": 21,
+    "fields": {
+      "resource_name": "The Remnants of a Supernova",
+      "category_name": "Supernovas",
+      "resource_summary": "An article about the elements contained in an Exploded Supernova",
+      "resource_url": "https://www.sciencealert.com/element-map-supernova-remnant-cassiopeia-a-chandra-x-ray"
+    }
+  }
+]
