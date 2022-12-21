@@ -24,8 +24,7 @@ export default function CarouselComp() {
           return (
             <Carousel.Item key={i}>
               <img
-                className="d-block w-100"
-                style={{ height: "750px" }}
+                className="carousel-image"
                 src={image.url}
                 alt={image.explanation}
               />

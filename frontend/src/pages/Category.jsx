@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import IFrame from "../components/IFrame";
+import IFrame from "../components/IFrame/IFrame";
 import TopicInfo from "../components/Topic-Info/TopicInfo";
 
 export default function Category() {

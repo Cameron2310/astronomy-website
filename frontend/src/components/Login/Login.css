@@ -1,7 +1,21 @@
-.login-card {
+.login-card.card {
   width: 20rem;
   height: 15rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10%;
+  margin: 1rem auto;
+  background-color: #b2b2b2;
+  color: #3c4048;
+}
+
+.signup-link {
+  color: #3c4048;
+}
+
+.signup-link:hover {
+  color: #00abb3;
+}
+
+.login-button {
+  background-color: #00abb3;
+  border-color: #b2b2b2;
+  color: #3c4048;
 }

@@ -2,6 +2,9 @@ import { useState } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import CryptoJS from "crypto-js";
+import Card from "react-bootstrap/Card";
+import "../Login/Login.css";
+import Button from "react-bootstrap/Button";
 
 export default function SignUp() {
   // Description:
@@ -34,27 +37,30 @@ export default function SignUp() {
   };
 
   return (
-    <div>
-      <div>
-        <input
-          type="text"
-          placeholder="Username"
-          onChange={(e) => {
-            setUsername(e.target.value);
-          }}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-        />
-      </div>
-      <div>
-        <button onClick={postUser}>Sign Up</button>
-      </div>
-      <p style={{ color: "red" }}>{error}</p>
-    </div>
+    <Card className="login-card">
+      <Card.Body>
+        <Card.Title>Sign Up</Card.Title>
+        <Card.Text>
+          <input
+            type="text"
+            placeholder="Username"
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+          />
+        </Card.Text>
+        <Button className="login-button" onClick={postUser}>
+          Sign Up
+        </Button>
+        <p style={{ color: "red" }}>{error}</p>
+      </Card.Body>
+    </Card>
   );
 }

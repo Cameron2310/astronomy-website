@@ -21,33 +21,31 @@ export default function NavBar() {
   }
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark" expand="lg">
       <Container>
-        <Navbar.Brand>Astronomy Site</Navbar.Brand>
+        <Navbar.Brand className="nav-links">Astronomy Site</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link className="nav-links" href="/">
+              Home
+            </Nav.Link>
             {navBarCategories.map((category, i) => {
               return (
-                <Nav.Link href={`/${category}/`} key={i}>
+                <Nav.Link className="nav-links" href={`/${category}/`} key={i}>
                   {category}
                 </Nav.Link>
               );
             })}
-            <Nav.Link href="/Community/">Community</Nav.Link>
+            <Nav.Link className="nav-links" href="/Community/">
+              Community
+            </Nav.Link>
             {Cookies.get("UID") ? (
               <div>
-                <Nav.Link href="/Login/">Dashboard</Nav.Link>
-                <div
-                  style={{
-                    position: "absolute",
-                    right: 50,
-                    top: 0,
-                    margin: "15px",
-                    padding: 0,
-                  }}
-                >
+                <Nav.Link className="nav-links" href="/Login/">
+                  Dashboard
+                </Nav.Link>
+                <div className="input-div">
                   <input
                     type="button"
                     name="logout"
@@ -57,7 +55,9 @@ export default function NavBar() {
                 </div>
               </div>
             ) : (
-              <Nav.Link href="/login/">Login</Nav.Link>
+              <Nav.Link className="nav-links" href="/login/">
+                Login
+              </Nav.Link>
             )}
           </Nav>
         </Navbar.Collapse>

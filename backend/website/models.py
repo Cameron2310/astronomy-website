@@ -31,6 +31,7 @@ class SubTopic(models.Model):
     article_images = models.ManyToManyField(ArticleImage)
     article_resources = models.ManyToManyField(Resource)
     three_d_model = models.URLField(max_length=100, default=None)
+    source = models.TextField()
 
 
 class Category(models.Model):
@@ -62,7 +63,8 @@ class User(AbstractBaseUser):
         default='First Name', blank=True, max_length=50)
     last_name = models.CharField(
         default='Last Name', blank=True, max_length=50)
-    favorite_planet = models.CharField(null=True, blank=True, max_length=100)
+    favorite_planet = models.CharField(
+        null=True, blank=True, max_length=100)
 
     password = models.CharField(max_length=150)
 

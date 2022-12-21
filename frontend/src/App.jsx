@@ -12,7 +12,8 @@ import IndividualPlanetPage from "./pages/Solar-System/Planets-page/Individual-p
 import Dashboard from "./pages/User-Pages/Dashboard";
 import Community from "./pages/Community";
 import ArticlePage from "./pages/ArticlePage/";
-// import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
+import Bibliography from "./pages/Bibliography/Bibliography";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/Bibliography/" element={<Bibliography />} />
         <Route path="/Community/" element={<Community />} />
         <Route path="Photos/:photoName/" element={<PhotoPage />} />
         <Route path=":categoryName/" element={<Category />} />
@@ -33,7 +35,7 @@ function App() {
         <Route path="/signup/" element={<SignUpPage />} />
         <Route path="/dashboard/" element={<Dashboard />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }

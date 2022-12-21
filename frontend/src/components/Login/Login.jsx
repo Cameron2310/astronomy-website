@@ -58,11 +58,17 @@ export default function Login() {
           />
           <p style={{ color: "red" }}>{error}</p>
         </Card.Text>
-        <Button variant="primary" type="submit" onClick={() => getUser()}>
+        <Button
+          className="login-button"
+          type="submit"
+          onClick={() => getUser()}
+        >
           Login
         </Button>
         <br />
-        <Link to="/signup/">New? Sign up for an account!</Link>
+        <Link className="signup-link" to="/signup/">
+          New? Sign up for an account!
+        </Link>
       </Card.Body>
     </Card>
   );

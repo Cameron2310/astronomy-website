@@ -1,9 +1,14 @@
 .card {
-  background-color: #3ea6d2;
-  color: white;
+  background-color: #00abb3;
+  color: #eaeaea;
   height: 5rem;
   margin: 1rem 1rem;
 }
+
+.card:hover {
+  background-color: #3c4048;
+}
+
 .text {
   position: relative;
   bottom: 30px;

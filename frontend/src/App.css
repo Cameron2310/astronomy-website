@@ -1,8 +1,10 @@
 #root {
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   text-align: center;
 }
 
 .articles {
-  margin: auto 15rem;
+  margin: 0 15rem;
 }

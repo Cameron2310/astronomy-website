@@ -13,8 +13,8 @@ export default function SubjectCard({ topicInformation }) {
     >
       <Card.Body>
         <Card.Title>{topicInformation.name}</Card.Title>
-        <Card.Text className="text">
-          <CardImg className="card-img" src={topicInformation.image} />
+        <Card.Text>
+          <CardImg src={topicInformation.image} />
         </Card.Text>
       </Card.Body>
     </Card>

@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { CardGroup, Col, Row } from "reactstrap";
 import SubjectCard from "../../../components/SubjectCard/SubjectCard";
-import IFrame from "../../../components/IFrame";
+import IFrame from "../../../components/IFrame/IFrame";
 import TopicInfo from "../../../components/Topic-Info/TopicInfo";
 import "./PlanetsPage.css";
 

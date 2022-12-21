@@ -13,15 +13,7 @@ export default function TopicInfo({ topicInformation, isSubtopic }) {
         <h2>{topicInformation.name}</h2>
         <br />
         <p>{topicInformation.article}</p>
-        <CardGroup
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignContent: "center",
-            flexWrap: "wrap",
-          }}
-        >
+        <CardGroup className="card-group" style={{ justifyContent: "center" }}>
           {topicInformation.subtopics.map((subtopic, i) => {
             return (
               <div key={i}>

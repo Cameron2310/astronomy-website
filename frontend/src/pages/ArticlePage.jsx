@@ -5,7 +5,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 
 import TopicInfo from "../components/Topic-Info/TopicInfo";
 import ResourceCard from "../components/ResourceCard";
-import IFrame from "../components/IFrame";
+import IFrame from "../components/IFrame/IFrame";
 
 export default function ArticlePage() {
   const [topicInformation, setTopicInformation] = useState();

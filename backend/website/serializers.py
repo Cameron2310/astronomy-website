@@ -28,7 +28,7 @@ class SubtopicsSerializer(serializers.ModelSerializer):
     class Meta:
         model = SubTopic
         fields = ['id', 'name', 'article', 'article_images',
-                  'article_resources', 'three_d_model']
+                  'article_resources', 'source', 'three_d_model']
 
 
 class CategoriesSerializer(serializers.ModelSerializer):

@@ -37,13 +37,23 @@ class FilterImagesAPIView(APIView):
         return Response(serializer.data)
 
 
-class SubTopicAPIView(APIView):
+class FilterSubtopicAPIView(APIView):
     serializer_class = SubtopicsSerializer
 
     def get(self, request):
         subtopic_name = request.query_params["name"]
         subtopic = SubTopic.objects.get(name=subtopic_name)
         serializer = SubtopicsSerializer(subtopic)
+
+        return Response(serializer.data)
+
+
+class SubTopicAPIView(APIView):
+    serializer_class = SubtopicsSerializer
+
+    def get(self, request):
+        subtopics = SubTopic.objects.all()
+        serializer = SubtopicsSerializer(subtopics, many=True)
 
         return Response(serializer.data)
 

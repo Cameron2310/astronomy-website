@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import CardGroup from "react-bootstrap/CardGroup";
 
-import IFrame from "../../../../components/IFrame";
+import IFrame from "../../../../components/IFrame/IFrame";
 import FactsCard from "../../../../components/Facts-card/FactsCard";
 import TopicInfo from "../../../../components/Topic-Info/TopicInfo";
 import ResourceCard from "../../../../components/ResourceCard";

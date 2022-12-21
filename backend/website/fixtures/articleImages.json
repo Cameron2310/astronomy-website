@@ -304,5 +304,14 @@
       "source": "Source: NASA",
       "url": "https://www.universetoday.com/wp-content/uploads/2008/11/neptune_int-browse-1280x720.jpg"
     }
+  },
+  {
+    "model": "website.articleimage",
+    "pk": 35,
+    "fields": {
+      "category_name": "Saturn",
+      "source": "Source: NASA/JPL-Caltech/Space Science Institute",
+      "url": "https://solarsystem.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdDREIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--06becfc37245ad9eb79df9a54130eb1e9308cfdb/PIA14934.jpg?disposition=attachment"
+    }
   }
 ]
