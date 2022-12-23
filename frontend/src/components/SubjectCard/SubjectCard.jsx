@@ -6,6 +6,7 @@ export default function SubjectCard({ topicInformation }) {
   // Component that utilizes bootstrap card to display subtopic names on each category page
   return (
     <Card
+      className="topic-card"
       onClick={() => {
         window.location = `${topicInformation.name}/`;
       }}

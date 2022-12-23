@@ -1,0 +1,40 @@
+.dashboard-card {
+  width: 22rem;
+  height: 18rem;
+  margin: 1rem auto;
+  background-color: #00abb3;
+  color: #3c4048;
+}
+
+.dashboard-inputs {
+  margin: 0 auto;
+  margin-top: 1%;
+  font-size: 1rem;
+  width: auto;
+}
+.dashboard-form {
+  margin: 0 auto;
+  margin-top: 1%;
+  font-size: 1rem;
+  width: auto;
+}
+
+.save-button:hover {
+  color: #3c4048;
+  background-color: #eaeaea;
+}
+
+@media (min-width: 1000px) and (min-height: 400px) {
+  .dashboard-inputs {
+    margin: 0 auto;
+    margin-top: 1%;
+    width: auto;
+    font-size: 1.1rem;
+  }
+  .user-button {
+    font-size: 1.2rem;
+  }
+  .title {
+    font-size: 1.7rem;
+  }
+}

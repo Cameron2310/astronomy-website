@@ -1,11 +1,11 @@
-.card {
+.topic-card {
   background-color: #00abb3;
   color: #eaeaea;
   height: 5rem;
   margin: 1rem 1rem;
 }
 
-.card:hover {
+.topic-card:hover {
   background-color: #3c4048;
 }
 

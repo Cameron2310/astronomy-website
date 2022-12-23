@@ -2,7 +2,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/esm/Button";
 import axios from "axios";
 import { useRef, useState } from "react";
-import {} from "react";
+import "./NewPost.css";
 
 export default function NewPostModal({ setPosts, posts, verification }) {
   // Description:
@@ -11,7 +11,7 @@ export default function NewPostModal({ setPosts, posts, verification }) {
   // State variables
   const [showURLField, setShowURLField] = useState(false);
   const text = useRef(null);
-  const imageUrl = useRef("");
+  const imageUrl = useRef(null);
 
   async function createNewPost() {
     if (verification) {
@@ -28,7 +28,7 @@ export default function NewPostModal({ setPosts, posts, verification }) {
 
   return (
     <div>
-      <Form style={{ width: "30%", margin: "auto", marginTop: 10 }}>
+      <Form className="newpost-form">
         <Form.Group className="mb-3" controlId="ControlTextarea2">
           <Form.Control type="text" placeholder="Create New Post" ref={text} />
           {showURLField ? (
@@ -39,10 +39,15 @@ export default function NewPostModal({ setPosts, posts, verification }) {
             />
           ) : null}
           <Form.Text className="text-muted"></Form.Text>
-          <Button variant="primary" onClick={() => createNewPost()}>
+          <Button
+            className="newpost-button"
+            variant="primary"
+            onClick={() => createNewPost()}
+          >
             Add Post
           </Button>
           <Button
+            className="newpost-button"
             variant="primary"
             onClick={() => setShowURLField(!showURLField)}
           >

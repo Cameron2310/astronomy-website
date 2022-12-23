@@ -2,7 +2,7 @@
   width: 20rem;
   height: 15rem;
   margin: 1rem auto;
-  background-color: #b2b2b2;
+  background-color: #00abb3;
   color: #3c4048;
 }
 
@@ -11,11 +11,34 @@
 }
 
 .signup-link:hover {
-  color: #00abb3;
+  color: #eaeaea;
 }
 
-.login-button {
-  background-color: #00abb3;
+.user-button {
+  background-color: #3c4048;
   border-color: #b2b2b2;
+  color: #eaeaea;
+}
+
+.user-button:hover {
   color: #3c4048;
+  background-color: #eaeaea;
+}
+
+@media (min-width: 1000px) and (min-height: 400px) {
+  .login-card.card {
+    width: 25rem;
+    height: 20rem;
+    margin: 2rem auto;
+    background-color: #00abb3;
+    color: #3c4048;
+  }
+  .user-input,
+  .user-button,
+  .signup-link {
+    font-size: 1.2rem;
+  }
+  .title {
+    font-size: 1.7rem;
+  }
 }

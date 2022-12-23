@@ -6,6 +6,8 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import CryptoJS from "crypto-js";
 
+import "./Dashboard.css";
+
 export default function Dashboard() {
   // Description:
   // Component that shows user information
@@ -56,7 +58,6 @@ export default function Dashboard() {
           user_id: decryptedUserId,
         },
       });
-      console.log(response.data);
       setUserInformation(response.data);
     };
     getUserInformation();
@@ -64,26 +65,33 @@ export default function Dashboard() {
 
   if (!userInformation || !planets) return null;
   return (
-    <Card className="login-card">
+    <Card className="dashboard-card">
       <Card.Body>
         <Card.Text className="input-fields">
           <h2>Dashboard</h2>
           <input
+            className="dashboard-inputs"
             type="text"
             placeholder={"Username: " + userInformation.username}
             ref={username}
           />
           <input
+            className="dashboard-inputs"
             type="text"
             placeholder={"First Name: " + userInformation.first_name}
             ref={firstName}
           />
           <input
+            className="dashboard-inputs"
             type="text"
             placeholder={"Last Name: " + userInformation.last_name}
             ref={lastName}
           />
-          <Form.Select size="sm" ref={favoritePlanet}>
+          <Form.Select
+            className="dashboard-form"
+            size="sm"
+            ref={favoritePlanet}
+          >
             <option>What's your favorite planet?</option>
             {planets.bodies.map((planet, i) => {
               return (
@@ -92,7 +100,12 @@ export default function Dashboard() {
             })}
           </Form.Select>
         </Card.Text>
-        <Button variant="primary" type="submit" onClick={() => saveData()}>
+        <Button
+          className="user-button"
+          variant="primary"
+          type="submit"
+          onClick={() => saveData()}
+        >
           Save
         </Button>
       </Card.Body>

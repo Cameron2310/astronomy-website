@@ -39,9 +39,10 @@ export default function SignUp() {
   return (
     <Card className="login-card">
       <Card.Body>
-        <Card.Title>Sign Up</Card.Title>
+        <Card.Title className="title">Sign Up</Card.Title>
         <Card.Text>
           <input
+            className="user-input"
             type="text"
             placeholder="Username"
             onChange={(e) => {
@@ -49,6 +50,7 @@ export default function SignUp() {
             }}
           />
           <input
+            className="user-input"
             type="password"
             placeholder="Password"
             onChange={(e) => {
@@ -56,7 +58,7 @@ export default function SignUp() {
             }}
           />
         </Card.Text>
-        <Button className="login-button" onClick={postUser}>
+        <Button className="user-button" onClick={postUser}>
           Sign Up
         </Button>
         <p style={{ color: "red" }}>{error}</p>

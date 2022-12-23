@@ -19,13 +19,15 @@ export default function PostCard({
   return (
     <div>
       <Card className="post-card">
-        <Card.Header>Posted by {post.author.username}</Card.Header>
+        <Card.Header className="post-header">
+          Posted by {post.author.username}
+        </Card.Header>
         <Card.Img variant="top" src={post.image} />
-        <Card.Body>
+        <Card.Body className="post-body">
           <Card.Text className="caption">{post.caption}</Card.Text>
-          <Card.Header>{post.likes} likes</Card.Header>
+          <Card.Header className="likes">{post.likes} likes</Card.Header>
         </Card.Body>
-        <Card.Header>
+        <Card.Header className="post-header">
           <span className="icon-span">
             <Button className="post-button" onClick={() => updateLikes(post)}>
               <svg

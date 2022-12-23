@@ -1,17 +1,124 @@
-.post-card {
-  width: 40%;
-  margin: 2rem auto 1rem auto;
-  height: auto;
+@media (min-width: 1200px) {
+  .post-card {
+    width: 40%;
+    margin: 2rem auto 1rem auto;
+    height: auto;
+    border-style: none;
+  }
+
+  .caption {
+    color: #3c4048;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .icon-span {
+    margin: 0 4rem;
+  }
+
+  .post-body {
+    background-color: #00abb3;
+  }
+
+  .post-button {
+    background-color: #eaeaea;
+    color: #3c4048;
+    border-color: #3c4048;
+    margin-right: 1%;
+  }
+
+  .post-header {
+    background-color: #3c4048;
+    color: #eaeaea;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .likes {
+    background-color: #eaeaea;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 20%;
+  }
+}
+@media (min-width: 775px) and (max-width: 1200px) {
+  .post-card {
+    width: 50%;
+    margin: 1rem auto 1rem auto;
+    height: auto;
+    border-style: none;
+  }
+
+  .icon-span {
+    margin: 0 1rem;
+  }
+
+  .caption {
+    color: #3c4048;
+    font-weight: 500;
+  }
+
+  .post-body {
+    background-color: #00abb3;
+  }
+
+  .post-button {
+    background-color: #eaeaea;
+    color: #3c4048;
+    border-color: #3c4048;
+    margin-right: 1%;
+  }
+
+  .post-header {
+    background-color: #3c4048;
+    color: #eaeaea;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .likes {
+    background-color: #eaeaea;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 25%;
+  }
 }
 
-.caption {
-  color: white;
-}
+@media (max-width: 775px) {
+  .post-card {
+    width: 60%;
+    margin: 1rem auto 1rem auto;
+    height: auto;
+    border-style: none;
+  }
 
-.icon-span {
-  margin: 0 4rem;
-}
+  .caption {
+    color: #3c4048;
+    font-weight: 500;
+  }
 
-.post-button {
-  background-color: black;
+  .post-body {
+    background-color: #00abb3;
+  }
+
+  .post-button {
+    background-color: #eaeaea;
+    color: #3c4048;
+    border-color: #3c4048;
+    margin-right: 1%;
+  }
+
+  .post-header {
+    background-color: #3c4048;
+    color: #eaeaea;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .likes {
+    background-color: #eaeaea;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 25%;
+  }
 }

@@ -24,7 +24,10 @@ export default function NavBar() {
     <Navbar bg="dark" expand="lg">
       <Container>
         <Navbar.Brand className="nav-links">Astronomy Site</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="toggle-button"
+        />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link className="nav-links" href="/">

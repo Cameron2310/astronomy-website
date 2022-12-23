@@ -17,6 +17,9 @@
   padding: 0;
   margin: 15px;
 }
+.toggle-button {
+  background-color: #b2b2b2;
+}
 
 @media (min-width: 1000px) {
   .nav-links {
