@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import PostCard from "../components/Community-Posts/PostCard";
-import NewPost from "../components/Community-Posts/NewPost";
+import PostCard from "../components/Community-Posts/PostCard/PostCard";
+import NewPost from "../components/Community-Posts/NewPost/NewPost";
 import Cookies from "js-cookie";
 import CryptoJS from "crypto-js";
 

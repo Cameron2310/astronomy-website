@@ -1,0 +1,20 @@
+.fact-card {
+  position: sticky;
+  width: 16rem;
+  height: 100%;
+  top: 0;
+  background-color: #3c4048;
+}
+
+.fact-card-text {
+  text-align: left;
+  margin-top: 1%;
+  width: 20rem;
+  color: #eaeaea;
+}
+
+.fun-facts {
+  margin: 0 auto;
+  color: #eaeaea;
+  text-decoration: underline;
+}

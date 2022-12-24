@@ -4,6 +4,8 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
+import "./CommentModal.css";
+
 export default function CommentModal({ post, show, setShow, verification }) {
   // Description:
   // Component that shows all the comments for the post
@@ -73,7 +75,7 @@ export default function CommentModal({ post, show, setShow, verification }) {
   return (
     <>
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+        <Modal.Header className="comment-header">
           <Modal.Title>Comments</Modal.Title>
         </Modal.Header>
 
@@ -81,20 +83,20 @@ export default function CommentModal({ post, show, setShow, verification }) {
 
         {comments.map((comment, i) => {
           return (
-            <Modal.Body style={{ borderStyle: "dashed" }}>
+            <Modal.Body className="comment-body">
               <p>Comment by: {comment.author.username}</p>
               {comment.text} {comment.likes} likes
               <div>
                 {comment.author.id == verification ? (
                   <Button
-                    variant="primary"
+                    className="comment-button"
                     onClick={() => deleteComment(comment)}
                   >
                     Delete
                   </Button>
                 ) : null}
                 <Button
-                  variant="primary"
+                  className="comment-button"
                   onClick={() => updateCommentLikes(comment)}
                 >
                   Like
@@ -119,7 +121,7 @@ export default function CommentModal({ post, show, setShow, verification }) {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={() => createNewComment()}>
+          <Button className="comment-button" onClick={() => createNewComment()}>
             Add New Comment
           </Button>
         </Modal.Footer>

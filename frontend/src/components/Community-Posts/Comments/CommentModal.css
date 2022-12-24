@@ -1,0 +1,28 @@
+.comment-body {
+  border-bottom-style: dotted;
+}
+
+.comment-header {
+  background-color: #3c4048;
+  color: #eaeaea;
+}
+
+.comment-button {
+  background-color: #00abb3;
+  color: #eaeaea;
+  font-weight: 500;
+  border-color: #00abb3;
+  margin-top: 1%;
+}
+
+.comment-button:hover {
+  background-color: #eaeaea;
+  color: #3c4048;
+  font-weight: 500;
+  border-color: #3c4048;
+}
+
+.mb-3 {
+  margin: 1% auto;
+  width: 95%;
+}

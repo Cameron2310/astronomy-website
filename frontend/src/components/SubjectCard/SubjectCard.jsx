@@ -10,12 +10,12 @@ export default function SubjectCard({ topicInformation }) {
       onClick={() => {
         window.location = `${topicInformation.name}/`;
       }}
-      style={{ width: "18rem", cursor: "pointer" }}
+      style={{ width: "16rem", cursor: "pointer" }}
     >
       <Card.Body>
         <Card.Title>{topicInformation.name}</Card.Title>
-        <Card.Text>
-          <CardImg src={topicInformation.image} />
+        <Card.Text className="planetcard-text">
+          <CardImg src={topicInformation.image} className="card-image" />
         </Card.Text>
       </Card.Body>
     </Card>

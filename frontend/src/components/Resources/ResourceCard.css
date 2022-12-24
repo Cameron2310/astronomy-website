@@ -1,0 +1,17 @@
+.resource-card {
+  border-style: none;
+}
+
+.resource-card-text {
+  width: 15rem;
+  margin: 0 auto;
+  background-color: #00abb3;
+  border-radius: 5px;
+  color: #eaeaea;
+  cursor: pointer;
+}
+
+.resource-card-text:hover {
+  background-color: #eaeaea;
+  color: #3c4048;
+}

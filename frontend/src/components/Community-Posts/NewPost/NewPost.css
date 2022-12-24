@@ -1,0 +1,19 @@
+.newpost-form {
+  width: 30%;
+  margin: 1% auto;
+}
+
+.newpost-button {
+  margin: 1% 1%;
+  background-color: #00abb3;
+  color: #eaeaea;
+  font-weight: 500;
+  border-color: #00abb3;
+}
+
+.newpost-button:hover {
+  background-color: #eaeaea;
+  color: #3c4048;
+  font-weight: 500;
+  border-color: #3c4048;
+}

@@ -1,5 +1,6 @@
 import SubjectCard from "../SubjectCard/SubjectCard";
 import CardGroup from "react-bootstrap/CardGroup";
+import "./TopicInfo.css";
 
 export default function TopicInfo({ topicInformation, isSubtopic }) {
   // Description:
@@ -38,7 +39,9 @@ export default function TopicInfo({ topicInformation, isSubtopic }) {
                   src={topicInformation.article_images[i].url}
                   style={{ width: 600, border: "none" }}
                 />
-                <p>{topicInformation.article_images[i].source}</p>
+                <p className="source">
+                  {topicInformation.article_images[i].source}
+                </p>
               </div>
             );
           })}

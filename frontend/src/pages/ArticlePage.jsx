@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import CardGroup from "react-bootstrap/CardGroup";
 
 import TopicInfo from "../components/Topic-Info/TopicInfo";
-import ResourceCard from "../components/ResourceCard";
+import ResourceCard from "../components/Resources/ResourceCard";
 import IFrame from "../components/IFrame/IFrame";
 
 export default function ArticlePage() {

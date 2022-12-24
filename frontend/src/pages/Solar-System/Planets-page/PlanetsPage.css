@@ -3,17 +3,18 @@
   color: #eaeaea;
   height: 5rem;
   margin: 1rem 1rem;
+  text-align: center;
 }
 
 .topic-card:hover {
   background-color: #3c4048;
 }
 
-.text {
-  position: relative;
-  bottom: 30px;
+.planetcard-text {
+  margin-top: -15%;
 }
-.card-img {
+
+.card-image {
   display: block;
   margin-left: auto;
   width: 50px;
