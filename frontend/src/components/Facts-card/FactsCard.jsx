@@ -17,11 +17,11 @@ export default function FactsCard({ planetData }) {
         <p>Gravity: {planetData.gravity} m/s^2</p>
         <p>Average temperature: {convertKelvinToFahrenheit()}°F</p>
         <p>
-          Closest {planetData.englishName} is to the Sun:{" "}
+          Closest distance to the Sun:{" "}
           {(0.62137 * planetData.perihelion).toLocaleString("en-US")} miles
         </p>
         <p>
-          Farthest {planetData.englishName} is from the Sun:{" "}
+          Farthest distance from the Sun:{" "}
           {(0.62137 * planetData.aphelion).toLocaleString("en-US")} miles
         </p>
       </Card.Text>

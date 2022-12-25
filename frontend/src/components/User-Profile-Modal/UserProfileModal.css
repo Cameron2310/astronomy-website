@@ -1,0 +1,13 @@
+.userprofile-header {
+  background-color: #3c4048;
+  color: #eaeaea;
+}
+.userprofile-close-button {
+  background-color: #3c4048;
+  font-weight: 500;
+  color: #eaeaea;
+}
+.userprofile-close-button:hover {
+  background-color: #eaeaea;
+  color: #3c4048;
+}

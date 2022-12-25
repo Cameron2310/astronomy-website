@@ -7,6 +7,7 @@ import IFrame from "../../../../components/IFrame/IFrame";
 import FactsCard from "../../../../components/Facts-card/FactsCard";
 import TopicInfo from "../../../../components/Topic-Info/TopicInfo";
 import ResourceCard from "../../../../components/Resources/ResourceCard";
+import "./IndividualPlanetPage.css";
 
 export default function IndividualPlanetsPage() {
   const [planetData, setPlanetData] = useState();
@@ -40,7 +41,7 @@ export default function IndividualPlanetsPage() {
   return (
     <div>
       <IFrame url={topicInformation.three_d_model} />
-      <div>
+      <div className="article-div">
         <FactsCard planetData={planetData} />
         <TopicInfo topicInformation={topicInformation} />
       </div>

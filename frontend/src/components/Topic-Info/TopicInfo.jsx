@@ -1,4 +1,4 @@
-import SubjectCard from "../SubjectCard/SubjectCard";
+import SubjectCard from "../Subject-Card/SubjectCard";
 import CardGroup from "react-bootstrap/CardGroup";
 import "./TopicInfo.css";
 
@@ -28,7 +28,7 @@ export default function TopicInfo({ topicInformation, isSubtopic }) {
   } else {
     return (
       <div>
-        <h2>{topicInformation.name}</h2>
+        <h2 className="article-header">{topicInformation.name}</h2>
         <br />
         <p className="articles">
           {article.map((paragraph, i) => {

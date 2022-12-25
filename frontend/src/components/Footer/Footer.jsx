@@ -14,6 +14,12 @@ export default function Footer() {
         <Link className="footer-links" to="/Community/">
           Community
         </Link>
+        <a
+          href="https://github.com/Cameron2310/astronomy-website"
+          className="footer-links"
+        >
+          Github
+        </a>
       </span>
     </div>
   );

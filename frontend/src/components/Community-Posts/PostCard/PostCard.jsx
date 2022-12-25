@@ -1,8 +1,8 @@
+import { useState } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import CommentModal from "../Comments/CommentModal";
-
-import { useState } from "react";
+import UserProfileModal from "../../User-Profile-Modal/UserProfileModal";
 import "./PostCard.css";
 
 export default function PostCard({
@@ -15,11 +15,15 @@ export default function PostCard({
   // Component that shows individual post
 
   const [show, setShow] = useState(false);
+  const [showUserProfile, setShowUserProfile] = useState(false);
 
   return (
     <div>
       <Card className="post-card">
-        <Card.Header className="post-header">
+        <Card.Header
+          className="post-header-top"
+          onClick={() => setShowUserProfile(true)}
+        >
           Posted by {post.author.username}
         </Card.Header>
         <Card.Img variant="top" src={post.image} />
@@ -77,13 +81,17 @@ export default function PostCard({
             ) : null}
           </span>
         </Card.Header>
-
         <CommentModal
           post={post}
           show={show}
           setShow={setShow}
           post_id={post.id}
           verification={verification}
+        />
+        <UserProfileModal
+          post={post}
+          showUserProfile={showUserProfile}
+          setShowUserProfile={setShowUserProfile}
         />
       </Card>
     </div>

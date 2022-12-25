@@ -60,9 +60,9 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser):
     username = models.CharField(max_length=50, unique=True)
     first_name = models.CharField(
-        default='First Name', blank=True, max_length=50)
+        default='', blank=True, max_length=50)
     last_name = models.CharField(
-        default='Last Name', blank=True, max_length=50)
+        default='', blank=True, max_length=50)
     favorite_planet = models.CharField(
         null=True, blank=True, max_length=100)
 

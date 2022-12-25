@@ -48,7 +48,7 @@ export default function NavBar() {
                 <Nav.Link className="nav-links" href="/Login/">
                   Dashboard
                 </Nav.Link>
-                <div className="input-div">
+                <div className="logout-button">
                   <input
                     type="button"
                     name="logout"

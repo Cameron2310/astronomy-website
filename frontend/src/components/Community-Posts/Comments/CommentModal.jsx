@@ -117,8 +117,8 @@ export default function CommentModal({ post, show, setShow, verification }) {
             <Form.Text className="text-muted"></Form.Text>
           </Form.Group>
         </Form>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+        <Modal.Footer className="comments-footer">
+          <Button className="close-button" onClick={handleClose}>
             Close
           </Button>
           <Button className="comment-button" onClick={() => createNewComment()}>

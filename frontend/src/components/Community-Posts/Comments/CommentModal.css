@@ -26,3 +26,20 @@
   margin: 1% auto;
   width: 95%;
 }
+
+.comments-footer {
+  background-color: #3c4048;
+}
+
+.close-button {
+  background-color: #eaeaea;
+  color: #3c4048;
+  font-weight: 500;
+  border-color: #eaeaea;
+}
+
+.close-button:hover {
+  background-color: #3c4048;
+  color: #eaeaea;
+  border-color: #eaeaea;
+}
