@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -136,6 +136,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS__ORIGIN_ALLOW_ALL = True
 
 AUTH_USER_MODEL = 'website.User'
+
+CSRF_TRUSTED_ORIGINS = ['astronomywebsite.net']
 
 
 REST_FRAMEWORK = {
