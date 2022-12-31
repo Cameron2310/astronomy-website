@@ -1,5 +1,5 @@
 from apscheduler.schedulers.background import BackgroundScheduler
-import website.apis.daily_photo_API as api
+import daily_photo_API as api
 
 
 def start():

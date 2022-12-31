@@ -44,6 +44,3 @@ def save_image():
     new_image.save()
 
     return new_image
-
-
-save_image()
