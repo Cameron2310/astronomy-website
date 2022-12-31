@@ -8,3 +8,9 @@
 .articles {
   margin: 0 15rem;
 }
+
+@media (max-width: 700px) {
+  .articles {
+    margin: 0 4rem;
+  }
+}
