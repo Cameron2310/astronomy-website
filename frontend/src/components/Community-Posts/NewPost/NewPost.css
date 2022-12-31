@@ -18,9 +18,16 @@
   border-color: #3c4048;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 800px) and (min-width: 400px) {
   .newpost-form {
     width: 40%;
+    margin: 1% auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .newpost-form {
+    width: 50%;
     margin: 1% auto;
   }
 }
