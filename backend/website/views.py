@@ -20,6 +20,7 @@ class ImagesAPIView(APIView):
     serializer_class = ImagesSerializer
 
     def get(self, request):
+        print("getting images")
         images = HomePageImage.objects.all().order_by('-id')[:5][::-1]
         serializer = ImagesSerializer(images, many=True)
 
