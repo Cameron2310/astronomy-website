@@ -11,7 +11,7 @@ export default function NewPostModal({ setPosts, posts, verification }) {
   // State variables
   const [showURLField, setShowURLField] = useState(false);
   const text = useRef(null);
-  const imageUrl = useRef(null);
+  const imageUrl = useRef("");
 
   async function createNewPost() {
     if (verification) {

@@ -1,5 +1,5 @@
 .login-card.card {
-  width: 20rem;
+  width: 18rem;
   height: 15rem;
   margin: 1rem auto;
   background-color: #00abb3;
@@ -27,7 +27,7 @@
 
 @media (min-width: 1000px) and (min-height: 400px) {
   .login-card.card {
-    width: 25rem;
+    width: 22rem;
     height: 20rem;
     margin: 2rem auto;
     background-color: #00abb3;

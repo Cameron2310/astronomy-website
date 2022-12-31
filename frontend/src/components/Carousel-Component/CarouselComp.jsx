@@ -11,6 +11,7 @@ export default function CarouselComp() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios("http://localhost:8000/images/");
+      console.log(response.data);
       setImages(response.data);
     };
     fetchData();
