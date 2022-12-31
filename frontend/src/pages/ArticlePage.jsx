@@ -13,7 +13,7 @@ export default function ArticlePage() {
 
   useEffect(() => {
     const getSubtopicData = async () => {
-      const response = await axios("/subtopic/", {
+      const response = await axios("subtopic/", {
         params: { name: subCategory },
       });
       setTopicInformation(response.data);

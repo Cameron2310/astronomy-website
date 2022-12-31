@@ -15,7 +15,7 @@ export default function UserProfileModal({
 
   useEffect(() => {
     const getUserProfile = async () => {
-      const response = await axios.get("http://localhost:8000/userdata/", {
+      const response = await axios.get("userdata/", {
         params: {
           user_id: post.author.id,
         },

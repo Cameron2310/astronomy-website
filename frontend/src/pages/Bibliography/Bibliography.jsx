@@ -7,7 +7,7 @@ export default function Bibliography() {
 
   useEffect(() => {
     const getSources = async () => {
-      const response = await axios.get("http://localhost:8000/subtopics/");
+      const response = await axios.get("subtopics/");
       setSources(
         response.data.filter((source) => {
           if (source.source != "") return source;

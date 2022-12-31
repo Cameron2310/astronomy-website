@@ -15,7 +15,7 @@ export default function SignUp() {
   const [error, setError] = useState();
 
   const postUser = async () => {
-    const response = await axios.post("http://localhost:8000/userlogin/", {
+    const response = await axios.post("userlogin/", {
       params: {
         username: username,
         password: password,

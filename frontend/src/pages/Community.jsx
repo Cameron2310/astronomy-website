@@ -18,7 +18,7 @@ export default function Community() {
   // Functions to update likes and delete posts
   async function updateLikes(post) {
     if (verification) {
-      const response = await axios.put("http://localhost:8000/posts/", {
+      const response = await axios.put("posts/", {
         params: {
           post_id: post.id,
           likes: post.likes,
@@ -36,7 +36,7 @@ export default function Community() {
   }
   async function deletePost(post) {
     if (verification) {
-      const response = await axios.delete("http://localhost:8000/posts/", {
+      const response = await axios.delete("posts/", {
         params: {
           post_id: post.id,
         },
@@ -47,7 +47,7 @@ export default function Community() {
 
   useEffect(() => {
     const getPosts = async () => {
-      const response = await axios.get("http://localhost:8000/posts/");
+      const response = await axios.get("posts/");
       setPosts(response.data);
     };
     getPosts();

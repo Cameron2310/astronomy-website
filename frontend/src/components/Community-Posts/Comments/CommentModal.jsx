@@ -18,7 +18,7 @@ export default function CommentModal({ post, show, setShow, verification }) {
   // Functions that handle creating, deleting, & liking comments
   async function createNewComment() {
     if (verification) {
-      const response = await axios.post("http://localhost:8000/comments/", {
+      const response = await axios.post("comments/", {
         params: {
           post_id: post.id,
           comment_text: commentText.current.value,
@@ -30,7 +30,7 @@ export default function CommentModal({ post, show, setShow, verification }) {
   }
   async function updateCommentLikes(comment) {
     if (verification) {
-      const response = await axios.put("http://localhost:8000/comments/", {
+      const response = await axios.put("comments/", {
         params: {
           comment_id: comment.id,
           comment_likes: comment.likes,
@@ -48,7 +48,7 @@ export default function CommentModal({ post, show, setShow, verification }) {
   }
   async function deleteComment(comment) {
     if (verification) {
-      const response = await axios.delete("http://localhost:8000/comments/", {
+      const response = await axios.delete("comments/", {
         params: {
           comment_id: comment.id,
           post_id: post.id,
@@ -61,7 +61,7 @@ export default function CommentModal({ post, show, setShow, verification }) {
   // useEffect makes backend request to get comments for current post
   useEffect(() => {
     const getComments = async () => {
-      const response = await axios.get("http://localhost:8000/comments/", {
+      const response = await axios.get("comments/", {
         params: {
           id: post.id,
         },

@@ -8,7 +8,7 @@ export default function PhotoPage() {
 
   useEffect(() => {
     const fetchPhoto = async () => {
-      const response = await axios("http://localhost:8000/filter_images/", {
+      const response = await axios("filter_images/", {
         params: { photo_name: photoName },
       });
       setPhotoData(response.data);

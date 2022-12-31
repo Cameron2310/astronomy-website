@@ -16,7 +16,7 @@ export default function Login() {
   const [error, setError] = useState();
 
   const getUser = async () => {
-    const response = await axios.get("http://localhost:8000/userlogin/", {
+    const response = await axios.get("userlogin/", {
       params: {
         username: username,
         password: password,

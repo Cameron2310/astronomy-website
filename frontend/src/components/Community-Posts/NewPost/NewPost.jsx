@@ -15,7 +15,7 @@ export default function NewPostModal({ setPosts, posts, verification }) {
 
   async function createNewPost() {
     if (verification) {
-      const response = await axios.post("http://localhost:8000/posts/", {
+      const response = await axios.post("posts/", {
         params: {
           user_id: verification,
           caption: text.current.value,

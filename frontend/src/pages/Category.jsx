@@ -10,7 +10,7 @@ export default function Category() {
 
   useEffect(() => {
     const getCategoryData = async () => {
-      const response = await axios("http://localhost:8000/categories/", {
+      const response = await axios("categories/", {
         params: {
           categoryName: categoryName,
         },

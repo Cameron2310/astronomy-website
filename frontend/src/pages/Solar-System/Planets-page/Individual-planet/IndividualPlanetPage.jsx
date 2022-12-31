@@ -27,7 +27,7 @@ export default function IndividualPlanetsPage() {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios("/subtopic/", {
+      const response = await axios("subtopic/", {
         params: {
           name: topicName,
         },

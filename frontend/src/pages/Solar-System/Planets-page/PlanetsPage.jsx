@@ -34,7 +34,7 @@ export default function PlanetPage() {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios("/subtopic/", {
+      const response = await axios.get("subtopic/", {
         params: { name: "Planets" },
       });
       setSubTopic(response.data);
