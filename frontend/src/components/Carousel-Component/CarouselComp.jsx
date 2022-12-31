@@ -6,20 +6,11 @@ import "./CarouselComp.css";
 export default function CarouselComp() {
   // Description:
   // Carousel component that rotates through 5 photos from the backend API
-  const [images, setImages] = useState();
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios
-        .get("http://localhost:8000/images/")
-        .catch((error) => {
-          if (!error.response) {
-            // network error
-            errorStatus = "Error: Network Error";
-          } else {
-            errorStatus = error.response.data.message;
-          }
-        });
+      const response = await axios.get("http://localhost:8000/images/");
       console.log("running ...");
       console.log(response.data);
       setImages(response.data);
