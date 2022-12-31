@@ -37,7 +37,7 @@ export default function TopicInfo({ topicInformation, isSubtopic }) {
                 <p>{paragraph}</p>
                 <img
                   src={topicInformation.article_images[i].url}
-                  style={{ width: 600, border: "none" }}
+                  style={{ width: "100%", border: "none" }}
                 />
                 <p className="source">
                   {topicInformation.article_images[i].source}
