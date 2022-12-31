@@ -30,6 +30,9 @@ export default function CarouselComp() {
           }
           console.log(error.config);
         });
+      if (!response.data) {
+        fetchData();
+      }
       console.log("running ...");
       console.log(response.data);
       setImages(response.data);
