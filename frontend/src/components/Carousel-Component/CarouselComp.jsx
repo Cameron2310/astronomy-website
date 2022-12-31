@@ -28,8 +28,6 @@ export default function CarouselComp() {
         }
         console.log(error.config);
       });
-      console.log("running ...");
-      console.log(response.status);
       setImages(response.data);
     };
     fetchData();
