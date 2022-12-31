@@ -29,7 +29,6 @@ export default function PhotoPage() {
         console.log(error.config);
       });
       setPhotoData(response.data);
-      console.log(response.data);
     };
     fetchPhoto();
   }, []);

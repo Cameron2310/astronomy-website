@@ -18,13 +18,32 @@ export default function Community() {
   // Functions to update likes and delete posts
   async function updateLikes(post) {
     if (verification) {
-      const response = await axios.put("posts/", {
-        params: {
-          post_id: post.id,
-          likes: post.likes,
-          userId: verification,
-        },
-      });
+      const response = await axios
+        .put("/posts/", {
+          params: {
+            post_id: post.id,
+            likes: post.likes,
+            userId: verification,
+          },
+        })
+        .catch(function (error) {
+          if (error.response) {
+            // The request was made and the server responded with a status code
+            // that falls out of the range of 2xx
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+          } else if (error.request) {
+            // The request was made but no response was received
+            // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+            // http.ClientRequest in node.js
+            console.log(error.request);
+          } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log("Error", error.message);
+          }
+          console.log(error.config);
+        });
       setPosts(
         posts.map((post) => {
           if (post.id === response.data.id)
@@ -36,18 +55,37 @@ export default function Community() {
   }
   async function deletePost(post) {
     if (verification) {
-      const response = await axios.delete("posts/", {
-        params: {
-          post_id: post.id,
-        },
-      });
+      const response = await axios
+        .delete("/posts/", {
+          params: {
+            post_id: post.id,
+          },
+        })
+        .catch(function (error) {
+          if (error.response) {
+            // The request was made and the server responded with a status code
+            // that falls out of the range of 2xx
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+          } else if (error.request) {
+            // The request was made but no response was received
+            // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+            // http.ClientRequest in node.js
+            console.log(error.request);
+          } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log("Error", error.message);
+          }
+          console.log(error.config);
+        });
       setPosts(response.data);
     } else window.location = "/login/";
   }
 
   useEffect(() => {
     const getPosts = async () => {
-      const response = await axios.get("posts/").catch(function (error) {
+      const response = await axios.get("/posts/").catch(function (error) {
         if (error.response) {
           // The request was made and the server responded with a status code
           // that falls out of the range of 2xx

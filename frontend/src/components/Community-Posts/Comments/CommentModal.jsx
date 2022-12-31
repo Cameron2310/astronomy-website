@@ -18,25 +18,63 @@ export default function CommentModal({ post, show, setShow, verification }) {
   // Functions that handle creating, deleting, & liking comments
   async function createNewComment() {
     if (verification) {
-      const response = await axios.post("comments/", {
-        params: {
-          post_id: post.id,
-          comment_text: commentText.current.value,
-          user_id: verification,
-        },
-      });
+      const response = await axios
+        .post("/comments/", {
+          params: {
+            post_id: post.id,
+            comment_text: commentText.current.value,
+            user_id: verification,
+          },
+        })
+        .catch(function (error) {
+          if (error.response) {
+            // The request was made and the server responded with a status code
+            // that falls out of the range of 2xx
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+          } else if (error.request) {
+            // The request was made but no response was received
+            // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+            // http.ClientRequest in node.js
+            console.log(error.request);
+          } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log("Error", error.message);
+          }
+          console.log(error.config);
+        });
       setComments([...comments, response.data]);
     } else window.location = "/login/";
   }
   async function updateCommentLikes(comment) {
     if (verification) {
-      const response = await axios.put("comments/", {
-        params: {
-          comment_id: comment.id,
-          comment_likes: comment.likes,
-          user_id: verification,
-        },
-      });
+      const response = await axios
+        .put("/comments/", {
+          params: {
+            comment_id: comment.id,
+            comment_likes: comment.likes,
+            user_id: verification,
+          },
+        })
+        .catch(function (error) {
+          if (error.response) {
+            // The request was made and the server responded with a status code
+            // that falls out of the range of 2xx
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+          } else if (error.request) {
+            // The request was made but no response was received
+            // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+            // http.ClientRequest in node.js
+            console.log(error.request);
+          } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log("Error", error.message);
+          }
+          console.log(error.config);
+        });
       setComments(
         comments.map((comment) => {
           if (comment.id === response.data.id)
@@ -48,12 +86,31 @@ export default function CommentModal({ post, show, setShow, verification }) {
   }
   async function deleteComment(comment) {
     if (verification) {
-      const response = await axios.delete("comments/", {
-        params: {
-          comment_id: comment.id,
-          post_id: post.id,
-        },
-      });
+      const response = await axios
+        .delete("/comments/", {
+          params: {
+            comment_id: comment.id,
+            post_id: post.id,
+          },
+        })
+        .catch(function (error) {
+          if (error.response) {
+            // The request was made and the server responded with a status code
+            // that falls out of the range of 2xx
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+          } else if (error.request) {
+            // The request was made but no response was received
+            // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+            // http.ClientRequest in node.js
+            console.log(error.request);
+          } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log("Error", error.message);
+          }
+          console.log(error.config);
+        });
       setComments(response.data);
     } else window.location = "/login/";
   }
@@ -61,11 +118,30 @@ export default function CommentModal({ post, show, setShow, verification }) {
   // useEffect makes backend request to get comments for current post
   useEffect(() => {
     const getComments = async () => {
-      const response = await axios.get("comments/", {
-        params: {
-          id: post.id,
-        },
-      });
+      const response = await axios
+        .get("/comments/", {
+          params: {
+            id: post.id,
+          },
+        })
+        .catch(function (error) {
+          if (error.response) {
+            // The request was made and the server responded with a status code
+            // that falls out of the range of 2xx
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+          } else if (error.request) {
+            // The request was made but no response was received
+            // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+            // http.ClientRequest in node.js
+            console.log(error.request);
+          } else {
+            // Something happened in setting up the request that triggered an Error
+            console.log("Error", error.message);
+          }
+          console.log(error.config);
+        });
       setComments(response.data);
     };
     getComments();
