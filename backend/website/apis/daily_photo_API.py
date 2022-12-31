@@ -2,7 +2,7 @@ from random import randrange
 from dotenv import load_dotenv
 import os
 import requests
-# from models import *
+from website.models import HomePageImage
 
 load_dotenv()
 
@@ -34,14 +34,16 @@ def get_daily_image():
     return response
 
 
-get_daily_image()
-# def save_image():
-#     # Function saves image to the database
+def save_image():
+    # Function saves image to the database
 
-#     image = get_daily_image()
+    image = get_daily_image()
 
-#     new_image = HomePageImage.objects.create(
-#         title=image['title'], date=image['date'], explanation=image['explanation'], url=image['url'])
-#     new_image.save()
+    new_image = HomePageImage.objects.create(
+        title=image['title'], date=image['date'], explanation=image['explanation'], url=image['url'])
+    new_image.save()
 
-#     return new_image
+    return new_image
+
+
+save_image()
