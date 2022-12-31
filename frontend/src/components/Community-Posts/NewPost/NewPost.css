@@ -17,3 +17,10 @@
   font-weight: 500;
   border-color: #3c4048;
 }
+
+@media (max-width: 800px) {
+  .newpost-form {
+    width: 40%;
+    margin: 1% auto;
+  }
+}
