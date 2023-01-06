@@ -15,6 +15,4 @@
   - Image model
   - Celestial Objects model
   
- ## URL for Website
-  - https://astronomywebsite.net
 
