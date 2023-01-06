@@ -97,6 +97,9 @@ class PostsAPIView(APIView):
         user_id = data['params']['user_id']
         caption = data['params']['caption']
 
+        if caption == '':
+            return HttpResponse('Post must have a caption')
+
         try:
             image_url = data['params']['imageUrl']
         except:

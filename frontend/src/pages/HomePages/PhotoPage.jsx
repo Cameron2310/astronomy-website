@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./PhotoPage.css";
 
 export default function PhotoPage() {
   const { photoName } = useParams();
@@ -36,7 +37,11 @@ export default function PhotoPage() {
   if (!photoData) return null;
   return (
     <div>
-      <img src={photoData.url} alt={photoData.title} />
+      <img
+        className="photo-page-img"
+        src={photoData.url}
+        alt={photoData.title}
+      />
       <h2>{photoData.title}</h2>
       <p className="articles">{photoData.explanation}</p>
     </div>
